@@ -23,6 +23,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 		System.out.println("0000000000");
-		System.out.println("1111111111");
+		System.out.println("kkkkkkkkkk");
 	}
 }
