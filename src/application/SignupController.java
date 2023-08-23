@@ -73,8 +73,8 @@ public class SignupController implements Initializable {
 		Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 		Parent root = FXMLLoader.load(getClass().getResource("LoginWithVideo.fxml"));
 		Scene scene = new Scene(root,800,465);
-		//Image icon = new Image("icon.png");
-		//primaryStage.getIcons().add(icon);
+		Image icon = new Image("/Images/icon.png");
+		primaryStage.getIcons().add(icon);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Welcome to PlayRight !");
 		primaryStage.show();
@@ -170,8 +170,8 @@ public class SignupController implements Initializable {
 			   Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 			   Parent root = FXMLLoader.load(getClass().getResource("LoginWithVideo.fxml"));
 			   Scene scene = new Scene(root,800,466);
-			   //Image icon = new Image("icon.png");
-			  // primaryStage.getIcons().add(icon);
+			   Image icon = new Image("/Images/icon.png");
+			   primaryStage.getIcons().add(icon);
 			   primaryStage.setScene(scene);
 			   primaryStage.setTitle("Manager screen");
 			   primaryStage.show();

@@ -34,8 +34,8 @@ public class Main extends Application implements Serializable {
 			Parent root = FXMLLoader.load(getClass().getResource("/application/LoginWithVideo.fxml"));
 			Scene scene = new Scene(root,800,466);
 			
-			//Image icon = new Image("icon.png");
-			//primaryStage.getIcons().add(icon);
+			Image icon = new Image("/Images/icon.png");
+			primaryStage.getIcons().add(icon);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Welcome to PlayRight !");

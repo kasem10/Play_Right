@@ -76,7 +76,7 @@ public class LogInWithVideoCont implements Initializable {
 			Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 			Parent root = FXMLLoader.load(getClass().getResource("Manager.fxml"));
 			Scene scene = new Scene(root,623,627);
-			Image icon = new Image("icon.png");
+			Image icon = new Image("/Images/icon.png");
 			primaryStage.getIcons().add(icon);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Manager screen");
@@ -90,8 +90,8 @@ public class LogInWithVideoCont implements Initializable {
 					Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 					Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
 					Scene scene = new Scene(root,623,627);
-					//Image icon = new Image("icon.png");
-					//primaryStage.getIcons().add(icon);
+					Image icon = new Image("/Images/icon.png");
+					primaryStage.getIcons().add(icon);
 					primaryStage.setScene(scene);
 					primaryStage.setTitle("Customer screen");
 					primaryStage.show();
@@ -112,8 +112,8 @@ public class LogInWithVideoCont implements Initializable {
 	    Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 	    Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
 	    Scene scene = new Scene(root,700,620);
-	    //Image icon = new Image("icon.png");
-	   // primaryStage.getIcons().add(icon);
+	    Image icon = new Image("/Images/icon.png");
+	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
 	    primaryStage.setTitle("SignUp");
 	    primaryStage.show();

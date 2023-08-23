@@ -27,12 +27,12 @@
             </DropShadow>
          </effect>
          <children>
-            <ImageView fitHeight="57.0" fitWidth="200.0" layoutX="34.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="80.0" fitWidth="80.0" layoutX="94.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Images/logo%20image2.png" />
+                  <Image url="@../Images/icon.png" />
                </image>
             </ImageView>
-            <TextField fx:id="userNameText" layoutX="52.0" layoutY="118.0" prefHeight="30.0" prefWidth="150.0" promptText="Username" style="-fx-background-radius: 50px;">
+            <TextField fx:id="userNameText" layoutX="52.0" layoutY="122.0" prefHeight="30.0" prefWidth="150.0" promptText="Username" style="-fx-background-radius: 50px;">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Insets />
                </opaqueInsets>
             </TextField>
-            <PasswordField fx:id="passwordText" layoutX="52.0" layoutY="161.0" prefHeight="30.0" prefWidth="150.0" promptText="Password" style="-fx-background-radius: 50px;">
+            <PasswordField fx:id="passwordText" layoutX="52.0" layoutY="165.0" prefHeight="30.0" prefWidth="150.0" promptText="Password" style="-fx-background-radius: 50px;">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
@@ -55,7 +55,7 @@
                   <Font name="System Bold Italic" size="13.0" />
                </font>
             </Button>
-            <Label fx:id="lblStatus" alignment="CENTER" layoutX="52.0" layoutY="81.0" prefHeight="27.0" prefWidth="150.0" textFill="#f40000">
+            <Label fx:id="lblStatus" alignment="CENTER" layoutX="52.0" layoutY="89.0" prefHeight="27.0" prefWidth="150.0" textFill="#f40000">
                <font>
                   <Font name="System Bold Italic" size="14.0" />
                </font>
