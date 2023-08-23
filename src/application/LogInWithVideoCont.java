@@ -48,7 +48,7 @@ public class LogInWithVideoCont implements Initializable {
 		Main.saveMediaPlayer = player;
 		mediaView.setMediaPlayer(Main.saveMediaPlayer);
 		Main.saveMediaPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-		Main.saveMediaPlayer.setVolume(1);
+		Main.saveMediaPlayer.setVolume(0.1);
 		Main.saveMediaPlayer.play();
 		controlVolume.setValue(Main.saveMediaPlayer.getVolume() * 100);
 		controlVolume.valueProperty().addListener(new InvalidationListener() {
@@ -88,7 +88,7 @@ public class LogInWithVideoCont implements Initializable {
 					Main.saveCustomer=cust;
 					Main.saveMediaPlayer.setVolume(0);
 					Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-					Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+					Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
 					Scene scene = new Scene(root,623,627);
 					Image icon = new Image("/Images/icon.png");
 					primaryStage.getIcons().add(icon);
