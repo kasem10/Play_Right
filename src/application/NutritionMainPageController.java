@@ -46,6 +46,8 @@ public class NutritionMainPageController implements Initializable {
     @FXML
     private RadioButton female;
     
+    private final DropShadow dropShadow = new DropShadow();
+    
     
     
     public void calc(ActionEvent event) throws IOException{
@@ -111,7 +113,10 @@ public class NutritionMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-	   
+		  dropShadow.setColor(Color.GRAY);
+		     dropShadow.setRadius(10);
+		     dropShadow.setSpread(0.2);
+		     result.setEffect(dropShadow);
 	
 	}
 	

@@ -43,7 +43,7 @@ public class LogInWithVideoCont implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
-		Media media = new Media(getClass().getResource("/Images/videoBackground.mp4").toString());
+		Media media = new Media(getClass().getResource("/Images/videoBackgroundGym2.mp4").toString());
 		MediaPlayer player = new MediaPlayer(media);
 		Main.saveMediaPlayer = player;
 		mediaView.setMediaPlayer(Main.saveMediaPlayer);

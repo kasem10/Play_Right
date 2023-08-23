@@ -10,24 +10,45 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NutritionMainPageController">
    <children>
-      <Label fx:id="welcome" layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="451.0" textAlignment="CENTER" textFill="WHITE">
+      <Label fx:id="welcome" layoutX="82.0" layoutY="21.0" prefHeight="51.0" prefWidth="451.0" text="Calculation of nutritional parameters" textAlignment="CENTER">
          <font>
-            <Font name="System Bold" size="35.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="41.0" prefHeight="26.0" prefWidth="44.0" text="age" />
-      <TextField fx:id="age" layoutX="99.0" layoutY="42.0" />
-      <TextField fx:id="height" layoutX="99.0" layoutY="75.0" />
-      <TextField fx:id="weight" layoutX="99.0" layoutY="114.0" />
-      <Label layoutX="38.0" layoutY="74.0" prefHeight="26.0" prefWidth="44.0" text="height" />
-      <Label layoutX="38.0" layoutY="113.0" prefHeight="26.0" prefWidth="44.0" text="weight" />
-      <RadioButton fx:id="male" layoutX="93.0" layoutY="165.0" mnemonicParsing="false" text="male">
+      <Label layoutX="47.0" layoutY="87.0" prefHeight="26.0" prefWidth="44.0" text="age">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <TextField fx:id="age" layoutX="99.0" layoutY="88.0" prefHeight="26.0" prefWidth="95.0" />
+      <TextField fx:id="height" layoutX="99.0" layoutY="123.0" prefHeight="26.0" prefWidth="95.0" />
+      <TextField fx:id="weight" layoutX="99.0" layoutY="160.0" prefHeight="26.0" prefWidth="95.0" />
+      <Label layoutX="42.0" layoutY="122.0" prefHeight="26.0" prefWidth="44.0" text="height">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Label layoutX="38.0" layoutY="159.0" prefHeight="26.0" prefWidth="44.0" text="weight">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <RadioButton fx:id="male" layoutX="100.0" layoutY="206.0" mnemonicParsing="false" text="male">
          <toggleGroup>
             <ToggleGroup fx:id="gender" />
-         </toggleGroup></RadioButton>
-      <RadioButton fx:id="female" layoutX="196.0" layoutY="165.0" mnemonicParsing="false" text="female" toggleGroup="$gender" />
-      <Label layoutX="16.0" layoutY="161.0" prefHeight="26.0" prefWidth="44.0" text="gender" />
-      <Button layoutX="132.0" layoutY="207.0" mnemonicParsing="false" onAction="#calc" text="submit" />
+         </toggleGroup>
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></RadioButton>
+      <RadioButton fx:id="female" layoutX="184.0" layoutY="206.0" mnemonicParsing="false" text="female" toggleGroup="$gender">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></RadioButton>
+      <Label layoutX="38.0" layoutY="201.0" prefHeight="26.0" prefWidth="44.0" text="gender">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Label>
+      <Button layoutX="147.0" layoutY="254.0" mnemonicParsing="false" onAction="#calc" text="submit">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
       <Label fx:id="result" layoutX="332.0" layoutY="224.0" prefHeight="152.0" prefWidth="235.0" />
    </children>
 </AnchorPane>
