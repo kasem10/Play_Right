@@ -106,11 +106,6 @@ public class NutritionMainPageController implements Initializable {
     }
 	
 	
-	
-	
-	
-	   
-	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		  dropShadow.setColor(Color.GRAY);

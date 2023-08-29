@@ -13,6 +13,8 @@ public class Gym implements Serializable {
 	private static Gym gym = null;
 	
 	private HashMap<Integer, Customer> customers;
+	private HashMap<Integer, InterstedCustomers> interstedCustomers;
+	
 	
 	public static Gym getInstance()
 	{
@@ -24,6 +26,8 @@ public class Gym implements Serializable {
 	private Gym() {
 		
 		customers = new HashMap<>();
+		interstedCustomers = new HashMap<>();
+		
 		
 	}
 	
@@ -35,11 +39,30 @@ public class Gym implements Serializable {
 		this.customers = customers;
 	}
 	
+	public HashMap<Integer, InterstedCustomers> getinterstedCustomers() {
+		return interstedCustomers;
+	}
+
+	public void setinterstedCustomers(HashMap<Integer, InterstedCustomers> customers) {
+		this.interstedCustomers = customers;
+	}
+	
+	
 	public boolean addCustomer(Customer cust) {
 		if(cust == null || getCustomers().containsKey(cust.getId()))
 			return false;
 
   	return getCustomers().put(cust.getId(), cust) ==null;
+		
+	}
+	
+	public boolean addinterstedCustomers(InterstedCustomers cust) {
+		if(cust == null || getinterstedCustomers().containsKey(cust.getId())) {
+			System.out.println("kkkkkkkkkkk");
+			return false;
+		}
+
+  	return getinterstedCustomers().put(cust.getId(), cust) ==null;
 		
 	}
 

@@ -63,6 +63,13 @@ public class CustomerMainPageController implements Initializable {
 				st.setScene(cn);
 				st.show();
 		}
+	   public void findFreinds(ActionEvent event) throws IOException{
+			 Parent root = FXMLLoader.load(getClass().getResource("joinFreinds.fxml"));
+			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene cn = new Scene(root);
+				st.setScene(cn);
+				st.show();
+		}
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

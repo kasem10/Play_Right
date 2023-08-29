@@ -6,14 +6,19 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CustomerMainPageController">
    <children>
-      <Button fx:id="training" layoutX="37.0" layoutY="111.0" mnemonicParsing="false" onAction="#goTraining" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="154.0" prefWidth="215.0" text="Training" textFill="WHITE">
+      <Button fx:id="training" layoutX="36.0" layoutY="45.0" mnemonicParsing="false" onAction="#goTraining" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="154.0" prefWidth="215.0" text="Training" textFill="WHITE">
          <font>
             <Font name="System Bold" size="27.0" />
          </font>
       </Button>
-      <Button fx:id="nutrition" layoutX="330.0" layoutY="111.0" mnemonicParsing="false" onAction="#gonutrition" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="154.0" prefWidth="215.0" text="Nutrition" textFill="WHITE">
+      <Button fx:id="nutrition" layoutX="329.0" layoutY="45.0" mnemonicParsing="false" onAction="#gonutrition" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="154.0" prefWidth="215.0" text="Nutrition" textFill="WHITE">
          <font>
             <Font name="System Bold" size="28.0" />
          </font></Button>
+      <Button layoutX="112.0" layoutY="220.0" mnemonicParsing="false" onAction="#findFreinds" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="154.0" prefWidth="330.0" text="Workout with friends" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
