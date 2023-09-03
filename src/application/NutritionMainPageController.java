@@ -2,7 +2,9 @@ package application;
 
 import java.io.IOException;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
@@ -11,6 +13,7 @@ import java.util.ResourceBundle;
 
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -39,6 +42,9 @@ public class NutritionMainPageController implements Initializable {
 
     @FXML
     private Label result;
+    
+    @FXML
+    private VBox vbox;
     
     @FXML
     private RadioButton male;
@@ -79,6 +85,34 @@ public class NutritionMainPageController implements Initializable {
                 "\nRecommended Carbs in day: " + String.format("%.2f", recommendedCarbs);
 
         result.setText(resultText);
+        
+        Button newButton = new Button("fuck you");
+
+        vbox.getChildren().add(newButton);
+        
+        newButton.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+            	 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+  			   Parent root = null;
+			try {
+				root = FXMLLoader.load(getClass().getResource("nutritionbuildplan.fxml"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+  			   Scene scene = new Scene(root,800,466);
+  			   Image icon = new Image("/Images/icon.png");
+  			   primaryStage.getIcons().add(icon);
+  			   primaryStage.setScene(scene);
+  			   primaryStage.setTitle("Manager screen");
+  			   primaryStage.show();
+               
+            }
+        });
+        
+       
+        
 		 
 	}
     

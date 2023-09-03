@@ -15,6 +15,7 @@ public class Gym implements Serializable {
 	private HashMap<Integer, Customer> customers;
 	
 	private HashMap<Integer, interestedjoin> interestedjoin;
+	private HashMap<Integer, Meal>  meals;
 	
 	
 	public static Gym getInstance()
@@ -29,6 +30,7 @@ public class Gym implements Serializable {
 		
 		customers = new HashMap<>();
 		interestedjoin = new HashMap<>();
+		meals = new HashMap<>();
 		
 		
 	}
@@ -39,6 +41,15 @@ public class Gym implements Serializable {
 
 	public void setCustomers(HashMap<Integer, Customer> customers) {
 		this.customers = customers;
+	}
+	
+	public HashMap<Integer, Meal> getMeals() {
+		
+		return meals;
+	}
+
+	public void setMeals(HashMap<Integer, Meal> meals) {
+		this.meals = meals;
 	}
 	public HashMap<Integer, interestedjoin> getinterestedjoin() {
 	
@@ -71,5 +82,16 @@ public class Gym implements Serializable {
   	return getinterestedjoin().put(cust.getId(), cust) ==null;
 		
 	}
+    public boolean addnewmeal(Meal meal) {
+	    
+    	
+    		if(meal == null || getMeals().containsKey(meal.getId())) {
+    			System.out.println("kkkkkkkkkkk");
+    			return false;
+    		}
+
+      	return getMeals().put(meal.getId(), meal) ==null;
+    		
+    	}
 
 }

@@ -6,6 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NutritionMainPageController">
@@ -49,6 +50,7 @@
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <Label fx:id="result" layoutX="332.0" layoutY="224.0" prefHeight="152.0" prefWidth="235.0" />
+      <Label fx:id="result" layoutX="334.0" layoutY="178.0" prefHeight="152.0" prefWidth="235.0" />
+      <VBox fx:id="vbox" layoutX="399.0" layoutY="330.0" prefHeight="39.0" prefWidth="100.0" />
    </children>
 </AnchorPane>
