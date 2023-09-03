@@ -13,20 +13,22 @@ public class Gym implements Serializable {
 	private static Gym gym = null;
 	
 	private HashMap<Integer, Customer> customers;
-	private HashMap<Integer, InterstedCustomers> interstedCustomers;
+	
+	private HashMap<Integer, interestedjoin> interestedjoin;
 	
 	
 	public static Gym getInstance()
 	{
 		if(gym == null)
 			gym = new Gym();
+		
 		return gym;
 	}
 	
 	private Gym() {
 		
 		customers = new HashMap<>();
-		interstedCustomers = new HashMap<>();
+		interestedjoin = new HashMap<>();
 		
 		
 	}
@@ -38,31 +40,35 @@ public class Gym implements Serializable {
 	public void setCustomers(HashMap<Integer, Customer> customers) {
 		this.customers = customers;
 	}
+	public HashMap<Integer, interestedjoin> getinterestedjoin() {
 	
-	public HashMap<Integer, InterstedCustomers> getinterstedCustomers() {
-		return interstedCustomers;
+		return interestedjoin;
 	}
 
-	public void setinterstedCustomers(HashMap<Integer, InterstedCustomers> customers) {
-		this.interstedCustomers = customers;
+	public void setinterestedjoin(HashMap<Integer, interestedjoin> customers) {
+		this.interestedjoin = customers;
 	}
 	
 	
 	public boolean addCustomer(Customer cust) {
 		if(cust == null || getCustomers().containsKey(cust.getId()))
 			return false;
+		
+		
 
   	return getCustomers().put(cust.getId(), cust) ==null;
 		
 	}
 	
-	public boolean addinterstedCustomers(InterstedCustomers cust) {
-		if(cust == null || getinterstedCustomers().containsKey(cust.getId())) {
+    public boolean addinterestedjoin(interestedjoin cust) {
+	    
+	
+		if(cust == null || getinterestedjoin().containsKey(cust.getId())) {
 			System.out.println("kkkkkkkkkkk");
 			return false;
 		}
 
-  	return getinterstedCustomers().put(cust.getId(), cust) ==null;
+  	return getinterestedjoin().put(cust.getId(), cust) ==null;
 		
 	}
 

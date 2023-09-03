@@ -1,33 +1,27 @@
 package application;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
-import Utils.Gender;
-
-
-public class InterstedCustomers  implements Serializable{
+public class interestedjoin extends Person implements Serializable {
 	
-	/**
-	 * 
-	 */
+	
+	
+	
 	private static final long serialVersionUID = 1L;
-
 	private static int idCounter = 1;
 	private String fullname;
 	private String phone;
 	private String area;
-	private int id;
 	
 	
-	public InterstedCustomers(String fullname,String phone, String area) {
-		this.id=idCounter++;
+	
+	public interestedjoin(String fullname,String phone, String area) {
+		super(idCounter++, Main.saveCustomer.getFirstName(), Main.saveCustomer.getLastName(), Main.saveCustomer.getBirthDay(), Main.saveCustomer.getGender());
 		this.fullname = fullname;
 		this.phone = phone;
 		this.area=area;
 		
 	}
-
 
 	public String getFullname() {
 		return fullname;
@@ -42,6 +36,18 @@ public class InterstedCustomers  implements Serializable{
 	public String getPhone() {
 		return phone;
 	}
+	
+	public interestedjoin(int id) {
+		super(id);
+	}
+	public static int getIdCounter() {
+		return idCounter;
+	}
+
+	public static void setIdCounter(int idCounter) {
+		interestedjoin.idCounter = idCounter;
+	}
+	
 
 
 	public void setPhone(String phone) {
@@ -58,14 +64,8 @@ public class InterstedCustomers  implements Serializable{
 		this.area = area;
 	}
 	
-	public int getId() {
-		return id;
-	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
+	
+	
 
 
 	@Override
@@ -73,7 +73,5 @@ public class InterstedCustomers  implements Serializable{
 		return "fullname=" + fullname + ", phone=" + phone + ", area=" + area ;
 	}
 	
-	
-
 
 }

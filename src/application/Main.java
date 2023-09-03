@@ -46,12 +46,18 @@ public class Main extends Application implements Serializable {
 	}
 	public static void main(String[] args) {
 		
+		
+		
 		deSerialize();
 		 if(gym==null) {
 			serialize();
 		} 
 		launch(args);
+		
+	
+	
 	}
+	
 	
 	/* methods for serialization */
 	

@@ -17,12 +17,14 @@ public abstract class Person implements Serializable {
 	private Gender gender;
 	
 	public Person(int id, String firstName, String lastName, LocalDate birthDay, Gender gender) {
+	
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.birthDay = birthDay;
 		this.gender = gender;
+		System.out.println("aloooooooooooooooooooooooooooooooooooooooooooooo" + id );
 	}
 	
 	public Person(int id) {

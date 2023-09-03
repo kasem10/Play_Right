@@ -30,21 +30,33 @@ public class joinFreinds implements Initializable {
 	    private TextField location;
 
 	    @FXML
-	    private ListView<InterstedCustomers> joinfreindsview;
+	    private ListView<interestedjoin> joinfreindsview;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		System.out.println(Main.gym.getinterstedCustomers().values());
-		joinfreindsview.getItems().addAll(Main.gym.getinterstedCustomers().values());	
+		//joinfreindsview.getItems().addAll(Main.gym.getinterstedCustomers().values());
+		joinfreindsview.getItems().addAll(Main.gym.getinterestedjoin().values());
 	}
 	
 	 public void add(MouseEvent event) throws IOException{
 		 
-		 InterstedCustomers newcust = new InterstedCustomers(fullName.getText() , phone.getText() , location.getText());
-		 Main.gym.addinterstedCustomers(newcust);
+		 interestedjoin newcust = new interestedjoin(fullName.getText() , phone.getText() , location.getText());
+		 checkid(newcust);
+		 Main.gym.addinterestedjoin(newcust);
 		 Main.update();
 		 joinfreindsview.getItems().add(newcust);
 	   
 	    }
+	 
+	 public void checkid (interestedjoin c) {
+			int x=0;
+			for(int max : Main.gym.getinterestedjoin().keySet()) {
+			if(max>x)
+				x=max;
+				
+			}
+			c.setId(x+1);
+			return ;
+		}
 
 }
