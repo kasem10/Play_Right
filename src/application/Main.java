@@ -26,6 +26,9 @@ public class Main extends Application implements Serializable {
 	private static final long serialVersionUID = 1L;
 	public static MediaPlayer saveMediaPlayer; /* to mute with sound after going to another page */
 	public static Customer saveCustomer;   /* to know who is the customer now */
+	public static double saveCarbs;
+	public static double saveCalories;
+	public static double saveProtin;
 	
 	@Override
 	public void start(Stage primaryStage) throws IOException {

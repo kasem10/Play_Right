@@ -86,6 +86,10 @@ public class NutritionMainPageController implements Initializable {
 
         result.setText(resultText);
         
+        Main.saveCalories= recommendedCalories;
+        Main.saveCarbs= recommendedCarbs;
+        Main.saveProtin= recommendedProtein;
+        
         Button newButton = new Button("fuck you");
 
         vbox.getChildren().add(newButton);
