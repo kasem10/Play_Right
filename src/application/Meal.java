@@ -16,7 +16,7 @@ public class Meal implements Serializable {
 	double cal;
 	
 	
-	public Meal(String name, double carbs, double protin, double cal) {
+	public Meal(String name, double carbs, double cal, double protin) {
 		super();
 		id=idcounter++;
 		this.name = name;
