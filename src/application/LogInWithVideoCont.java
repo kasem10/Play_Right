@@ -75,7 +75,7 @@ public class LogInWithVideoCont implements Initializable {
 			Main.saveMediaPlayer.setVolume(0);
 			Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 			Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
-			Scene scene = new Scene(root,623,627);
+			Scene scene = new Scene(root,800,466);
 			Image icon = new Image("/Images/icon.png");
 			primaryStage.getIcons().add(icon);
 			primaryStage.setScene(scene);
@@ -90,7 +90,7 @@ public class LogInWithVideoCont implements Initializable {
 					Main.saveMediaPlayer.setVolume(0);
 					Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 					Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
-					Scene scene = new Scene(root,623,627);
+					Scene scene = new Scene(root,800,466);
 					Image icon = new Image("/Images/icon.png");
 					primaryStage.getIcons().add(icon);
 					primaryStage.setScene(scene);

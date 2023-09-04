@@ -22,6 +22,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class nutritionplancontroller  implements Initializable {
@@ -153,7 +155,7 @@ public class nutritionplancontroller  implements Initializable {
 	 public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 		    Parent root = FXMLLoader.load(getClass().getResource("nutritionMainPage.fxml"));
-		    Scene scene = new Scene(root,700,620);
+		    Scene scene = new Scene(root,800,466);
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);

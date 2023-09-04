@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
@@ -32,6 +33,9 @@ public class CustomerMainPageController implements Initializable {
 	Button training;
 	@FXML
 	Button nutrition;
+	
+	@FXML
+	Button findFriends;
 	
 	
 	 @FXML
@@ -78,8 +82,20 @@ public class CustomerMainPageController implements Initializable {
 	     dropShadow.setSpread(0.2);
 	     training.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     nutrition.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+	     findFriends.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	
 	}
 	
+	
+	 public void back(ActionEvent event) throws IOException{
+		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("LogInWithVideo.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setScene(scene);
+		    primaryStage.setTitle("SignUp");
+		    primaryStage.show();
+	 }
 
 }

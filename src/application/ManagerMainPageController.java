@@ -2,6 +2,7 @@ package application;
 
 import java.io.IOException;
 import javafx.scene.effect.DropShadow;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
@@ -43,6 +44,17 @@ public class ManagerMainPageController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 	     
 	}
+	
+	 public void back(ActionEvent event) throws IOException{
+		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("LogInWithVideo.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setScene(scene);
+		    primaryStage.setTitle("SignUp");
+		    primaryStage.show();
+	 }
 	
 
 }

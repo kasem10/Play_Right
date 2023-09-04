@@ -90,7 +90,7 @@ public class NutritionMainPageController implements Initializable {
         Main.saveCarbs= recommendedCarbs;
         Main.saveProtin= recommendedProtein;
         
-        Button newButton = new Button("fuck you");
+        Button newButton = new Button("build plan");
 
         vbox.getChildren().add(newButton);
         
@@ -146,12 +146,23 @@ public class NutritionMainPageController implements Initializable {
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		  dropShadow.setColor(Color.GRAY);
+		  dropShadow.setColor(Color.RED);
 		     dropShadow.setRadius(10);
 		     dropShadow.setSpread(0.2);
 		     result.setEffect(dropShadow);
 	
 	}
+	
+	 public void back(ActionEvent event) throws IOException{
+		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setScene(scene);
+		    primaryStage.setTitle("SignUp");
+		    primaryStage.show();
+	 }
 	
 
 }
