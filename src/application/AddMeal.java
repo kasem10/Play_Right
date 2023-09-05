@@ -13,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.image.Image;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
@@ -61,6 +62,18 @@ public class AddMeal  {
 		comp.setId(x+1);
 		return;
 	}
+	
+	 public void back(ActionEvent event) throws IOException{
+		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setScene(scene);
+		    primaryStage.setTitle("SignUp");
+		    primaryStage.show();
+	 }
+	
 	
 
 	

@@ -8,41 +8,56 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMeal">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AddMeal">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="522.0" fitWidth="1167.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/addcomp.jpg" />
+            <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="63.0" layoutY="75.0" prefHeight="18.0" prefWidth="46.0" text="Name">
+      <Label layoutX="294.0" layoutY="138.0" prefHeight="18.0" prefWidth="46.0" text="Name">
          <font>
-            <Font name="System Bold" size="16.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="name" layoutX="126.0" layoutY="71.0" />
-      <TextField fx:id="cal" layoutX="126.0" layoutY="117.0" />
-      <Label layoutX="63.0" layoutY="119.0" prefHeight="22.0" prefWidth="46.0" text="cal">
+      <TextField fx:id="name" layoutX="357.0" layoutY="134.0" />
+      <TextField fx:id="cal" layoutX="357.0" layoutY="180.0" />
+      <Label layoutX="279.0" layoutY="182.0" prefHeight="26.0" prefWidth="65.0" text="Calories">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="276.0" layoutY="258.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
+      <Button layoutX="402.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
          <font>
-            <Font name="System Bold Italic" size="13.0" />
+            <Font name="System Bold Italic" size="14.0" />
          </font>
       </Button>
-      <Label layoutX="63.0" layoutY="160.0" prefHeight="22.0" prefWidth="46.0" text="protin">
+      <Label layoutX="282.0" layoutY="223.0" prefHeight="26.0" prefWidth="65.0" text="Protins">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="protin" layoutX="126.0" layoutY="158.0" />
-      <TextField fx:id="carbs" layoutX="126.0" layoutY="200.0" />
-      <Label layoutX="63.0" layoutY="201.0" prefHeight="22.0" prefWidth="46.0" text="carbs">
+      <TextField fx:id="protin" layoutX="357.0" layoutY="221.0" />
+      <TextField fx:id="carbs" layoutX="357.0" layoutY="263.0" />
+      <Label layoutX="294.0" layoutY="264.0" prefHeight="22.0" prefWidth="46.0" text="carbs">
          <font>
-            <Font name="System Bold" size="15.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
+      <Label layoutX="380.0" layoutY="43.0" prefHeight="26.0" prefWidth="138.0" text="Add meal">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER_RIGHT" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="26.0" fitWidth="28.0" layoutX="26.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/goBackIcon.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
