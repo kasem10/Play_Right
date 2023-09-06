@@ -30,6 +30,8 @@ public class Main extends Application implements Serializable {
 	public static double saveCalories;
 	public static double saveProtin;
 	
+	
+	
 	@Override
 	public void start(Stage primaryStage) throws IOException {
 		try {

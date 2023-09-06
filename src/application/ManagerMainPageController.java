@@ -39,6 +39,16 @@ public class ManagerMainPageController implements Initializable {
 				st.show();
 		}
 	   
+	   public void AddMusic(ActionEvent event) throws IOException{
+		   
+			 Parent root = FXMLLoader.load(getClass().getResource("addMusic.fxml"));
+			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene cn = new Scene(root);
+				st.setScene(cn);
+				st.show();
+				
+		}
+	   
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {

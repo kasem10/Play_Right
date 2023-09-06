@@ -43,6 +43,10 @@ public class LogInWithVideoCont implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
+		if(Main.saveMediaPlayer != null) {
+			Main.saveMediaPlayer.stop();
+		}
+		
 		Media media = new Media(getClass().getResource("/Images/videoBackgroundGym2.mp4").toString());
 		MediaPlayer player = new MediaPlayer(media);
 		Main.saveMediaPlayer = player;
@@ -85,7 +89,7 @@ public class LogInWithVideoCont implements Initializable {
 		else {
 			for(Customer cust : Main.gym.getCustomers().values()) {
 				if((userNameText.getText() != "") && (passwordText.getText() != "") && cust.getUserName().equals(userNameText.getText())&&cust.getPassword().equals(passwordText.getText())){
-					System.out.println("aloooooooooo");
+					
 					Main.saveCustomer=cust;
 					Main.saveMediaPlayer.setVolume(0);
 					Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();

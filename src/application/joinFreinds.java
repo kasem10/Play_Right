@@ -50,6 +50,8 @@ public class joinFreinds implements Initializable {
 		
 	}
 	 ArrayList<interestedjoin> items = new ArrayList<interestedjoin>();
+	 
+	 
 	 public void add(MouseEvent event) throws IOException{
 		 interestedjoin newcust = new interestedjoin(fullName.getText() , phone.getText() , location.getValue());
 		 checkid(newcust);

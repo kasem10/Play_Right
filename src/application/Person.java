@@ -24,7 +24,7 @@ public abstract class Person implements Serializable {
 		this.lastName = lastName;
 		this.birthDay = birthDay;
 		this.gender = gender;
-		System.out.println("aloooooooooooooooooooooooooooooooooooooooooooooo" + id );
+		
 	}
 	
 	public Person(int id) {

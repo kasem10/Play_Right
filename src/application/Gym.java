@@ -17,9 +17,12 @@ public class Gym implements Serializable {
 	private HashMap<Integer, interestedjoin> interestedjoin;
 	private HashMap<Integer, Meal>  meals;
 	
+	private HashMap<Integer, music> music;
 	
+
 	public static Gym getInstance()
 	{
+		
 		if(gym == null)
 			gym = new Gym();
 		
@@ -31,7 +34,7 @@ public class Gym implements Serializable {
 		customers = new HashMap<>();
 		interestedjoin = new HashMap<>();
 		meals = new HashMap<>();
-		
+		music = new HashMap<>();
 		
 	}
 	
@@ -60,6 +63,15 @@ public class Gym implements Serializable {
 		this.interestedjoin = customers;
 	}
 	
+	public HashMap<Integer, music> getMusic() {
+		
+		return music;
+	}
+
+	public void setMusic(HashMap<Integer, music> music) {
+		this.music = music;
+	}
+	
 	
 	public boolean addCustomer(Customer cust) {
 		if(cust == null || getCustomers().containsKey(cust.getId()))
@@ -75,7 +87,7 @@ public class Gym implements Serializable {
 	    
 	
 		if(cust == null || getinterestedjoin().containsKey(cust.getId())) {
-			System.out.println("kkkkkkkkkkk");
+			
 			return false;
 		}
 
@@ -86,12 +98,26 @@ public class Gym implements Serializable {
 	    
     	
     		if(meal == null || getMeals().containsKey(meal.getId())) {
-    			System.out.println("kkkkkkkkkkk");
+    			
     			return false;
     		}
 
       	return getMeals().put(meal.getId(), meal) ==null;
     		
     	}
+    
+    
+    public boolean addMusic(music music) {
+    	
+    	
+    	
+    	if(music == null || getMusic().containsKey(music.getId())) {
+			
+			return false;
+		}
+
+  	 return getMusic().put(music.getId(), music) ==null;
+    	
+    }
 
 }
