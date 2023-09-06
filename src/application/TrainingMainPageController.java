@@ -61,7 +61,7 @@ public class TrainingMainPageController implements Initializable {
 	
 	public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-		    Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+		    Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
 		    Scene scene = new Scene(root,800,466);
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);

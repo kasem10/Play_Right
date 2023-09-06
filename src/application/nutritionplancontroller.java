@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.ResourceBundle;
 
 
@@ -17,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.image.Image;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -35,24 +37,35 @@ public class nutritionplancontroller  implements Initializable {
     private ListView<Meal> AddedMeals;
     
     @FXML
+    private ComboBox<String> sortCombBox;
+    
+    @FXML
     private Label cal, carbs, protin;
 	
     double updatedCarbs=0, updatedCal=0, updatedProtin=0;
     double NeedsCarbs, NeedsCal, NeedsProtin;
 
 	public void initialize(URL location, ResourceBundle resources) { 
+		ObservableList<String> list = FXCollections.observableArrayList("calories","carbs","protin");
+		sortCombBox.setItems(list);
 		
 		NeedsCarbs = Main.saveCarbs;
 		NeedsCal = Main.saveCalories;
 		NeedsProtin = Main.saveProtin;
+		
+	   	meals.setStyle("-fx-control-inner-background: lightgray;"); 
+		 AddedMeals.setStyle("-fx-control-inner-background: lightgray;");
 	
 		meals.getItems().addAll(Main.gym.getMeals().values());
+		meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
+
 		cal.setText(updatedCal + "/" + String.valueOf(Main.saveCalories));
 		cal.setTextFill(Color.RED);
 		carbs.setText(updatedCarbs + "/" + String.valueOf(Main.saveCarbs));
 		carbs.setTextFill(Color.RED);
 		protin.setText(updatedProtin + "/" + String.valueOf(Main.saveProtin));
 		protin.setTextFill(Color.RED);
+		
 		
 		
 	    
@@ -151,6 +164,24 @@ public class nutritionplancontroller  implements Initializable {
 				aler.showAndWait();
 			}
 		}
+	 
+	 public void sort(ActionEvent event) throws IOException{
+		 
+		 if( sortCombBox.getValue().equals("calories")) {
+			 meals.getItems().sort(Comparator.comparingDouble(Meal::getCal).reversed());
+			 
+		 }
+         if( sortCombBox.getValue().equals("carbs")) {
+        	 meals.getItems().sort(Comparator.comparingDouble(Meal::getCarbs).reversed());
+			 
+		 }
+         if( sortCombBox.getValue().equals("protin")) {
+        	 meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
+	 
+ }
+		 
+		
+	 }
 	 
 	 public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
