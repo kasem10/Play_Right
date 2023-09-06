@@ -29,7 +29,7 @@ public class Main extends Application implements Serializable {
 	public static double saveCarbs;
 	public static double saveCalories;
 	public static double saveProtin;
-	
+	public static double saveProtin33333333333333;
 	
 	
 	@Override
