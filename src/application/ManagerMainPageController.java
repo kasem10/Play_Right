@@ -25,7 +25,7 @@ import javafx.stage.Stage;
 public class ManagerMainPageController implements Initializable {
 	
 	   public void AddMeals(ActionEvent event) throws IOException{
-			 Parent root = FXMLLoader.load(getClass().getResource("AddMeal.fxml"));
+			 Parent root = FXMLLoader.load(getClass().getResource("ManageMeals.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
 				st.setScene(cn);
@@ -41,7 +41,7 @@ public class ManagerMainPageController implements Initializable {
 	   
 	   public void AddMusic(ActionEvent event) throws IOException{
 		   
-			 Parent root = FXMLLoader.load(getClass().getResource("addMusic.fxml"));
+			 Parent root = FXMLLoader.load(getClass().getResource("ManageMusic.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
 				st.setScene(cn);

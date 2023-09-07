@@ -65,7 +65,7 @@ public class AddMeal  {
 	
 	 public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-		    Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+		    Parent root = FXMLLoader.load(getClass().getResource("ManageMeals.fxml"));
 		    Scene scene = new Scene(root,800,466);
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);

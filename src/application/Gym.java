@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 
 
+
 public class Gym implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -106,6 +107,12 @@ public class Gym implements Serializable {
     		
     	}
     
+    public boolean removemeal(Meal meal) {
+		if(meal == null || !getMeals().containsKey(meal.getId()))
+			return false;
+		return getMeals().remove(meal.getId(), meal);
+	}
+    
     
     public boolean addMusic(music music) {
     	
@@ -119,5 +126,10 @@ public class Gym implements Serializable {
   	 return getMusic().put(music.getId(), music) ==null;
     	
     }
+    public boolean removemusic(music music) {
+		if(music == null || !getMusic().containsKey(music.getId()))
+			return false;
+		return getMusic().remove(music.getId(), music);
+	}
 
 }
