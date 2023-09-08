@@ -60,6 +60,6 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="sortCombBox" layoutX="120.0" layoutY="35.0" onAction="#sort" prefWidth="150.0" promptText="sort by" />
+      <ComboBox fx:id="sortCombBox" layoutX="216.0" layoutY="45.0" onAction="#sort" prefWidth="150.0" promptText="sort by" />
    </children>
 </AnchorPane>

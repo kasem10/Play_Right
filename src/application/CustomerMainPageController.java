@@ -37,6 +37,9 @@ public class CustomerMainPageController implements Initializable {
 	@FXML
 	Button findFriends;
 	
+	@FXML
+	Button music;
+	
 	
 	 @FXML
 	    private void onButtonMouseEntered(MouseEvent event) {
@@ -91,6 +94,7 @@ public class CustomerMainPageController implements Initializable {
 	     training.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     nutrition.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     findFriends.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+	     music.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	
 	}
 	

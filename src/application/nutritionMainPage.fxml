@@ -18,7 +18,7 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="welcome" layoutX="280.0" layoutY="25.0" prefHeight="51.0" prefWidth="451.0" text="Calculation of nutritional parameters" textAlignment="CENTER">
+      <Label fx:id="welcome" layoutX="282.0" layoutY="25.0" prefHeight="51.0" prefWidth="451.0" text="Calculation of nutritional parameters" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>

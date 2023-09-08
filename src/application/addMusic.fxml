@@ -17,11 +17,11 @@
       </ImageView>
       <Button layoutX="394.0" layoutY="323.0" mnemonicParsing="false" onAction="#submitaddMusic" text="Submit">
          <font>
-            <Font name="System Bold Italic" size="14.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="310.0" layoutY="25.0" prefHeight="20.0" prefWidth="237.0" text="Add music">
+      <Label alignment="CENTER" layoutX="310.0" layoutY="31.0" prefHeight="20.0" prefWidth="237.0" text="Add music">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
@@ -45,6 +45,6 @@
          </font>
       </Label>
       <TextField fx:id="name" layoutX="288.0" layoutY="158.0" prefHeight="36.0" prefWidth="348.0" />
-      <TextField fx:id="path" layoutX="288.0" layoutY="229.0" prefHeight="36.0" prefWidth="356.0" />
+      <TextField fx:id="path" layoutX="288.0" layoutY="229.0" prefHeight="36.0" prefWidth="348.0" />
    </children>
 </AnchorPane>

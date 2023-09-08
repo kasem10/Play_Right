@@ -16,9 +16,9 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="301.0" layoutY="29.0" prefHeight="39.0" prefWidth="290.0" text="What is your goal ?">
+      <Label layoutX="321.0" layoutY="32.0" prefHeight="39.0" prefWidth="290.0" text="What is your goal ?">
          <font>
-            <Font name="System Bold Italic" size="27.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <TextField fx:id="currentweight" layoutX="366.0" layoutY="154.0" />
@@ -41,7 +41,7 @@
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Label>
-      <Button layoutX="383.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToPlan" prefHeight="37.0" prefWidth="125.0" text="workout plan">
+      <Button layoutX="380.0" layoutY="350.0" mnemonicParsing="false" onAction="#goToPlan" prefHeight="37.0" prefWidth="125.0" text="workout plan">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Button>

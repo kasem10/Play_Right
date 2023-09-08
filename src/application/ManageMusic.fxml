@@ -16,9 +16,9 @@
          </image>
       </ImageView>
       <ListView fx:id="music" layoutX="135.0" layoutY="141.0" prefHeight="210.0" prefWidth="535.0" />
-      <Label alignment="CENTER" layoutX="310.0" layoutY="25.0" prefHeight="20.0" prefWidth="237.0" text="Manage Music">
+      <Label alignment="CENTER" layoutX="310.0" layoutY="28.0" prefHeight="20.0" prefWidth="237.0" text="Manage Music">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
@@ -31,7 +31,13 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="258.0" layoutY="381.0" mnemonicParsing="false" onAction="#AddMusic" text="Add" />
-      <Button layoutX="429.0" layoutY="381.0" mnemonicParsing="false" onAction="#removemusic" text="Remove" />
+      <Button layoutX="316.0" layoutY="377.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="36.0" prefWidth="72.0" text="Add">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button layoutX="442.0" layoutY="377.0" mnemonicParsing="false" onAction="#removemusic" prefHeight="36.0" prefWidth="72.0" text="Remove">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
    </children>
 </AnchorPane>

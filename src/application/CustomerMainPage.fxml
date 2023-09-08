@@ -37,7 +37,7 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button fx:id="training1" layoutX="120.0" layoutY="185.0" mnemonicParsing="false" onAction="#viewMusic" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="115.0" text="Music">
+      <Button fx:id="music" layoutX="120.0" layoutY="185.0" mnemonicParsing="false" onAction="#viewMusic" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="115.0" text="Music">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>

@@ -32,13 +32,13 @@
             <Font name="System Bold Italic" size="14.0" />
          </font></Label>
       <ListView fx:id="joinfreindsview" layoutX="131.0" layoutY="188.0" prefHeight="210.0" prefWidth="535.0" />
-      <Button layoutX="353.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#add" text="Submit">
+      <Button layoutX="371.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#add" text="Submit">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
       <Label layoutX="310.0" layoutY="25.0" prefHeight="20.0" prefWidth="237.0" text="Training with friends">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
@@ -51,6 +51,6 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <ComboBox fx:id="location" layoutX="573.0" layoutY="87.0" prefWidth="150.0" />
+      <ComboBox fx:id="location" layoutX="573.0" layoutY="85.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

@@ -36,6 +36,7 @@ public class musicControll implements Initializable {
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 		
+		music.setStyle("-fx-control-inner-background: lightgray;");
 		music.getItems().addAll(Main.gym.getMusic().values());
 		controlVolume.setValue(Main.saveMediaPlayer.getVolume() * 100);
 		controlVolume.valueProperty().addListener(new InvalidationListener() {

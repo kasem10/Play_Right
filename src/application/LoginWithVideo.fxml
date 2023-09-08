@@ -65,7 +65,7 @@
       <Slider fx:id="controlVolume" layoutX="758.0" layoutY="150.0" orientation="VERTICAL" />
       <ImageView fitHeight="18.0" fitWidth="19.0" layoutX="756.0" layoutY="131.0">
          <image>
-            <Image url="@../../Images/sliderIcon.png" />
+            <Image url="@../Images/sliderIcon.png" />
          </image>
       </ImageView>
    </children>

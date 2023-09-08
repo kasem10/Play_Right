@@ -27,6 +27,8 @@ public class ManageMusic implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		music.setStyle("-fx-control-inner-background: lightgray;");
 		music.getItems().addAll(Main.gym.getMusic().values());
 		// TODO Auto-generated method stub
 		

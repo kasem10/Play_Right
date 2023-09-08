@@ -27,9 +27,9 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="402.0" layoutY="331.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
+      <Button layoutX="393.0" layoutY="336.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
          <font>
-            <Font name="System Bold Italic" size="14.0" />
+            <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
       <Label layoutX="282.0" layoutY="223.0" prefHeight="26.0" prefWidth="65.0" text="Protins">
@@ -44,9 +44,9 @@
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="380.0" layoutY="43.0" prefHeight="26.0" prefWidth="138.0" text="Add meal">
+      <Label layoutX="378.0" layoutY="38.0" prefHeight="26.0" prefWidth="138.0" text="Add meal">
          <font>
-            <Font name="System Bold Italic" size="20.0" />
+            <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <Button alignment="CENTER_RIGHT" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
