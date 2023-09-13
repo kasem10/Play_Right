@@ -38,6 +38,13 @@ public class ManagerMainPageController implements Initializable {
 				st.setScene(cn);
 				st.show();
 		}
+	   public void tracking(ActionEvent event) throws IOException{
+			 Parent root = FXMLLoader.load(getClass().getResource("TrackingCustomers.fxml"));
+			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene cn = new Scene(root);
+				st.setScene(cn);
+				st.show();
+		}
 	   
 	   public void AddMusic(ActionEvent event) throws IOException{
 		   

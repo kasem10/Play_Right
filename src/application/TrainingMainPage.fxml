@@ -55,5 +55,7 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
+      <Label layoutX="521.0" layoutY="159.0" prefHeight="18.0" prefWidth="89.0" text="(in kg)" />
+      <Label layoutX="521.0" layoutY="196.0" prefHeight="18.0" prefWidth="89.0" text="(in kg)" />
    </children>
 </AnchorPane>

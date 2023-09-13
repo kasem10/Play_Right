@@ -4,6 +4,7 @@ import java.io.IOException;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
@@ -18,8 +19,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class CustomerMainPageController implements Initializable {
@@ -39,6 +44,8 @@ public class CustomerMainPageController implements Initializable {
 	
 	@FXML
 	Button music;
+	
+
 	
 	
 	 @FXML
@@ -64,6 +71,7 @@ public class CustomerMainPageController implements Initializable {
 				st.show();
 		}
 	   public void goTraining(ActionEvent event) throws IOException{
+		System.out.println(Main.saveCustomer.toString());
 			 Parent root = FXMLLoader.load(getClass().getResource("TrainingMainPage.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
@@ -76,6 +84,9 @@ public class CustomerMainPageController implements Initializable {
 				Scene cn = new Scene(root);
 				st.setScene(cn);
 				st.show();
+				 Alert a=new Alert(AlertType.INFORMATION);
+			       a.setHeaderText("The details you enter are shown to others for the purpose of finding partners");
+			       a.showAndWait();
 		}
 	   
 	   public void viewMusic(ActionEvent event) throws IOException{
@@ -88,15 +99,17 @@ public class CustomerMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-	     dropShadow.setColor(Color.RED);
-	     dropShadow.setRadius(10);
-	     dropShadow.setSpread(0.2);
+
+
 	     training.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     nutrition.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     findFriends.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     music.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+	          
 	
 	}
+	
+	
 	
 	
 	 public void back(ActionEvent event) throws IOException{

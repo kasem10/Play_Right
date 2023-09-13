@@ -2,6 +2,7 @@ package application;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Date;
 
 import Utils.Gender;
 
@@ -15,12 +16,54 @@ public class Customer extends Person implements Serializable{
 	private static int idCounter = 1;
 	private String userName;
 	private String password;
-	
+	private double wieght;
+	private double diff;
+	private String fedback;
+	private LocalDate date ;
 	
 	public Customer(String firstName, String lastName, LocalDate birthDay, Gender gender,String userName, String password) {
 		super(idCounter++, firstName, lastName, birthDay, gender);
 		this.userName = userName;
 		this.password = password;
+		LocalDate currentDate = LocalDate.now();
+		date  = currentDate.minusDays(1);;
+	}
+	
+	
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+
+
+
+	public double getDiff() {
+		return diff;
+	}
+
+	public void setDiff(double diff) {
+		this.diff = diff;
+	}
+
+	public String getFedback() {
+		return fedback;
+	}
+
+	public void setFedback(String fedback) {
+		this.fedback = fedback;
+	}
+
+	
+	
+	public double getWieght() {
+		return wieght;
+	}
+
+	public void setWieght(double wieght) {
+		this.wieght = wieght;
 	}
 	
 	public String getUserName() {
@@ -51,10 +94,16 @@ public class Customer extends Person implements Serializable{
 		Customer.idCounter = idCounter;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return super.toString();
+		return "Customer [wieght=" + wieght + ", diff=" + diff + ", fedback=" + fedback + ", getFirstName()="
+				+ getFirstName() + "]";
 	}
+
+
+	
+
+	
+
+
 }
