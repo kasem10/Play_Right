@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -24,9 +25,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.scene.text.Font;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+import javafx.geometry.Pos;
 public class LogInWithVideoCont implements Initializable {
 	
 	@FXML
@@ -133,34 +135,63 @@ public class LogInWithVideoCont implements Initializable {
 	    primaryStage.show();
     }
      
- 	public void showpopup() {
-		Stage popupStage = new Stage();
-        popupStage.initModality(Modality.APPLICATION_MODAL); // Block interactions with the parent stage
+     public void showpopup() {
+    	    Stage popupStage = new Stage();
+    	    popupStage.initModality(Modality.APPLICATION_MODAL); // Block interactions with the parent stage
+    	    popupStage.setTitle("Custom Popup");
 
-        TextField wieghtinput = new TextField();
-        TextField fedbackinput = new TextField();
-        Button closeButton = new Button("Submit");
-        
+    	    // Create input fields and labels
+    	    TextField weightInput = new TextField();
+    	    weightInput.setPromptText("Enter Weight");
 
-        closeButton.setOnAction(e ->{
-        double wieght33 ;
-        wieght33 = Double.parseDouble(wieghtinput.getText());
-        Main.saveCustomer.setDiff(wieght33- Main.saveCustomer.getWieght());
-        Main.saveCustomer.setFedback(fedbackinput.getText());
-        Main.saveCustomer.setWieght(wieght33);
-        Main.saveCustomer.setDate(LocalDate.now());
-        Main.update();
-        popupStage.close();
-        });
+    	    TextField feedbackInput = new TextField();
+    	    feedbackInput.setPromptText("Enter Feedback");
 
-        VBox layout = new VBox(10);
-        layout.getChildren().addAll(wieghtinput,fedbackinput, closeButton);
-        Scene popupScene = new Scene(layout, 250, 100);
-        popupStage.setScene(popupScene);
-        popupStage.setTitle("Popup with Input Field");
-        popupStage.showAndWait(); 
-		
-	}
+    	    // Create a submit button
+    	    Button submitButton = new Button("Submit");
+    	    submitButton.setAlignment(Pos.CENTER);
+
+    	    submitButton.setOnAction(e -> {
+    	        double weight;
+    	        weight = Double.parseDouble(weightInput.getText());
+    	        Main.saveCustomer.setDiff(weight - Main.saveCustomer.getWieght());
+    	        Main.saveCustomer.setFedback(feedbackInput.getText());
+    	        Main.saveCustomer.setWieght(weight);
+    	        Main.saveCustomer.setDate(LocalDate.now());
+    	        Main.update();
+    	        popupStage.close();
+    	    });
+
+    	    // Create labels for input fields
+    	    Label weightLabel = new Label("Weight:");
+    	   
+    	    Label feedbackLabel = new Label("Feedback:");
+
+    	    // Set styles for labels
+    	    weightLabel.setFont(new Font("Arial", 14));
+    	    feedbackLabel.setFont(new Font("Arial", 14));
+
+    	    // Create a VBox to arrange components vertically
+    	    VBox layout = new VBox(10);
+    	    layout.setStyle("-fx-background-color: white;"); // Set white background
+    	    layout.setMinWidth(300);
+    	    layout.setMinHeight(190);
+    	    layout.setPadding(new Insets(10));
+    	     // Center the VBox content
+
+
+    	    // Add components to the VBox
+    	    layout.getChildren().addAll(
+    	        weightLabel, weightInput,
+    	        feedbackLabel, feedbackInput,
+    	        submitButton
+    	    );
+
+    	    // Create the scene
+    	    Scene popupScene = new Scene(layout);
+    	    popupStage.setScene(popupScene);
+    	    popupStage.showAndWait();
+    	}
 
 	
 

@@ -29,6 +29,10 @@ public class Main extends Application implements Serializable {
 	public static double saveCarbs;
 	public static double saveCalories;
 	public static double saveProtin;
+	public static Meal meal1;
+	public static Meal meal2;
+	public static Meal meal3;
+	
 	
 	
 	

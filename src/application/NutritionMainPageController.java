@@ -20,10 +20,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class NutritionMainPageController implements Initializable {
@@ -111,6 +113,14 @@ public class NutritionMainPageController implements Initializable {
   			   primaryStage.setScene(scene);
   			   primaryStage.setTitle("Manager screen");
   			   primaryStage.show();
+  			 Alert aler = new Alert(AlertType.CONFIRMATION);
+  			String headerText = "We have some Suggestions for you:\n"
+  	                 + "First meal: " + Main.meal1.getName() + "\n"
+  	                 + "Second meal: " + Main.meal2.getName() + "\n"
+  	                 + "Third meal: " + Main.meal3.getName();
+
+          	aler.setHeaderText(headerText);
+ 			aler.showAndWait();
                
             }
         });

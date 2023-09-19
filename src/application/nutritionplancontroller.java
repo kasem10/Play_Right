@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 
@@ -39,6 +40,8 @@ public class nutritionplancontroller  implements Initializable {
     @FXML
     private ComboBox<String> sortCombBox;
     
+   
+    
     @FXML
     private Label cal, carbs, protin;
 	
@@ -54,10 +57,10 @@ public class nutritionplancontroller  implements Initializable {
 		NeedsProtin = Main.saveProtin;
 		
 	   	meals.setStyle("-fx-control-inner-background: lightgray;"); 
-		 AddedMeals.setStyle("-fx-control-inner-background: lightgray;");
+		AddedMeals.setStyle("-fx-control-inner-background: lightgray;");
 	
 		meals.getItems().addAll(Main.gym.getMeals().values());
-		meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
+		//meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
 
 		cal.setText(updatedCal + "/" + String.valueOf(Main.saveCalories));
 		cal.setTextFill(Color.RED);
@@ -65,6 +68,27 @@ public class nutritionplancontroller  implements Initializable {
 		carbs.setTextFill(Color.RED);
 		protin.setText(updatedProtin + "/" + String.valueOf(Main.saveProtin));
 		protin.setTextFill(Color.RED);
+		
+		
+		 Random random = new Random();
+		 int number = random.nextInt(4);
+		 int number2 = random.nextInt(4);
+		 int number3 = random.nextInt(4);
+		 
+		 meals.getItems().sort(Comparator.comparingDouble(Meal::getCal).reversed());
+		 
+		// interestedjoin randomcust = items.get(number);
+		 
+		 Main.meal1=  meals.getItems().get(number);
+		 meals.getItems().sort(Comparator.comparingDouble(Meal::getCarbs).reversed());
+		 Main.meal2 = meals.getItems().get(number2);
+		
+		 meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
+		Main.meal3 = meals.getItems().get(number3);
+	
+		
+			meals.getItems().clear();
+			meals.getItems().addAll(Main.gym.getMeals().values());
 		
 		
 		
