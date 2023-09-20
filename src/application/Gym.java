@@ -1,6 +1,7 @@
 package application;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 
@@ -19,6 +20,8 @@ public class Gym implements Serializable {
 	private HashMap<Integer, Meal>  meals;
 	
 	private HashMap<Integer, music> music;
+	ArrayList<exercise> muscleBuilding3days;
+	ArrayList<exercise> Weightlose3daya;
 	
 
 	public static Gym getInstance()
@@ -39,6 +42,28 @@ public class Gym implements Serializable {
 		
 	}
 	
+	
+	
+	public ArrayList<exercise> getMuscleBuilding3days() {
+//	muscleBuilding3days = new ArrayList<exercise>();
+//		Main.update();
+		return muscleBuilding3days;
+	}
+
+	public void setMuscleBuilding3days(ArrayList<exercise> muscleBuilding3days) {
+		this.muscleBuilding3days = muscleBuilding3days;
+	}
+
+	public ArrayList<exercise> getWeightlose3daya() {
+		//Weightlose3daya = new ArrayList<exercise>();
+		//Main.update();
+		return Weightlose3daya;
+	}
+
+	public void setWeightlose3daya(ArrayList<exercise> weightlose3daya) {
+		Weightlose3daya = weightlose3daya;
+	}
+
 	public HashMap<Integer, Customer> getCustomers() {
 		return customers;
 	}

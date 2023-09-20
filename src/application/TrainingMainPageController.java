@@ -25,11 +25,9 @@ import javafx.stage.Stage;
 
 public class TrainingMainPageController implements Initializable {
 	
-	 // set combobox in the genders
+	 
  
-	
-	
-	
+
 	 @FXML
 	    private ComboBox<String> BudyGoal;
 	 @FXML
@@ -39,7 +37,7 @@ public class TrainingMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		ObservableList<String> list = FXCollections.observableArrayList("Muscle Strengthening","Muscle Building","Muscle Toning","Weight Loss");
+		ObservableList<String> list = FXCollections.observableArrayList("Muscle Building","Weight Loss");
 		BudyGoal.setItems(list);
 		ObservableList<String> list2 = FXCollections.observableArrayList("3 Days","4 Days","5 Days");
 		howManyDays.setItems(list2);
@@ -48,15 +46,80 @@ public class TrainingMainPageController implements Initializable {
 	
 	
 	public void goToPlan(ActionEvent event) throws IOException {
+		if(BudyGoal.getValue() == "Muscle Building" && howManyDays.getValue() == "3 Days") {
+			Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding3Days.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setTitle("Time To Training");
+		    primaryStage.setScene(scene);
+		    primaryStage.show();
+			
+		}
+		if(BudyGoal.getValue() == "Muscle Building" && howManyDays.getValue() == "4 Days") {
+			Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding4Days.fxml"));
+		    Scene scene = new Scene(root,800,466);
+		    Image icon = new Image("/Images/icon.png");
+		    primaryStage.getIcons().add(icon);
+		    primaryStage.setTitle("Time To Training");
+		    primaryStage.setScene(scene);
+		    primaryStage.show();
+			
+		}
+		if(BudyGoal.getValue() == "Muscle Building" && howManyDays.getValue() == "5 Days") {
+			
+				Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+			    Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding5Days.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setTitle("Time To Training");
+			    primaryStage.setScene(scene);
+			    primaryStage.show();
+			
+			
+		}
 		
 		if(BudyGoal.getValue() == "Weight Loss" && howManyDays.getValue() == "3 Days") {
-			Parent root = FXMLLoader.load(getClass().getResource("wieghtLose3Days.fxml"));
-			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
-				Scene cn = new Scene(root);
-				st.setScene(cn);
-				st.show();
 			
-		}		
+				
+				Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+			    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose3Days.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setTitle("Time To Training");
+			    primaryStage.setScene(scene);
+			    primaryStage.show();
+			
+		}	
+		if(BudyGoal.getValue() == "Weight Loss" && howManyDays.getValue() == "4 Days") {
+			
+				
+				Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+			    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose4Days.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setTitle("Time To Training");
+			    primaryStage.setScene(scene);
+			    primaryStage.show();	
+			
+		}	
+		if(BudyGoal.getValue() == "Weight Loss" && howManyDays.getValue() == "5 Days") {
+		
+				Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+			    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose5Days.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setTitle("Time To Training");
+			    primaryStage.setScene(scene);
+			    primaryStage.show();
+			
+		}	
 	}
 	
 	public void back(ActionEvent event) throws IOException{
@@ -66,7 +129,6 @@ public class TrainingMainPageController implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
 		    primaryStage.show();
 	 }
 	

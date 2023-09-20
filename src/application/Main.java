@@ -20,9 +20,10 @@ import javafx.scene.media.MediaPlayer;
 
 
 public class Main extends Application implements Serializable {
+	public static String category;
 	
 	public static Gym gym;
-	
+	public static String saveperviospage;
 	private static final long serialVersionUID = 1L;
 	public static MediaPlayer saveMediaPlayer; /* to mute with sound after going to another page */
 	public static Customer saveCustomer;   /* to know who is the customer now */
