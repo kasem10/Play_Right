@@ -32,7 +32,7 @@ public class ManagerMainPageController implements Initializable {
 				st.show();
 		}
 	   public void Addexercise(ActionEvent event) throws IOException{
-			 Parent root = FXMLLoader.load(getClass().getResource("TrainingMainPage.fxml"));
+			 Parent root = FXMLLoader.load(getClass().getResource("addexercise.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
 				st.setScene(cn);

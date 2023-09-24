@@ -20,7 +20,16 @@ public class Gym implements Serializable {
 	private HashMap<Integer, Meal>  meals;
 	
 	private HashMap<Integer, music> music;
-	ArrayList<exercise> muscleBuilding3days;
+	
+	
+	
+	 HashMap<Integer, ArrayList<exercise>> mb3;
+	 HashMap<Integer, ArrayList<exercise>> mb4;
+	 HashMap<Integer, ArrayList<exercise>> mb5;
+	
+	
+	
+	
 	ArrayList<exercise> Weightlose3daya;
 	
 
@@ -44,19 +53,10 @@ public class Gym implements Serializable {
 	
 	
 	
-	public ArrayList<exercise> getMuscleBuilding3days() {
-//	muscleBuilding3days = new ArrayList<exercise>();
-//		Main.update();
-		return muscleBuilding3days;
-	}
-
-	public void setMuscleBuilding3days(ArrayList<exercise> muscleBuilding3days) {
-		this.muscleBuilding3days = muscleBuilding3days;
-	}
+	
 
 	public ArrayList<exercise> getWeightlose3daya() {
-		//Weightlose3daya = new ArrayList<exercise>();
-		//Main.update();
+		
 		return Weightlose3daya;
 	}
 
@@ -90,6 +90,36 @@ public class Gym implements Serializable {
 	}
 	
 	public HashMap<Integer, music> getMusic() {
+		
+		
+		
+		 mb3  = new HashMap<>();
+		 mb4 = new HashMap<>() ; 
+		 mb5 = new HashMap<>();
+		 
+		 ArrayList<exercise> exerciseList = mb3.get(1);
+		 if (exerciseList == null) {
+		     // The ArrayList for key 1 doesn't exist, create it
+		     exerciseList = new ArrayList<>();
+		     mb3.put(1, exerciseList);
+		 }
+		 ArrayList<exercise> exerciseList2 = mb3.get(2);
+		 if (exerciseList2 == null) {
+		     // The ArrayList for key 1 doesn't exist, create it
+		     exerciseList2 = new ArrayList<>();
+		     mb3.put(2, exerciseList2);
+		 }
+		 ArrayList<exercise> exerciseList3 = mb3.get(3);
+		 if (exerciseList3 == null) {
+		     // The ArrayList for key 1 doesn't exist, create it
+		     exerciseList3 = new ArrayList<>();
+		     mb3.put(3, exerciseList3);
+		 }
+		 
+		 Main.update();
+		 
+		 
+		
 		
 		return music;
 	}
@@ -149,6 +179,29 @@ public class Gym implements Serializable {
 		}
 
   	 return getMusic().put(music.getId(), music) ==null;
+    	
+    }
+    
+ public boolean addex(exercise ex, String goal , int day) {
+	 
+	 
+	
+
+	 
+	 
+    	if(goal.equals("mb3")) {
+    		
+    		mb3.get(day).add(ex);
+    	}
+    	if(goal.equals("mb4")) {
+    		mb4.get(day).add(ex);
+    	}
+    	if(goal.equals("mb5")) {
+    		mb5.get(day).add(ex);
+    	}
+    
+
+  	 return true;
     	
     }
     public boolean removemusic(music music) {

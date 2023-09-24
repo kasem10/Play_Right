@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -19,12 +20,14 @@ import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
 public class weightLose3TrainingController implements Initializable {
+	
 	/**
 	 * 
 	 */
 
 	
-	
+	@FXML
+    private Label numberOfEx;
 	int x=0;;
 	
 	
@@ -39,22 +42,59 @@ public class weightLose3TrainingController implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
+	numberOfEx.setText("excercise 0/" );
+		
 		
 		
 		
 
 		
-	if(Main.saveperviospage == "MB3") {
+	if(Main.saveperviospage == "MB3day1") {
 		workedone.clear();
-		workedone.addAll(Main.gym.getMuscleBuilding3days());	
+		workedone.addAll(Main.gym.mb3.get(1));	
 	}
-	if(Main.saveperviospage == "WL3") {
+	if(Main.saveperviospage == "MB3day2") {
 		workedone.clear();
-		workedone.addAll(Main.gym.getWeightlose3daya());	
+		workedone.addAll(Main.gym.mb3.get(2));	
+	}
+	if(Main.saveperviospage == "MB3day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb3.get(3));	
 	}
 	
+	
+	
+	if(Main.saveperviospage == "MB4day1") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb4.get(1));	
+	}
+	if(Main.saveperviospage == "MB4day2") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb4.get(2));	
+	}
+	if(Main.saveperviospage == "MB4day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb4.get(3));	
+	}
+	if(Main.saveperviospage == "MB4day4") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb4.get(4));	
+	}
+	
+	
+	
+	
+	if(Main.saveperviospage == "WL3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.getWeightlose3daya());
+		
+		
+	}
+	
+	 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
+	
 	  String firstone = workedone.get(0).path;
-		Media media = new Media(getClass().getResource("/Images/"+firstone ).toString());
+		Media media = new Media(getClass().getResource("/exercises/"+firstone ).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
 		player.setVolume(0.0);
@@ -68,9 +108,12 @@ public class weightLose3TrainingController implements Initializable {
 	}
 	
 	public void next(ActionEvent event) throws IOException {
+		
+	
 		x++;
+		 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
 		String worked = workedone.get(x).path;
-		Media media = new Media(getClass().getResource("/Images/" +worked).toString());
+		Media media = new Media(getClass().getResource("/exercises/" +worked).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
 		player.setVolume(0.0);
@@ -82,9 +125,10 @@ public void back1(ActionEvent event) throws IOException {
 	if(x>0) {
 		x--;
 	}
+	 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
 
 	   String worked = workedone.get(x).path;
-		Media media = new Media(getClass().getResource("/Images/"+worked).toString());
+		Media media = new Media(getClass().getResource("/exercises/"+worked).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
 		player.setVolume(0.0);
@@ -109,7 +153,7 @@ public void back(ActionEvent event) throws IOException{
 		page="MuscleBuilding3Days.fxml";
 	}
 	if(Main.category == "MB4") {
-		page="MuscleBuilding3Days.fxml";
+		page="MuscleBuilding4Days.fxml";
 	}
 	if(Main.category == "MB5") {
 		page="MuscleBuilding3Days.fxml";

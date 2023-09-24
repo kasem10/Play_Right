@@ -16,15 +16,15 @@
       </ImageView>
       <Label layoutX="42.0" layoutY="236.0" prefHeight="37.0" prefWidth="78.0" text="day 3" />
       <Label layoutX="133.0" layoutY="66.0" text="legs and shulders" />
-      <Button layoutX="306.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToexercises" prefHeight="62.0" prefWidth="231.0" text="Day 1 ">
+      <Button layoutX="306.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToexercisesday1" prefHeight="62.0" prefWidth="231.0" text="Day 1 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></Button>
-      <Button layoutX="306.0" layoutY="221.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="231.0" text="Day 2 ">
+      <Button layoutX="306.0" layoutY="221.0" mnemonicParsing="false" onAction="#goToexercisesday2" prefHeight="61.0" prefWidth="231.0" text="Day 2 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></Button>
-      <Button layoutX="306.0" layoutY="326.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="231.0" text="Day 3 ">
+      <Button layoutX="306.0" layoutY="326.0" mnemonicParsing="false" onAction="#goToexercisesday3" prefHeight="61.0" prefWidth="231.0" text="Day 3 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

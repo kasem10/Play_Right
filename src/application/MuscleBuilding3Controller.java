@@ -23,11 +23,11 @@ public class MuscleBuilding3Controller implements Initializable {
 	}
 	
 	
-public void goToexercises(ActionEvent event) throws IOException {
+public void goToexercisesday1(ActionEvent event) throws IOException {
 	
 	
 	    Main.category="MB3";
-	    Main.saveperviospage = "MB3";
+	    Main.saveperviospage = "MB3day1";
 	    Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 	    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose3DaysTrainig.fxml"));
 	    Scene scene = new Scene(root,800,466);
@@ -35,10 +35,36 @@ public void goToexercises(ActionEvent event) throws IOException {
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
 	    primaryStage.setTitle("SignUp");
-	    primaryStage.show();
-		
-		
-			
+	    primaryStage.show();		
+}
+
+public void goToexercisesday2(ActionEvent event) throws IOException {
+	
+	
+    Main.category="MB3";
+    Main.saveperviospage = "MB3day2";
+    Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose3DaysTrainig.fxml"));
+    Scene scene = new Scene(root,800,466);
+    Image icon = new Image("/Images/icon.png");
+    primaryStage.getIcons().add(icon);
+    primaryStage.setScene(scene);
+    primaryStage.setTitle("SignUp");
+    primaryStage.show();		
+}
+public void goToexercisesday3(ActionEvent event) throws IOException {
+	
+	
+    Main.category="MB3";
+    Main.saveperviospage = "MB3day3";
+    Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+    Parent root = FXMLLoader.load(getClass().getResource("wieghtLose3DaysTrainig.fxml"));
+    Scene scene = new Scene(root,800,466);
+    Image icon = new Image("/Images/icon.png");
+    primaryStage.getIcons().add(icon);
+    primaryStage.setScene(scene);
+    primaryStage.setTitle("SignUp");
+    primaryStage.show();		
 }
 
 public void back(ActionEvent event) throws IOException{
