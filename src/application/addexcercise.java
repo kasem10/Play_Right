@@ -34,7 +34,7 @@ public class addexcercise implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		ObservableList<String> list = FXCollections.observableArrayList("mb3","mb4","mb5");
+		ObservableList<String> list = FXCollections.observableArrayList("mb3","mb4","mb5","wl3","wl4","wl5");
 		type.setItems(list);
 		
 

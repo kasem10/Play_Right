@@ -26,6 +26,11 @@ public class Gym implements Serializable {
 	 HashMap<Integer, ArrayList<exercise>> mb3;
 	 HashMap<Integer, ArrayList<exercise>> mb4;
 	 HashMap<Integer, ArrayList<exercise>> mb5;
+	 
+	 
+	 HashMap<Integer, ArrayList<exercise>> wl3;
+	 HashMap<Integer, ArrayList<exercise>> wl4;
+	 HashMap<Integer, ArrayList<exercise>> wl5;
 	
 	
 	
@@ -93,32 +98,45 @@ public class Gym implements Serializable {
 		
 		
 		
-		 mb3  = new HashMap<>();
-		 mb4 = new HashMap<>() ; 
-		 mb5 = new HashMap<>();
+	/*	 wl3  = new HashMap<>();
+		 wl4 = new HashMap<>() ; 
+		 wl5 = new HashMap<>();
 		 
-		 ArrayList<exercise> exerciseList = mb3.get(1);
+		 
+		 ArrayList<exercise> exerciseList = wl5.get(1);
 		 if (exerciseList == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList = new ArrayList<>();
-		     mb3.put(1, exerciseList);
+		     wl5.put(1, exerciseList);
 		 }
-		 ArrayList<exercise> exerciseList2 = mb3.get(2);
+		 ArrayList<exercise> exerciseList2 = wl5.get(2);
 		 if (exerciseList2 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList2 = new ArrayList<>();
-		     mb3.put(2, exerciseList2);
+		     wl5.put(2, exerciseList2);
 		 }
-		 ArrayList<exercise> exerciseList3 = mb3.get(3);
+		 ArrayList<exercise> exerciseList3 = wl5.get(3);
 		 if (exerciseList3 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList3 = new ArrayList<>();
-		     mb3.put(3, exerciseList3);
+		     wl5.put(3, exerciseList3);
+		 }
+		 ArrayList<exercise> exerciseList4 = wl5.get(4);
+		 if (exerciseList4 == null) {
+		     // The ArrayList for key 1 doesn't exist, create it
+		     exerciseList4 = new ArrayList<>();
+		     wl5.put(4, exerciseList4);
+		 }
+		 ArrayList<exercise> exerciseList5 = wl5.get(5);
+		 if (exerciseList5 == null) {
+		     // The ArrayList for key 1 doesn't exist, create it
+		     exerciseList5 = new ArrayList<>();
+		     wl5.put(5, exerciseList5);
 		 }
 		 
 		 Main.update();
 		 
-		 
+		 */
 		
 		
 		return music;
@@ -183,12 +201,7 @@ public class Gym implements Serializable {
     }
     
  public boolean addex(exercise ex, String goal , int day) {
-	 
-	 
-	
-
-	 
-	 
+	 	 
     	if(goal.equals("mb3")) {
     		
     		mb3.get(day).add(ex);
@@ -198,6 +211,17 @@ public class Gym implements Serializable {
     	}
     	if(goal.equals("mb5")) {
     		mb5.get(day).add(ex);
+    	}
+    	
+        if(goal.equals("wl3")) {
+    		
+    		wl3.get(day).add(ex);
+    	}
+    	if(goal.equals("wl4")) {
+    		wl4.get(day).add(ex);
+    	}
+    	if(goal.equals("wl5")) {
+    		wl5.get(day).add(ex);
     	}
     
 

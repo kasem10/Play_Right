@@ -16,15 +16,15 @@
       </ImageView>
       <Label layoutX="42.0" layoutY="236.0" prefHeight="37.0" prefWidth="78.0" text="day 3" />
       <Label layoutX="133.0" layoutY="66.0" text="legs and shulders" />
-      <Button layoutX="305.0" layoutY="80.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" text="Day 1 ">
+      <Button layoutX="305.0" layoutY="80.0" mnemonicParsing="false" onAction="#goToexercisesday1" prefHeight="50.0" prefWidth="231.0" text="Day 1 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></Button>
-      <Button layoutX="306.0" layoutY="156.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" text="Day 2 ">
+      <Button layoutX="306.0" layoutY="156.0" mnemonicParsing="false" onAction="#goToexercisesday2" prefHeight="50.0" prefWidth="231.0" text="Day 2 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font></Button>
-      <Button layoutX="306.0" layoutY="233.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" text="Day 3 ">
+      <Button layoutX="306.0" layoutY="233.0" mnemonicParsing="false" onAction="#goToexercisesday3" prefHeight="50.0" prefWidth="231.0" text="Day 3 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
@@ -44,12 +44,12 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="306.0" layoutY="390.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" text="Day 5 ">
+      <Button layoutX="306.0" layoutY="390.0" mnemonicParsing="false" onAction="#goToexercisesday5" prefHeight="50.0" prefWidth="231.0" text="Day 5 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="306.0" layoutY="310.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="231.0" text="Day 4 ">
+      <Button layoutX="306.0" layoutY="310.0" mnemonicParsing="false" onAction="#goToexercisesday4" prefHeight="50.0" prefWidth="231.0" text="Day 4 ">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

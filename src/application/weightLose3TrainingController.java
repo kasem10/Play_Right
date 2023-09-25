@@ -83,13 +83,87 @@ public class weightLose3TrainingController implements Initializable {
 	
 	
 	
-	
-	if(Main.saveperviospage == "WL3") {
+	if(Main.saveperviospage == "MB5day1") {
 		workedone.clear();
-		workedone.addAll(Main.gym.getWeightlose3daya());
-		
-		
+		workedone.addAll(Main.gym.mb5.get(1));	
 	}
+	if(Main.saveperviospage == "MB5day2") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb5.get(2));	
+	}
+	if(Main.saveperviospage == "MB5day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb5.get(3));	
+	}
+	if(Main.saveperviospage == "MB5day4") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb5.get(4));	
+	}
+	if(Main.saveperviospage == "MB5day5") {
+		workedone.clear();
+		workedone.addAll(Main.gym.mb5.get(5));	
+	}
+	
+	
+	
+	
+	if(Main.saveperviospage == "WL3day1") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl3.get(1));
+	}
+	if(Main.saveperviospage == "WL3day2") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl3.get(2));
+	}
+	if(Main.saveperviospage == "WL3day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl3.get(3));
+	}
+	
+	
+	if(Main.saveperviospage == "WL4day1") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl4.get(1));
+	}
+	if(Main.saveperviospage == "WL4day2") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl4.get(2));
+	}
+	if(Main.saveperviospage == "WL4day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl4.get(3));
+	}
+	if(Main.saveperviospage == "WL4day4") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl4.get(3));
+	}
+	
+	
+	
+	
+	
+	if(Main.saveperviospage == "WL5day1") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl5.get(1));
+	}
+	if(Main.saveperviospage == "WL5day2") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl5.get(2));
+	}
+	if(Main.saveperviospage == "WL5day3") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl5.get(3));
+	}
+	if(Main.saveperviospage == "WL5day4") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl5.get(4));
+	}
+	if(Main.saveperviospage == "WL5day5") {
+		workedone.clear();
+		workedone.addAll(Main.gym.wl5.get(5));
+	}
+	
+	
 	
 	 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
 	
