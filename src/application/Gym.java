@@ -102,41 +102,43 @@ public class Gym implements Serializable {
 		 wl4 = new HashMap<>() ; 
 		 wl5 = new HashMap<>();
 		 
+		 mb5 = new HashMap<>();
 		 
-		 ArrayList<exercise> exerciseList = wl5.get(1);
+		 
+		 ArrayList<exercise> exerciseList = mb5.get(1);
 		 if (exerciseList == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList = new ArrayList<>();
-		     wl5.put(1, exerciseList);
+		     mb5.put(1, exerciseList);
 		 }
-		 ArrayList<exercise> exerciseList2 = wl5.get(2);
+		 ArrayList<exercise> exerciseList2 = mb5.get(2);
 		 if (exerciseList2 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList2 = new ArrayList<>();
-		     wl5.put(2, exerciseList2);
+		     mb5.put(2, exerciseList2);
 		 }
-		 ArrayList<exercise> exerciseList3 = wl5.get(3);
+		 ArrayList<exercise> exerciseList3 = mb5.get(3);
 		 if (exerciseList3 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList3 = new ArrayList<>();
-		     wl5.put(3, exerciseList3);
+		     mb5.put(3, exerciseList3);
 		 }
-		 ArrayList<exercise> exerciseList4 = wl5.get(4);
+		 ArrayList<exercise> exerciseList4 = mb5.get(4);
 		 if (exerciseList4 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList4 = new ArrayList<>();
-		     wl5.put(4, exerciseList4);
+		     mb5.put(4, exerciseList4);
 		 }
-		 ArrayList<exercise> exerciseList5 = wl5.get(5);
+		 ArrayList<exercise> exerciseList5 = mb5.get(5);
 		 if (exerciseList5 == null) {
 		     // The ArrayList for key 1 doesn't exist, create it
 		     exerciseList5 = new ArrayList<>();
-		     wl5.put(5, exerciseList5);
+		     mb5.put(5, exerciseList5);
 		 }
 		 
-		 Main.update();
+		 Main.update();  */
 		 
-		 */
+		 
 		
 		
 		return music;
