@@ -28,7 +28,11 @@ public class weightLose3TrainingController implements Initializable {
 	
 	@FXML
     private Label numberOfEx;
-	int x=0;;
+	 @FXML
+	    private Label desc;
+	int x=0;
+	int y=0;
+	
 	
 	
 	
@@ -163,11 +167,13 @@ public class weightLose3TrainingController implements Initializable {
 		workedone.addAll(Main.gym.wl5.get(5));
 	}
 	
+	 y = x+1;
 	
-	
-	 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
+	 numberOfEx.setText("excercise "+ y + "/" + workedone.size());
 	
 	  String firstone = workedone.get(0).path;
+	    desc.setText(workedone.get(0).desc);
+	    System.out.println(workedone.get(x).desc);
 		Media media = new Media(getClass().getResource("/exercises/"+firstone ).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
@@ -183,10 +189,16 @@ public class weightLose3TrainingController implements Initializable {
 	
 	public void next(ActionEvent event) throws IOException {
 		
-	
+
 		x++;
-		 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
+		if(x == workedone.size()) {
+			x=0;
+		}
+		y=x+1;
+		 numberOfEx.setText("excercise "+ y + "/" + workedone.size());
 		String worked = workedone.get(x).path;
+		System.out.println(workedone.get(x).desc);
+		desc.setText(workedone.get(x).desc);
 		Media media = new Media(getClass().getResource("/exercises/" +worked).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
@@ -198,10 +210,12 @@ public void back1(ActionEvent event) throws IOException {
 	
 	if(x>0) {
 		x--;
+		y=x+1;
 	}
-	 numberOfEx.setText("excercise "+ x + "/" + workedone.size());
+	 numberOfEx.setText("excercise "+ y + "/" + workedone.size());
 
 	   String worked = workedone.get(x).path;
+	   desc.setText(workedone.get(x).desc);
 		Media media = new Media(getClass().getResource("/exercises/"+worked).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
@@ -230,7 +244,7 @@ public void back(ActionEvent event) throws IOException{
 		page="MuscleBuilding4Days.fxml";
 	}
 	if(Main.category == "MB5") {
-		page="MuscleBuilding3Days.fxml";
+		page="MuscleBuilding5Days.fxml";
 	}
 	 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
 	    Parent root = FXMLLoader.load(getClass().getResource(page));

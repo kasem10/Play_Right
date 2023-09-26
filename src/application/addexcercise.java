@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 public class addexcercise implements Initializable {
 	
 	@FXML
-	TextField name, path;
+	TextField name, path , desc;
 	 @FXML
 	    private ComboBox<String> type;
 
@@ -50,7 +50,7 @@ public class addexcercise implements Initializable {
 	
 	public void submitaddex (ActionEvent event) throws IOException {
 			
-		exercise ex = new exercise(name.getText(),path.getText());
+		exercise ex = new exercise(name.getText(),path.getText() , desc.getText());
 		Main.gym.addex(ex, type.getValue(),day.getValue());
 		
 	//System.out.println(Main.gym.mb3.values());

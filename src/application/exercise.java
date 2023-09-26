@@ -14,15 +14,24 @@ public class exercise implements Serializable {
 	private static int idcounter=1;
 	String name;
 	String path;
-	
+	String desc;
 	
 	
 
-	public exercise(String name, String path) {
+	public exercise(String name, String path ,String desc ) {
 		super();
 		this.id = idcounter++;
 		this.name = name;
 		this.path = path;
+		this.desc=desc;
+	}
+	
+	public String getDesc() {
+		return desc;
+	}
+
+	public void setDesc(String desc) {
+		this.desc = desc;
 	}
 
 	public int getId() {

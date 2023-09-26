@@ -96,6 +96,8 @@ public class Gym implements Serializable {
 	
 	public HashMap<Integer, music> getMusic() {
 		
+		mb3.get(2).remove(10);
+		Main.update();
 		
 		
 	/*	 wl3  = new HashMap<>();
