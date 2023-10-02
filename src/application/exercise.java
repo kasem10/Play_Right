@@ -60,8 +60,12 @@ public class exercise implements Serializable {
 
 	@Override
 	public String toString() {
-		return "exercise [name=" + name + "]";
+		return "exercise [path=" + path + "]";
 	}
+
+	
+
+	
 	
 	
 	

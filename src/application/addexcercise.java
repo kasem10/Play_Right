@@ -37,14 +37,28 @@ public class addexcercise implements Initializable {
 		ObservableList<String> list = FXCollections.observableArrayList("mb3","mb4","mb5","wl3","wl4","wl5");
 		type.setItems(list);
 		
-
-		ObservableList<Integer> list2 = FXCollections.observableArrayList(1,2,3,4,5);
-		day.setItems(list2);
 		// TODO Auto-generated method stub
 		
 	}
+	public void fillcombobox (ActionEvent event) throws IOException {
+		if(type.getValue() == "mb3"  || type.getValue() == "wl3" ) {
+			day.getItems().clear();
+			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3);
+			day.setItems(list3);
+		}
+		if(type.getValue() == "mb4"  || type.getValue() == "wl4" ) {
+			day.getItems().clear();
+			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3,4);
+			day.setItems(list3);
+		}
+		if(type.getValue() == "mb5"  || type.getValue() == "wl5" ) {
+			day.getItems().clear();
+			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3,4,5);
+			day.setItems(list3);
+		}
 	
 	
+	}
 	
 	
 	

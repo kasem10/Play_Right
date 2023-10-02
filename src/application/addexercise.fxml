@@ -47,7 +47,7 @@
       </Label>
       <TextField fx:id="name" layoutX="288.0" layoutY="134.0" prefHeight="36.0" prefWidth="348.0" />
       <TextField fx:id="path" layoutX="288.0" layoutY="189.0" prefHeight="36.0" prefWidth="348.0" />
-      <ComboBox fx:id="type" layoutX="288.0" layoutY="308.0" prefWidth="150.0" />
+      <ComboBox fx:id="type" layoutX="288.0" layoutY="308.0" onAction="#fillcombobox" prefWidth="150.0" />
       <ComboBox fx:id="day" layoutX="288.0" layoutY="355.0" prefWidth="150.0" />
       <TextField fx:id="desc" layoutX="288.0" layoutY="244.0" prefHeight="37.0" prefWidth="348.0" />
       <Label alignment="CENTER" layoutX="166.0" layoutY="247.0" prefHeight="30.0" prefWidth="124.0" text="desc">

@@ -232,6 +232,35 @@ public class Gym implements Serializable {
   	 return true;
     	
     }
+ 
+ public boolean removeex(exercise ex, String goal ,String plan, int day) {
+ 	 
+ 	if(goal.equals("Muscle Building") && plan.equals("3 Days")) {
+ 		mb3.get(day).remove(ex);
+ 	}
+ 	
+ 	if(goal.equals("mb4") && plan.equals("4 Days")) {
+ 		mb4.get(day).remove(ex);
+ 	}
+ 	if(goal.equals("mb5") && plan.equals("5 Days")) {
+ 		mb5.get(day).remove(ex);
+ 	}
+ 	
+     if(goal.equals("wl3")&& plan.equals("3 Days") ) {
+ 		
+ 		wl3.get(day).remove(ex);
+ 	}
+ 	if(goal.equals("wl4")&& plan.equals("4 Days")) {
+ 		wl4.get(day).remove(ex);
+ 	}
+ 	if(goal.equals("wl5") && plan.equals("5 Days")) {
+ 		wl5.get(day).remove(ex);
+ 	}
+ 
+
+	 return true;
+ 	
+ }
     public boolean removemusic(music music) {
 		if(music == null || !getMusic().containsKey(music.getId()))
 			return false;
