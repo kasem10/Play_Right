@@ -27,6 +27,9 @@ public class ManageMeals implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		meals.setStyle("-fx-control-inner-background: lightgray;");
+		
 		meals.getItems().addAll(Main.gym.getMeals().values());
 		// TODO Auto-generated method stub
 		
@@ -66,7 +69,7 @@ public class ManageMeals implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		    primaryStage.setTitle("manager");
 		    primaryStage.show();
 	 }
 

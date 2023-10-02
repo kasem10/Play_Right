@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 public class TrainingMainPageController implements Initializable {
@@ -33,10 +34,12 @@ public class TrainingMainPageController implements Initializable {
 	 @FXML
 	    private ComboBox<String> howManyDays;
 	
-	
+	 
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		
 		ObservableList<String> list = FXCollections.observableArrayList("Muscle Building","Weight Loss");
 		BudyGoal.setItems(list);
 		ObservableList<String> list2 = FXCollections.observableArrayList("3 Days","4 Days","5 Days");

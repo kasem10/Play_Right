@@ -99,7 +99,7 @@ public class joinFreinds implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		    primaryStage.setTitle("CustomerMainPage");
 		    primaryStage.show();
 	 }
 

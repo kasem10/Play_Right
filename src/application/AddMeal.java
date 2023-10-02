@@ -70,7 +70,7 @@ public class AddMeal  {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		    primaryStage.setTitle("ManageMeals");
 		    primaryStage.show();
 	 }
 	

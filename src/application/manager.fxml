@@ -14,12 +14,12 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="314.0" layoutY="109.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="91.0" prefWidth="234.0" text="Manage Training">
+      <Button layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="91.0" prefWidth="206.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="314.0" layoutY="228.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="91.0" prefWidth="234.0" text="Manage Meals">
+      <Button layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="91.0" prefWidth="206.0" text="Manage Meals">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font></Button>
@@ -38,12 +38,12 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="314.0" layoutY="344.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="91.0" prefWidth="234.0" text="Manage Music">
+      <Button layoutX="427.0" layoutY="265.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="91.0" prefWidth="206.0" text="Manage Music">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="149.0" layoutY="233.0" mnemonicParsing="false" onAction="#tracking" prefHeight="91.0" prefWidth="141.0" text="Tracking">
+      <Button layoutX="169.0" layoutY="265.0" mnemonicParsing="false" onAction="#tracking" prefHeight="91.0" prefWidth="206.0" text="Members Track">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>

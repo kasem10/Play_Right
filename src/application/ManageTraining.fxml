@@ -16,7 +16,7 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <ListView fx:id="training" layoutX="134.0" layoutY="185.0" prefHeight="210.0" prefWidth="535.0" />
+      <ListView fx:id="training" layoutX="134.0" layoutY="179.0" prefHeight="210.0" prefWidth="535.0" />
       <Label alignment="CENTER" layoutX="281.0" layoutY="14.0" prefHeight="20.0" prefWidth="237.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="24.0" />
@@ -40,9 +40,12 @@
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="BudyGoal" layoutX="175.0" layoutY="72.0" prefWidth="150.0" />
-      <ComboBox fx:id="howManyDays" layoutX="444.0" layoutY="72.0" onAction="#fillcombobox" prefWidth="150.0" />
-      <Button layoutX="363.0" layoutY="128.0" mnemonicParsing="false" onAction="#show" text="show" />
-      <ComboBox fx:id="days" layoutX="475.0" layoutY="116.0" prefWidth="150.0" />
+      <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" />
+      <ComboBox fx:id="howManyDays" layoutX="335.0" layoutY="82.0" onAction="#fillcombobox" prefWidth="150.0" />
+      <Button layoutX="380.0" layoutY="131.0" mnemonicParsing="false" onAction="#show" text="show">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <ComboBox fx:id="days" layoutX="535.0" layoutY="82.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

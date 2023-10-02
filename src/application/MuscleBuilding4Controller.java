@@ -33,7 +33,7 @@ public void goToexercisesday1(ActionEvent event) throws IOException {
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    
 	    primaryStage.show();
 			
 }
@@ -48,7 +48,7 @@ public void goToexercisesday2(ActionEvent event) throws IOException {
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    
 	    primaryStage.show();
 			
 }
@@ -62,7 +62,7 @@ public void goToexercisesday3(ActionEvent event) throws IOException {
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    
 	    primaryStage.show();
 			
 }
@@ -76,7 +76,7 @@ public void goToexercisesday4(ActionEvent event) throws IOException {
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    
 	    primaryStage.show();
 			
 }
@@ -87,7 +87,7 @@ public void back(ActionEvent event) throws IOException{
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    primaryStage.setTitle("TrainingMainPage");
 	    primaryStage.show();
 }
 

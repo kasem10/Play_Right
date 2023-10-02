@@ -27,6 +27,9 @@ public class TrackingCustomers implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		customers.setStyle("-fx-control-inner-background: lightgray;");
+		
 		customers.getItems().addAll(Main.gym.getCustomers().values());
 		
 	}
@@ -41,7 +44,7 @@ public class TrackingCustomers implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		    primaryStage.setTitle("manager");
 		    primaryStage.show();
 	 }
 

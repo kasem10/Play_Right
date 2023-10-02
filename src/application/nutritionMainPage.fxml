@@ -72,8 +72,17 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Label layoutX="350.0" layoutY="182.0" text="(in years)" />
-      <Label layoutX="351.0" layoutY="214.0" text="(in cm)" />
-      <Label layoutX="351.0" layoutY="252.0" text="(in Kg)" />
+      <Label layoutX="350.0" layoutY="182.0" text="(in years)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="351.0" layoutY="214.0" text="(in cm)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="351.0" layoutY="252.0" text="(in Kg)">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
    </children>
 </AnchorPane>

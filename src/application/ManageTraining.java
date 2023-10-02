@@ -44,6 +44,10 @@ public class ManageTraining implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		
+		training.setStyle("-fx-control-inner-background: lightgray;");
+		
 		ObservableList<String> list = FXCollections.observableArrayList("Muscle Building","Weight Loss");
 		BudyGoal.setItems(list);
 		ObservableList<String> list2 = FXCollections.observableArrayList("3 Days","4 Days","5 Days");

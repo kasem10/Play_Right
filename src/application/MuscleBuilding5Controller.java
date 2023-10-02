@@ -33,7 +33,7 @@ public class MuscleBuilding5Controller implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		    
 		    primaryStage.show();
 				
 	}
@@ -47,7 +47,7 @@ public class MuscleBuilding5Controller implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		   
 		    primaryStage.show();
 				
 	}
@@ -61,7 +61,7 @@ public class MuscleBuilding5Controller implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		   
 		    primaryStage.show();
 				
 	}
@@ -75,7 +75,7 @@ public class MuscleBuilding5Controller implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		  
 		    primaryStage.show();
 				
 	}
@@ -89,7 +89,7 @@ public class MuscleBuilding5Controller implements Initializable {
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);
 		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("SignUp");
+		   
 		    primaryStage.show();
 				
 	}
@@ -100,7 +100,7 @@ public void back(ActionEvent event) throws IOException{
 	    Image icon = new Image("/Images/icon.png");
 	    primaryStage.getIcons().add(icon);
 	    primaryStage.setScene(scene);
-	    primaryStage.setTitle("SignUp");
+	    primaryStage.setTitle("TrainingMainPage");
 	    primaryStage.show();
 }
 }
