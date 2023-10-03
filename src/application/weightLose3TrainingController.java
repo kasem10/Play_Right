@@ -173,7 +173,7 @@ public class weightLose3TrainingController implements Initializable {
 	
 	  String firstone = workedone.get(0).path;
 	    desc.setText(workedone.get(0).desc);
-	    System.out.println(workedone.get(x).desc);
+	    
 		Media media = new Media(getClass().getResource("/exercises/"+firstone ).toString());
 		player = new MediaPlayer(media);
 		player.setCycleCount(MediaPlayer.INDEFINITE);
@@ -197,7 +197,7 @@ public class weightLose3TrainingController implements Initializable {
 		y=x+1;
 		 numberOfEx.setText("excercise "+ y + "/" + workedone.size());
 		String worked = workedone.get(x).path;
-		System.out.println(workedone.get(x).desc);
+		
 		desc.setText(workedone.get(x).desc);
 		Media media = new Media(getClass().getResource("/exercises/" +worked).toString());
 		player = new MediaPlayer(media);

@@ -71,7 +71,7 @@ public class CustomerMainPageController implements Initializable {
 				st.show();
 		}
 	   public void goTraining(ActionEvent event) throws IOException{
-		System.out.println(Main.saveCustomer.toString());
+		
 			 Parent root = FXMLLoader.load(getClass().getResource("TrainingMainPage.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);

@@ -49,10 +49,15 @@
       <TextField fx:id="path" layoutX="288.0" layoutY="189.0" prefHeight="36.0" prefWidth="348.0" />
       <ComboBox fx:id="type" layoutX="288.0" layoutY="308.0" onAction="#fillcombobox" prefWidth="150.0" />
       <ComboBox fx:id="day" layoutX="288.0" layoutY="355.0" prefWidth="150.0" />
-      <TextField fx:id="desc" layoutX="288.0" layoutY="244.0" prefHeight="37.0" prefWidth="348.0" />
-      <Label alignment="CENTER" layoutX="166.0" layoutY="247.0" prefHeight="30.0" prefWidth="124.0" text="desc">
+      <TextField fx:id="desc" layoutX="288.0" layoutY="254.0" prefHeight="37.0" prefWidth="348.0" />
+      <Label alignment="CENTER" layoutX="166.0" layoutY="257.0" prefHeight="30.0" prefWidth="124.0" text="desc">
          <font>
             <Font name="System Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="275.0" layoutY="218.0" prefHeight="30.0" prefWidth="263.0" text="(*use this template: nameOfExercise.mp4)">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
          </font>
       </Label>
    </children>

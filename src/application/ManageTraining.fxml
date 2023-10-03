@@ -40,12 +40,12 @@
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" />
-      <ComboBox fx:id="howManyDays" layoutX="335.0" layoutY="82.0" onAction="#fillcombobox" prefWidth="150.0" />
+      <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="150.0" promptText="Plan Type" />
+      <ComboBox fx:id="howManyDays" layoutX="335.0" layoutY="82.0" onAction="#fillcombobox" prefWidth="150.0" promptText="How many days" />
       <Button layoutX="380.0" layoutY="131.0" mnemonicParsing="false" onAction="#show" text="show">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="days" layoutX="535.0" layoutY="82.0" prefWidth="150.0" />
+      <ComboBox fx:id="days" layoutX="535.0" layoutY="82.0" prefWidth="150.0" promptText="Day number" />
    </children>
 </AnchorPane>
