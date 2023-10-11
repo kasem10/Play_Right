@@ -113,7 +113,7 @@ public class NutritionMainPageController implements Initializable {
   			   primaryStage.setScene(scene);
   			   primaryStage.setTitle("Manager screen");
   			   primaryStage.show();
-  			 Alert aler = new Alert(AlertType.CONFIRMATION);
+  			 Alert aler = new Alert(AlertType.INFORMATION);
   			String headerText = "We have some Suggestions for you:\n"
   	                 + "First meal: " + Main.meal1.getName() + "\n"
   	                 + "Second meal: " + Main.meal2.getName() + "\n"
