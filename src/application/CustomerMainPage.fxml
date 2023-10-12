@@ -48,5 +48,10 @@
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
+      <Button layoutX="344.0" layoutY="382.0" mnemonicParsing="false" onAction="#chat" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="57.0" prefWidth="145.0" text="chat">
+         <font>
+            <Font name="System Bold Italic" size="28.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
