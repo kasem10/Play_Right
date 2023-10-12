@@ -48,7 +48,7 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="312.0" layoutY="379.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Chat">
+      <Button layoutX="312.0" layoutY="379.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
