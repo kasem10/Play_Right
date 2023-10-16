@@ -48,5 +48,6 @@
             <Image url="@../Images/sliderIcon.png" />
          </image>
       </ImageView>
+      <Button fx:id="sort" layoutX="258.0" layoutY="100.0" mnemonicParsing="false" onAction="#sortbyfav" text="Button" />
    </children>
 </AnchorPane>

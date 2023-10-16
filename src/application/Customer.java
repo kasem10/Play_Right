@@ -2,6 +2,7 @@ package application;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 
 import Utils.Gender;
@@ -20,7 +21,21 @@ public class Customer extends Person implements Serializable{
 	private double diff;
 	private String fedback;
 	private LocalDate date ;
+	private ArrayList<music> songs ; 
 	
+	public ArrayList<music> getSongs() {
+		if(songs == null) {
+			songs = new ArrayList<music>();
+		}
+		
+		return songs;
+	}
+
+	public void setSongs(ArrayList<music> songs) {
+		this.songs = songs;
+	}
+
+
 	public Customer(String firstName, String lastName, LocalDate birthDay, Gender gender,String userName, String password) {
 		super(idCounter++, firstName, lastName, birthDay, gender);
 		this.userName = userName;
