@@ -43,7 +43,7 @@ public class CustomerMainPageController implements Initializable {
 	Button findFriends;
 	
 	@FXML
-	Button music;
+	Button music, chat, questions;
 	
 
 	
@@ -104,6 +104,14 @@ public class CustomerMainPageController implements Initializable {
 				st.setScene(cn);
 				st.show();
 		}
+	   
+	   public void QuestionsAndAnswers(ActionEvent event) throws IOException{
+			 Parent root = FXMLLoader.load(getClass().getResource("QuestionsAndAnswers.fxml"));
+			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene cn = new Scene(root);
+				st.setScene(cn);
+				st.show();
+		}
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -113,6 +121,8 @@ public class CustomerMainPageController implements Initializable {
 	     nutrition.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     findFriends.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	     music.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+	     chat.setStyle("-fx-background-color: black; -fx-text-fill: white;");
+	     questions.setStyle("-fx-background-color: black; -fx-text-fill: white;");
 	          
 	
 	}

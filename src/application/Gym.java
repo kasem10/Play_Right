@@ -37,6 +37,8 @@ public class Gym implements Serializable {
 	
 	ArrayList<exercise> Weightlose3daya;
 	
+	ArrayList<Question> Questions;
+	
 
 	public static Gym getInstance()
 	{
@@ -59,6 +61,19 @@ public class Gym implements Serializable {
 	
 	
 	
+
+	public ArrayList<Question> getQuestions() {
+		
+		if(Questions == null) {
+				Questions= new ArrayList<>();
+				Main.update();
+		}
+		return Questions;
+	}
+
+	public void setQuestions(ArrayList<Question> questions) {
+		Questions = questions;
+	}
 
 	public ArrayList<exercise> getWeightlose3daya() {
 		
@@ -266,5 +281,10 @@ public class Gym implements Serializable {
 			return false;
 		return getMusic().remove(music.getId(), music);
 	}
+    
+    public boolean addQuestion(Question q) {
+  		
+  		return getQuestions().add(q);
+  	}
 
 }

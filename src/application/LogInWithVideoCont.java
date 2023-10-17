@@ -50,6 +50,8 @@ public class LogInWithVideoCont implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		
+		Main.saveCustomer=null;
+		
 		if(Main.saveMediaPlayer != null) {
 			Main.saveMediaPlayer.stop();
 		}
@@ -95,6 +97,7 @@ public class LogInWithVideoCont implements Initializable {
 		}
 		else {
 			for(Customer cust : Main.gym.getCustomers().values()) {
+				
 				if((userNameText.getText() != "") && (passwordText.getText() != "") && cust.getUserName().equals(userNameText.getText())&&cust.getPassword().equals(passwordText.getText())){
 					
 					Main.saveCustomer=cust;

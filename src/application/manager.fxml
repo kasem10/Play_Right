@@ -48,9 +48,14 @@
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="312.0" layoutY="379.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
+      <Button layoutX="169.0" layoutY="377.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
          <font>
             <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="427.0" layoutY="377.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
    </children>
