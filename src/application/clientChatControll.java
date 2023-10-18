@@ -25,6 +25,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundImage;
+import javafx.scene.layout.BackgroundPosition;
+import javafx.scene.layout.BackgroundRepeat;
+import javafx.scene.layout.BackgroundSize;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -81,7 +87,7 @@ public class clientChatControll implements Initializable {
 
     private static final int SERVER_PORT = 8000;
     
-    public void send(ActionEvent event) throws IOException{
+    public void send(MouseEvent Action) throws IOException{
     	 String temp = identifier + ";" + clientMessage.getText(); // message to send
     	 viewChat.setText(viewChat.getText() + clientMessage.getText() + "\n"); // update messages on screen
          byte[] msg = temp.getBytes(); // convert to bytes
@@ -114,6 +120,12 @@ public class clientChatControll implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		viewChat.setStyle("-fx-control-inner-background: lightgray;");
+		
+		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
+		
+		 
 		 ClientThread clientThread = new ClientThread(socket, viewChat);
 	        clientThread.start();
 
