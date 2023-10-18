@@ -8,6 +8,8 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.URL;
 import java.net.UnknownHostException;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -20,11 +22,18 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javafx.collections.FXCollections;
@@ -46,11 +55,13 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class managerChatControll implements Initializable {
-    @FXML
-    private TextArea viewChat;
+   
 
     @FXML
     private TextField managerMessage;
+    
+    @FXML
+    private VBox vbox;
 
     @FXML
     private Button sendbtn;
@@ -79,8 +90,24 @@ public class managerChatControll implements Initializable {
     private static final int SERVER_PORT = 8000;
     
     public void send(MouseEvent Action) throws IOException{
-    	 String temp = identifier + ";" + managerMessage.getText(); // message to send
-    	 viewChat.setText(viewChat.getText() + managerMessage.getText() + "\n"); // update messages on screen
+    	 String temp = identifier + ": " + managerMessage.getText();
+      
+    	
+    	 Label newLabel = new Label("Me: "+managerMessage.getText());
+    	 
+    	 Text timeText = new Text(getCurrentTime()); // Implement the getCurrentTime() method to get the current time
+
+         // Style the time text with a smaller font size
+         timeText.setStyle("-fx-font-size: 8px; -fx-font-family: 'Arial';");
+    	
+    	 newLabel.setStyle("-fx-font-size: 16px; -fx-font-family: 'Arial';");
+    	 HBox messageContainer = new HBox(timeText, newLabel);
+
+         // Add the new label to the container
+         vbox.getChildren().add(messageContainer);
+         // Add the new label to the container
+    
+    	  // update messages on screen
          byte[] msg = temp.getBytes(); // convert to bytes
          managerMessage.setText(""); // remove text from input box
 
@@ -112,10 +139,10 @@ public class managerChatControll implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-        viewChat.setStyle("-fx-control-inner-background: lightgray;");
+      
 		
         managerMessage.setStyle("-fx-control-inner-background: lightgray;");
-		    ClientThread clientThread = new ClientThread(socket, viewChat);
+		    ClientThread clientThread = new ClientThread(socket, vbox);
 	        clientThread.start();
 
 	        // send initialization message to the server
@@ -128,5 +155,14 @@ public class managerChatControll implements Initializable {
 				e.printStackTrace();
 			}
 	}
+	
+	private String getCurrentTime() {
+        // Get the current time
+        LocalTime time = LocalTime.now();
+
+        // Format the time as a string with a specific pattern (e.g., HH:mm:ss)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        return time.format(formatter);
+    }
 }
 

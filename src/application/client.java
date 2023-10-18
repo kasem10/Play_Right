@@ -40,12 +40,13 @@ public class client extends Application {
     private static final TextArea messageArea = new TextArea();
 
     private static final TextField inputBox = new TextField();
+    private static final VBox vbox = new VBox();
 
 
     public static void main(String[] args) throws IOException {
 
         // thread for receiving messages
-        ClientThread clientThread = new ClientThread(socket, messageArea);
+        ClientThread clientThread = new ClientThread(socket, vbox);
         clientThread.start();
 
         // send initialization message to the server

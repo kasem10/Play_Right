@@ -2,6 +2,8 @@ package application;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
@@ -20,6 +22,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -27,11 +30,15 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BackgroundImage;
 import javafx.scene.layout.BackgroundPosition;
 import javafx.scene.layout.BackgroundRepeat;
 import javafx.scene.layout.BackgroundSize;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import javafx.collections.FXCollections;
@@ -53,14 +60,19 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class clientChatControll implements Initializable {
-    @FXML
-    private TextArea viewChat;
+    
 
     @FXML
     private TextField clientMessage;
 
     @FXML
     private Button sendbtn;
+    
+    
+    
+
+    @FXML
+    private VBox vbox;
 
     private static final DatagramSocket socket;
     static {
@@ -87,22 +99,38 @@ public class clientChatControll implements Initializable {
 
     private static final int SERVER_PORT = 8000;
     
-    public void send(MouseEvent Action) throws IOException{
-    	 String temp = identifier + ";" + clientMessage.getText(); // message to send
-    	 viewChat.setText(viewChat.getText() + clientMessage.getText() + "\n"); // update messages on screen
-         byte[] msg = temp.getBytes(); // convert to bytes
-         clientMessage.setText(""); // remove text from input box
+    public void send(MouseEvent Action) throws IOException {
+        String temp = identifier + ": " + clientMessage.getText();
 
-         // create a packet & send
-         DatagramPacket send = new DatagramPacket(msg, msg.length, address, SERVER_PORT);
-         try {
-             socket.send(send);
-         } catch (IOException e) {
-             throw new RuntimeException(e);
-         }
-         
-         
-     }
+        // Create a Text object for the time
+        Text timeText = new Text(getCurrentTime()); // Implement the getCurrentTime() method to get the current time
+
+        // Style the time text with a smaller font size
+        timeText.setStyle("-fx-font-size: 8px; -fx-font-family: 'Arial';");
+
+        // Create a Label for the message
+        Label messageLabel = new Label("Me: " + clientMessage.getText());
+
+        // Style the message text with a larger font size
+        messageLabel.setStyle("-fx-font-size: 16px; -fx-font-family: 'Arial';");
+
+        // Create an HBox to contain both the time and message
+        HBox messageContainer = new HBox(timeText, messageLabel);
+
+        // Add the new label to the container
+        vbox.getChildren().add(messageContainer);
+
+        byte[] msg = temp.getBytes(); // convert to bytes
+        clientMessage.setText(""); // remove text from the input box
+
+        // create a packet & send
+        DatagramPacket send = new DatagramPacket(msg, msg.length, address, SERVER_PORT);
+        try {
+            socket.send(send);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     	
     
     
@@ -121,12 +149,12 @@ public class clientChatControll implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		viewChat.setStyle("-fx-control-inner-background: lightgray;");
+		
 		
 		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
 		
 		 
-		 ClientThread clientThread = new ClientThread(socket, viewChat);
+		 ClientThread clientThread = new ClientThread(socket, vbox);
 	        clientThread.start();
 
 	        // send initialization message to the server
@@ -139,6 +167,15 @@ public class clientChatControll implements Initializable {
 				e.printStackTrace();
 			}
 	}
+	
+	private String getCurrentTime() {
+        // Get the current time
+        LocalTime time = LocalTime.now();
+
+        // Format the time as a string with a specific pattern (e.g., HH:mm:ss)
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+        return time.format(formatter);
+    }
 	
 	
 }
