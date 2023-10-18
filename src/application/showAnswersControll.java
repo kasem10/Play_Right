@@ -32,6 +32,10 @@ public class showAnswersControll implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
+
+		
+		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
+		
 		// TODO Auto-generated method stub
 		
 		

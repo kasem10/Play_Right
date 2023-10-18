@@ -18,7 +18,7 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <ListView fx:id="music" layoutX="135.0" layoutY="141.0" prefHeight="210.0" prefWidth="535.0" />
+      <ListView fx:id="music" layoutX="135.0" layoutY="143.0" prefHeight="210.0" prefWidth="535.0" />
       <Label alignment="CENTER" layoutX="310.0" layoutY="27.0" prefHeight="20.0" prefWidth="237.0" text="Music as you like">
          <font>
             <Font name="System Bold Italic" size="24.0" />
@@ -48,6 +48,9 @@
             <Image url="@../Images/sliderIcon.png" />
          </image>
       </ImageView>
-      <Button fx:id="sort" layoutX="258.0" layoutY="100.0" mnemonicParsing="false" onAction="#sortbyfav" text="Button" />
+      <Button fx:id="sort" alignment="CENTER" layoutX="382.0" layoutY="105.0" mnemonicParsing="false" onAction="#sortbyfav" prefHeight="26.0" prefWidth="70.0" text="Favorites">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
    </children>
 </AnchorPane>

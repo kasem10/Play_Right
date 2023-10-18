@@ -49,7 +49,7 @@ public class musicControll implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		sort.setText("favo");
+		sort.setText("Favorites");
 		
 		System.out.println(Main.saveCustomer.getSongs());
 		// TODO Auto-generated method stub
@@ -127,16 +127,16 @@ public class musicControll implements Initializable {
 		
 	}
 	public void sortbyfav(ActionEvent event) throws IOException{
-		if(sort.getText().equals("favo")) {
-		sort.setText("all");
+		if(sort.getText().equals("Favorites")) {
+		sort.setText("All");
 		music.getItems().clear();
 		ObservableList<music> list = FXCollections.observableArrayList();
 		list.addAll(Main.saveCustomer.getSongs());
 		music.getItems().addAll(list);
 		
 		}
-		else if(sort.getText().equals("all")) {
-			sort.setText("favo");
+		else if(sort.getText().equals("All")) {
+			sort.setText("Favorites");
 			music.getItems().clear();
 			music.getItems().addAll(Main.gym.getMusic().values());
 			

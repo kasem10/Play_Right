@@ -14,18 +14,18 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="training" layoutX="194.0" layoutY="139.0" mnemonicParsing="false" onAction="#goTraining" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="198.0" text="Training">
+      <Button fx:id="training" layoutX="194.0" layoutY="139.0" mnemonicParsing="false" onAction="#goTraining" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="Training">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="nutrition" layoutX="430.0" layoutY="139.0" mnemonicParsing="false" onAction="#gonutrition" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="198.0" text="Nutrition">
+      <Button fx:id="nutrition" layoutX="430.0" layoutY="139.0" mnemonicParsing="false" onAction="#gonutrition" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="Nutrition">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font></Button>
-      <Button fx:id="findFriends" layoutX="431.0" layoutY="267.0" mnemonicParsing="false" onAction="#findFreinds" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="197.0" text="JoinFriends">
+      <Button fx:id="findFriends" layoutX="430.0" layoutY="237.0" mnemonicParsing="false" onAction="#findFreinds" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="JoinFriends">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
       <Button alignment="CENTER_RIGHT" layoutX="24.0" layoutY="24.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
@@ -38,9 +38,9 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button fx:id="music" layoutX="194.0" layoutY="267.0" mnemonicParsing="false" onAction="#viewMusic" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="100.0" prefWidth="198.0" text="Music">
+      <Button fx:id="music" layoutX="194.0" layoutY="237.0" mnemonicParsing="false" onAction="#viewMusic" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="Music">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
       <Label layoutX="357.0" layoutY="29.0" text="Welcome">
@@ -48,12 +48,12 @@
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Button fx:id="chat" layoutX="194.0" layoutY="380.0" mnemonicParsing="false" onAction="#chat" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="chat">
+      <Button fx:id="chat" layoutX="194.0" layoutY="335.0" mnemonicParsing="false" onAction="#chat" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="chat">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="questions" layoutX="430.0" layoutY="380.0" mnemonicParsing="false" onAction="#QuestionsAndAnswers" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="Questions&amp;Answers">
+      <Button fx:id="questions" layoutX="430.0" layoutY="335.0" mnemonicParsing="false" onAction="#QuestionsAndAnswers" onMouseEntered="#onButtonMouseEntered" onMouseExited="#onButtonMouseExited" prefHeight="59.0" prefWidth="198.0" text="Questions&amp;Answers">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>

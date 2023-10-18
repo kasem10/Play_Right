@@ -31,8 +31,11 @@
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <TextField fx:id="clientMessage" layoutX="226.0" layoutY="366.0" prefHeight="50.0" prefWidth="302.0" />
-      <Button fx:id="sendbtn" layoutX="549.0" layoutY="379.0" mnemonicParsing="false" onAction="#sendMessage" text="Send" />
-      <VBox fx:id="viewAns" layoutX="226.0" layoutY="91.0" prefHeight="261.0" prefWidth="447.0" />
+      <TextField fx:id="clientMessage" layoutX="235.0" layoutY="366.0" prefHeight="50.0" prefWidth="378.0" />
+      <Button fx:id="sendbtn" layoutX="565.0" layoutY="378.0" mnemonicParsing="false" onAction="#sendMessage" text="Send">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font></Button>
+      <VBox fx:id="viewAns" layoutX="235.0" layoutY="91.0" prefHeight="250.0" prefWidth="378.0" />
    </children>
 </AnchorPane>

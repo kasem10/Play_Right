@@ -118,18 +118,35 @@ public class clientQuestionControll implements Initializable {
     
     public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-		    Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
-		    Scene scene = new Scene(root,800,466);
-		    Image icon = new Image("/Images/icon.png");
-		    primaryStage.getIcons().add(icon);
-		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("manager");
-		    primaryStage.show();
+		 
+		 if(Main.saveCustomer == null) {
+			   Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setScene(scene);
+			    primaryStage.setTitle("manager");
+			    primaryStage.show();
+		 }else {
+			  Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
+			    Scene scene = new Scene(root,800,466);
+			    Image icon = new Image("/Images/icon.png");
+			    primaryStage.getIcons().add(icon);
+			    primaryStage.setScene(scene);
+			   
+			    primaryStage.show();
+		 }
+		  
 	 }
 
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
+    	
+        
+		
+		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
+		
         for (Question q : Main.gym.getQuestions()) {
             // Create a final variable to capture the current Question
             final Question currentQuestion = q;

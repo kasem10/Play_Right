@@ -14,12 +14,12 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="91.0" prefWidth="206.0" text="Manage Training">
+      <Button layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="58.0" prefWidth="206.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="91.0" prefWidth="206.0" text="Manage Meals">
+      <Button layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="58.0" prefWidth="206.0" text="Manage Meals">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font></Button>
@@ -38,22 +38,22 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="427.0" layoutY="265.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="91.0" prefWidth="206.0" text="Manage Music">
+      <Button layoutX="427.0" layoutY="236.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="58.0" prefWidth="206.0" text="Manage Music">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="169.0" layoutY="265.0" mnemonicParsing="false" onAction="#tracking" prefHeight="91.0" prefWidth="206.0" text="Members Track">
+      <Button layoutX="169.0" layoutY="236.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Members Track">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="169.0" layoutY="377.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
+      <Button layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="427.0" layoutY="377.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
+      <Button layoutX="427.0" layoutY="325.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
