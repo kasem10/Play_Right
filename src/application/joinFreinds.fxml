@@ -31,7 +31,7 @@
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Label>
-      <ListView fx:id="joinfreindsview" layoutX="131.0" layoutY="188.0" prefHeight="210.0" prefWidth="535.0" />
+      <ListView fx:id="joinfreindsview" layoutX="131.0" layoutY="188.0" prefHeight="164.0" prefWidth="535.0" />
       <Button layoutX="371.0" layoutY="134.0" mnemonicParsing="false" onMouseClicked="#add" text="Submit">
          <font>
             <Font name="System Bold Italic" size="14.0" />

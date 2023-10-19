@@ -141,7 +141,7 @@ public class LogInWithVideoCont implements Initializable {
      public void showpopup() {
     	    Stage popupStage = new Stage();
     	    popupStage.initModality(Modality.APPLICATION_MODAL); // Block interactions with the parent stage
-    	    popupStage.setTitle("Custom Popup");
+    	    popupStage.setTitle("Feedback");
 
     	    // Create input fields and labels
     	    TextField weightInput = new TextField();
@@ -152,6 +152,7 @@ public class LogInWithVideoCont implements Initializable {
 
     	    // Create a submit button
     	    Button submitButton = new Button("Submit");
+    	    submitButton.setStyle("-fx-background-color: #4CAF50; -fx-text-fill: white;"); // Green button
     	    submitButton.setAlignment(Pos.CENTER);
 
     	    submitButton.setOnAction(e -> {
@@ -171,16 +172,18 @@ public class LogInWithVideoCont implements Initializable {
     	    Label feedbackLabel = new Label("Feedback:");
 
     	    // Set styles for labels
-    	    weightLabel.setFont(new Font("Arial", 14));
-    	    feedbackLabel.setFont(new Font("Arial", 14));
+    	    weightLabel.setStyle("-fx-font-size: 14; -fx-font-style: italic;");
+    	    feedbackLabel.setStyle("-fx-font-size: 14; -fx-font-style: italic;");
 
-    	    // Create a VBox to arrange components vertically
+
+    	 // Create a VBox to arrange components vertically
     	    VBox layout = new VBox(10);
-    	    layout.setStyle("-fx-background-color: white;"); // Set white background
+    	    layout.setStyle("-fx-background-color: #F5F5F5; -fx-padding: 10px; -fx-spacing: 10px;"); // Light gray background
     	    layout.setMinWidth(300);
     	    layout.setMinHeight(190);
-    	    layout.setPadding(new Insets(10));
-    	     // Center the VBox content
+
+    	    // Center the VBox content
+    	    //layout.setAlignment(Pos.CENTER);
 
 
     	    // Add components to the VBox
@@ -193,7 +196,10 @@ public class LogInWithVideoCont implements Initializable {
     	    // Create the scene
     	    Scene popupScene = new Scene(layout);
     	    popupStage.setScene(popupScene);
+    	    Image icon = new Image("/Images/icon.png");
+    	    popupStage.getIcons().add(icon);
     	    popupStage.showAndWait();
+    	    
     	}
 
 	

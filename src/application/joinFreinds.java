@@ -46,7 +46,7 @@ public class joinFreinds implements Initializable {
 		ObservableList<String> list = FXCollections.observableArrayList("Haifa","Tel aviv","Hedira","Raanana");
 		location.setItems(list);
 		joinfreindsview.getItems().addAll(Main.gym.getinterestedjoin().values());
-		joinfreindsview.setStyle("-fx-control-inner-background: lightgray;");
+		joinfreindsview.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; -fx-text-fill: blue;");
 		
 	}
 	 ArrayList<interestedjoin> items = new ArrayList<interestedjoin>();
@@ -68,6 +68,7 @@ public class joinFreinds implements Initializable {
 		 int number = random.nextInt(items.size());
 		 interestedjoin randomcust = items.get(number);
 		 Alert aler = new Alert(AlertType.CONFIRMATION);
+		 
 			aler.setHeaderText(randomcust.getFullname() + " is in the same area, its will be great to collaborate with" );
 			aler.showAndWait();
 		 }

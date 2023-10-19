@@ -22,10 +22,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Separator;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -68,7 +70,7 @@ public class clientQuestionControll implements Initializable {
         
         String name;
         if(Main.saveCustomer!=null) {
-        	name= Main.saveCustomer.getFirstName();
+        	name= Main.saveCustomer.getUserName();
         }
         else {
         	name= "manager";
@@ -106,8 +108,14 @@ public class clientQuestionControll implements Initializable {
         // Add the new label to the container
         labelContainer.getChildren().add(newLabel);
         
+        newLabel.setStyle("-fx-font-size: 16; -fx-underline: true; -fx-font-weight: bold; -fx-text-fill: blue; -fx-font-style: italic;");
+       
+        // Add a horizontal line (separator) between the labels
+        Separator separator = new Separator();
+        separator.setPrefWidth(200); // Set the desired width for the separator
+        labelContainer.getChildren().add(separator);
         
-        
+        newLabel.setWrapText(true);
        
 
         // Clear the text field
@@ -143,19 +151,37 @@ public class clientQuestionControll implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
     	
-        
-		
+    	
 		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
+		
+		
 		
         for (Question q : Main.gym.getQuestions()) {
             // Create a final variable to capture the current Question
             final Question currentQuestion = q;
+            
+          
+            
+            
 
             // Create a new label with the entered text
             Label newLabel = new Label(q.getAsker() + ": " + q.getQuestionText());
 
             // Add the new label to the container
             labelContainer.getChildren().add(newLabel);
+            
+            // Apply CSS styling to the label to set the font size, underline, bold, and text color
+            newLabel.setStyle("-fx-font-size: 16; -fx-underline: true; -fx-font-weight: bold; -fx-text-fill: blue; -fx-font-style: italic;");
+            
+            newLabel.setWrapText(true);
+
+         // Set a preferred width for the label (optional)
+           // newLabel.setPrefWidth(200);‏
+            
+            // Add a horizontal line (separator) between the labels
+            Separator separator = new Separator();
+            separator.setPrefWidth(200); // Set the desired width for the separator
+            labelContainer.getChildren().add(separator);
 
             // Attach the event handler to each label within the loop
             newLabel.setOnMouseClicked(e -> {

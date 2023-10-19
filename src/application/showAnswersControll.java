@@ -45,13 +45,22 @@ public class showAnswersControll implements Initializable {
             // Add the new label to the container
             viewAns.getChildren().add(newLabel);
             
+            // Apply CSS styling to the label to set the font size, underline, bold, and text color
+            newLabel.setStyle("-fx-font-size: 16; -fx-underline: true; -fx-font-weight: bold; -fx-text-fill: blue; -fx-font-style: italic;");
+            newLabel.setWrapText(true);
+            
             Label viewLabel = new Label("Answers: ");
             viewAns.getChildren().add(viewLabel);
+            // Apply CSS styling to the label to set the font size, underline, bold, and text color
+            viewLabel.setStyle("-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: black; -fx-font-style: italic;");
+            
             
             for(String ans: Main.saveQuestion.getAnswers()) {
             	
             	 Label newLabelANS = new Label(ans);
             	 viewAns.getChildren().add(newLabelANS);
+            	 newLabelANS.setStyle("-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: black; -fx-font-style: italic;");
+            	 newLabelANS.setWrapText(true);
             }
             
 		}
@@ -88,7 +97,9 @@ public class showAnswersControll implements Initializable {
 	       
 	        // Add the new label to the container
 	        viewAns.getChildren().add(newLabel);
+	        newLabel.setStyle("-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: black; -fx-font-style: italic;");
 	        
+	        newLabel.setWrapText(true);
 	        
 	        
 	       

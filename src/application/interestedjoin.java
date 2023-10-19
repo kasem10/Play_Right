@@ -70,7 +70,7 @@ public class interestedjoin extends Person implements Serializable {
 
 	@Override
 	public String toString() {
-		return "fullname=" + fullname + ", phone=" + phone + ", area=" + area ;
+		return  fullname + " from " + area + " Contact: " + phone   ;
 	}
 	
 

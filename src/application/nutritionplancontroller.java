@@ -56,18 +56,23 @@ public class nutritionplancontroller  implements Initializable {
 		NeedsCal = Main.saveCalories;
 		NeedsProtin = Main.saveProtin;
 		
-	   	meals.setStyle("-fx-control-inner-background: lightgray;"); 
-		AddedMeals.setStyle("-fx-control-inner-background: lightgray;");
+	   	//meals.setStyle("-fx-control-inner-background: lightgray;");
+	   	meals.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
+		//AddedMeals.setStyle("-fx-control-inner-background: lightgray;");
+		AddedMeals.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 	
 		meals.getItems().addAll(Main.gym.getMeals().values());
 		//meals.getItems().sort(Comparator.comparingDouble(Meal::getProtin).reversed());
 
 		cal.setText(updatedCal + "/" + String.valueOf(Main.saveCalories));
 		cal.setTextFill(Color.RED);
+		cal.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 		carbs.setText(updatedCarbs + "/" + String.valueOf(Main.saveCarbs));
 		carbs.setTextFill(Color.RED);
+		carbs.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 		protin.setText(updatedProtin + "/" + String.valueOf(Main.saveProtin));
 		protin.setTextFill(Color.RED);
+		protin.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 		
 		
 		 Random random = new Random();

@@ -65,7 +65,7 @@ public class Meal implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Meal [name=" + name + ", carbs=" + carbs + ", protin=" + protin + ", cal=" + cal + "]";
+		return name;
 	}
 	
 	
