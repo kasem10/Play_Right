@@ -27,6 +27,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Alert.AlertType;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class ManageTraining implements Initializable {
@@ -52,6 +53,34 @@ public class ManageTraining implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		training.setOnMouseClicked(event -> {
+		    if (event.getClickCount() == 2) { // Check for double-click
+		        exercise selectedExercise = training.getSelectionModel().getSelectedItem();
+		        if (selectedExercise != null) {
+		        	int Select = training.getSelectionModel().getSelectedIndex();
+		    		exercise s= training.getItems().get(Select);
+		    		Main.saveexercise =s;
+		    		
+		    		Stage newStage = new Stage();
+		    	    Parent root;
+		    	    try {
+		    	        root = FXMLLoader.load(getClass().getResource("viewonetraining.fxml"));
+		    	        Scene scene = new Scene(root, 300, 170);
+		    	        Image icon = new Image("/Images/icon.png");
+		    	        newStage.getIcons().add(icon);
+		    	        newStage.setScene(scene);
+		    	        newStage.show();
+		    	    } catch (IOException e) {
+		    	        e.printStackTrace();
+		    	    }
+		    	}
+				   
+		    		
+		    	    
+		        }
+		    
+		});
 		
 		
 		training.setStyle("-fx-control-inner-background: lightgray;");

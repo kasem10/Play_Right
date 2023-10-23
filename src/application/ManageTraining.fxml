@@ -7,7 +7,6 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="466.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManageTraining">
@@ -17,7 +16,7 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <ListView fx:id="training" layoutX="134.0" layoutY="179.0" prefHeight="210.0" prefWidth="300.0" />
+      <ListView fx:id="training" layoutX="134.0" layoutY="179.0" prefHeight="210.0" prefWidth="465.0" />
       <Label alignment="CENTER" layoutX="281.0" layoutY="14.0" prefHeight="20.0" prefWidth="237.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="24.0" />
@@ -33,25 +32,20 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="182.0" layoutY="411.0" mnemonicParsing="false" onAction="#add" prefHeight="36.0" prefWidth="72.0" text="Add">
+      <Button layoutX="268.0" layoutY="411.0" mnemonicParsing="false" onAction="#add" prefHeight="36.0" prefWidth="72.0" text="Add">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <Button layoutX="308.0" layoutY="411.0" mnemonicParsing="false" onAction="#remove" prefHeight="36.0" prefWidth="72.0" text="Remove">
+      <Button layoutX="394.0" layoutY="411.0" mnemonicParsing="false" onAction="#remove" prefHeight="36.0" prefWidth="72.0" text="Remove">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="116.0" promptText="Plan Type" />
-      <ComboBox fx:id="howManyDays" layoutX="294.0" layoutY="82.0" onAction="#fillcombobox" prefHeight="26.0" prefWidth="127.0" promptText="How many days" />
-      <Button layoutX="254.0" layoutY="132.0" mnemonicParsing="false" onAction="#show" text="show">
+      <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="127.0" promptText="Plan Type" />
+      <ComboBox fx:id="howManyDays" layoutX="303.0" layoutY="82.0" onAction="#fillcombobox" prefHeight="26.0" prefWidth="127.0" promptText="How many days" />
+      <Button layoutX="340.0" layoutY="130.0" mnemonicParsing="false" onAction="#show" text="show">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="days" layoutX="464.0" layoutY="82.0" prefHeight="26.0" prefWidth="116.0" promptText="Day number" />
-      <MediaView fx:id="ex1" fitHeight="200.0" fitWidth="210.0" layoutX="494.0" layoutY="184.0" />
-      <Button layoutX="443.0" layoutY="272.0" mnemonicParsing="false" onAction="#showEx" text="Play">
-         <font>
-            <Font name="System Bold Italic" size="12.0" />
-         </font></Button>
+      <ComboBox fx:id="days" layoutX="474.0" layoutY="82.0" prefHeight="26.0" prefWidth="116.0" promptText="Day number" />
    </children>
 </AnchorPane>
