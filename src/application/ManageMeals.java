@@ -28,7 +28,8 @@ public class ManageMeals implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		meals.setStyle("-fx-control-inner-background: lightgray;");
+		//meals.setStyle("-fx-control-inner-background: lightgray;");
+		meals.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 		
 		meals.getItems().addAll(Main.gym.getMeals().values());
 		// TODO Auto-generated method stub
@@ -44,7 +45,11 @@ public class ManageMeals implements Initializable {
 			st.show();
 			
 	}
+	 
+	 
 	 public void removemeal(ActionEvent event) throws IOException{
+		 
+		 
 		 
 		 int Select = meals.getSelectionModel().getSelectedIndex();
 		 if(Main.gym.removemeal((Meal)meals.getItems().get(Select))) {

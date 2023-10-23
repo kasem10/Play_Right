@@ -34,7 +34,8 @@ public class TrackingCustomers implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		customers.setStyle("-fx-control-inner-background: lightgray;");
+		//customers.setStyle("-fx-control-inner-background: lightgray;");
+		customers.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");
 		
 		customers.getItems().addAll(Main.gym.getCustomers().values());
 		

@@ -4,6 +4,9 @@ import java.io.IOException;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
@@ -39,6 +42,11 @@ public class ManageTraining implements Initializable {
 	 ListView<exercise> training;
 	 @FXML
 	 ComboBox<Integer> days;
+	 
+	 @FXML
+	    private MediaView ex1;
+		
+		MediaPlayer player;
 	
 	
 	 
@@ -233,6 +241,22 @@ public class ManageTraining implements Initializable {
 		    primaryStage.show();
 	 }
 	
+	public void showEx(ActionEvent event) throws IOException{
+		
+		int Select = training.getSelectionModel().getSelectedIndex();
+		
+		
+		exercise s= training.getItems().get(Select);
+		
+		Media media = new Media(getClass().getResource("/exercises/"+ s.getPath() ).toString());
+		player = new MediaPlayer(media);
+		player.setCycleCount(MediaPlayer.INDEFINITE);
+		player.setVolume(0.0);
+		player.play();
+		ex1.setMediaPlayer(player);
+	 }
+	
+
 	
 	
 	

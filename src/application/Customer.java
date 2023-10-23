@@ -111,8 +111,8 @@ public class Customer extends Person implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Customer [wieght=" + wieght + ", diff=" + diff + ", fedback=" + fedback + ", getFirstName()="
-				+ getFirstName() + "]";
+		return userName + " - " + "Current wieght: " + wieght + "Kg Improvement: " + diff + "Kg fedback: " + fedback ;
+				
 	}
 
 

@@ -51,7 +51,7 @@ public class music implements Serializable {
 
 	@Override
 	public String toString() {
-		return "music [name=" + name + "]";
+		return  name ;
 	}
 	
 	
