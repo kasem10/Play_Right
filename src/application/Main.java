@@ -8,7 +8,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-
+import Utils.Gender;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -37,6 +37,8 @@ public class Main extends Application implements Serializable {
 	
 	public static String saveAnswer;
 	public static Question saveQuestion;
+	
+	
 	
 	
 	

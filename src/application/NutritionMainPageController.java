@@ -10,8 +10,7 @@ import javafx.scene.paint.Color;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
-
+import Utils.Gender;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -63,6 +62,15 @@ public class NutritionMainPageController implements Initializable {
     	double heightCm = Double.parseDouble(height.getText());
         double weightKg = Double.parseDouble(weight.getText());
         int ageYears = Integer.parseInt(age.getText());
+        
+        
+        Main.saveCustomer.setSaveAge(ageYears); 
+        Main.saveCustomer.setSaveHeight(heightCm); 
+        Main.saveCustomer.setSaveWeight(weightKg);
+        
+        
+        
+        Main.update();
 
         boolean isMale = male.isSelected();
         boolean isFemale = female.isSelected();
@@ -125,6 +133,9 @@ public class NutritionMainPageController implements Initializable {
             }
         });
         
+        
+        
+        
        
         
 		 
@@ -153,9 +164,40 @@ public class NutritionMainPageController implements Initializable {
         return recommendedCalories * 0.6;
     }
 	
+  
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		System.out.println(Main.saveCustomer.getGender());
+		if(Main.saveCustomer.getSaveAge() != 0 || Main.saveCustomer.getSaveWeight() != 0 || Main.saveCustomer.getSaveHeight() != 0) {
+			
+			
+			
+			// Assuming Main.saveCustomer.getSaveAge() returns an int or any other data type
+			int ageValue = (int) Main.saveCustomer.getSaveAge(); // Replace with the actual data type
+			double weightValue = (double) Main.saveCustomer.getSaveAge();
+			double heightValue = (double) Main.saveCustomer.getSaveAge();
+			
+
+			// Convert the ageValue to a String and set it in the TextField
+			age.setText(String.valueOf(ageValue));
+			weight.setText(String.valueOf(weightValue));
+			height.setText(String.valueOf(heightValue));
+			
+	
+			
+			if (Gender.Male.equals(Main.saveCustomer.getGender())) {
+			    // Gender is male
+			     male.setSelected(true);
+			} else {
+			    // Gender is not male
+				female.setSelected(true);
+			}
+
+			
+			
+		}
 		  dropShadow.setColor(Color.RED);
 		     dropShadow.setRadius(10);
 		     dropShadow.setSpread(0.2);

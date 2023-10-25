@@ -23,6 +23,44 @@ public class Customer extends Person implements Serializable{
 	private LocalDate date ;
 	private ArrayList<music> songs ; 
 	
+	public Gender saveGender;
+	public double saveAge=0;
+	public double saveHeight=0;
+	public double saveWeight=0;
+	
+	
+	public Gender getSaveGender() {
+		return saveGender;
+	}
+
+	public void setSaveGender(Gender saveGender) {
+		this.saveGender = saveGender;
+	}
+
+	public double getSaveAge() {
+		return saveAge;
+	}
+
+	public void setSaveAge(double saveAge) {
+		this.saveAge = saveAge;
+	}
+
+	public double getSaveHeight() {
+		return saveHeight;
+	}
+
+	public void setSaveHeight(double saveHeight) {
+		this.saveHeight = saveHeight;
+	}
+
+	public double getSaveWeight() {
+		return saveWeight;
+	}
+
+	public void setSaveWeight(double saveWeight) {
+		this.saveWeight = saveWeight;
+	}
+
 	public ArrayList<music> getSongs() {
 		if(songs == null) {
 			songs = new ArrayList<music>();
