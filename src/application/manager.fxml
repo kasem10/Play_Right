@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -14,21 +15,21 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="58.0" prefWidth="206.0" text="Manage Training">
+      <Button fx:id="ManageTraining" layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="58.0" prefWidth="206.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="58.0" prefWidth="206.0" text="Manage Meals">
+      <Button fx:id="manageMeals" layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="58.0" prefWidth="206.0" text="Manage Meals">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font></Button>
-      <Label alignment="CENTER" layoutX="291.0" layoutY="21.0" prefHeight="58.0" prefWidth="271.0" text="Welcome manager" textAlignment="CENTER">
+      <Label fx:id="welcome" alignment="CENTER" layoutX="291.0" layoutY="21.0" prefHeight="58.0" prefWidth="271.0" text="Welcome manager" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button alignment="CENTER_RIGHT" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="btnback" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -38,25 +39,26 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="427.0" layoutY="236.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="58.0" prefWidth="206.0" text="Manage Music">
+      <Button fx:id="ManageMusic" layoutX="427.0" layoutY="236.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="58.0" prefWidth="206.0" text="Manage Music">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="169.0" layoutY="236.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Members Track">
+      <Button fx:id="MembersTrack" layoutX="169.0" layoutY="236.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Members Track">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
+      <Button fx:id="Chat" layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button layoutX="427.0" layoutY="325.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
+      <Button fx:id="QA" layoutX="427.0" layoutY="325.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
+      <ComboBox fx:id="lang" layoutX="618.0" layoutY="19.0" onAction="#changelang" prefWidth="150.0" promptText="English" />
    </children>
 </AnchorPane>
