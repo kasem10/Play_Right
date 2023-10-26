@@ -18,6 +18,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -28,10 +30,38 @@ public class ManageMeals implements Initializable {
 	@FXML
     private TextField search;
 	
+	 @FXML
+	    private Label title;
+
+	    @FXML
+	    private Button backbtn;
+
+	    @FXML
+	    private Button addbtn;
+
+	    @FXML
+	    private Button removebtn;
+	
 	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		if(Main.savelangmanager.equals("English")) {
+			title.setText("Manage Meals");
+			backbtn.setText("back");
+			addbtn.setText("add");
+			removebtn.setText("remove");
+			search.setPromptText("search by name");
+		}
+        if(Main.savelangmanager.equals("Hebrew")) {
+        	title.setText("ניהול ארוחות");
+			backbtn.setText("חזור");
+			addbtn.setText("הוספה");
+			removebtn.setText("מחיקה");
+			search.setPromptText("חיפוש לפי שם");
+		}
+		
 		
 		//meals.setStyle("-fx-control-inner-background: lightgray;");
 		meals.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");

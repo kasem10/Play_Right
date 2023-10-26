@@ -108,10 +108,43 @@ public class ManagerMainPageController implements Initializable {
 		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew");
 		lang.setItems(list);
 		
+		
+		if(Main.savelangmanager.equals("English")) {
+			 ManageTraining.setText("Manage Training");
+			welcome.setText("Welcome manager");
+
+		   manageMeals.setText("Manage Meals");
+
+		   ManageMusic.setText("Manage Music");
+          MembersTrack.setText("Members Track");
+          Chat.setText("Chat");
+          QA.setText("Questions&Answers");
+          btnback.setText("back");
+          lang.setValue("English");
+			
+		}
+		 if(Main.savelangmanager.equals("Hebrew")) {
+			 welcome.setText("ברוך הבא מנהל");
+			 btnback.setText("חזור");
+			 lang.setValue("Hebrew");
+			
+			
+			 ManageTraining.setText("ניהול אימונים");
+			   manageMeals.setText("ניהול ארוחות");
+
+			   ManageMusic.setText("ניהול שירים");
+	           MembersTrack.setText("מעקב");
+	           Chat.setText("צא'ט");
+	           QA.setText("שאלות ותשובות");
+			
+		}
+		
 	
 	}
 	
 	public void changelang(ActionEvent event) throws IOException {
+		
+		Main.savelangmanager = lang.getValue();
 		
 		
 		if(lang.getValue().equals("English")) {

@@ -34,6 +34,7 @@ public class Main extends Application implements Serializable {
 	public static Meal meal2;
 	public static Meal meal3;
 	public static exercise saveexercise;
+	public static String savelangmanager = "English";
 	
 	public static String saveAnswer;
 	public static Question saveQuestion;
