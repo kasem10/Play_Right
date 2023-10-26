@@ -17,7 +17,7 @@
          </image>
       </ImageView>
       <ListView fx:id="meals" layoutX="135.0" layoutY="143.0" prefHeight="210.0" prefWidth="535.0" />
-      <Label alignment="CENTER" layoutX="310.0" layoutY="28.0" prefHeight="20.0" prefWidth="237.0" text="Manage Meals">
+      <Label fx:id="title" alignment="CENTER" layoutX="310.0" layoutY="28.0" prefHeight="20.0" prefWidth="237.0" text="Manage Meals">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
