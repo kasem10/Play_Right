@@ -44,6 +44,21 @@ public class ManageTraining implements Initializable {
 	 @FXML
 	 ComboBox<Integer> days;
 	 
+	 
+	 @FXML
+	    private Button backbtn;
+
+	    @FXML
+	    private Button addbtn;
+
+	    @FXML
+	    private Button removebtn;
+	    @FXML
+	    private Button showbtn;
+	    @FXML
+	    private Label title;
+
+	 
 	 @FXML
 	    private MediaView ex1;
 		
@@ -53,6 +68,29 @@ public class ManageTraining implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		if(Main.savelangmanager.equals("English")) {
+			title.setText("Manage Training");
+			backbtn.setText("back");
+			addbtn.setText("add");
+			removebtn.setText("remove");
+			showbtn.setText("Show");
+			BudyGoal.setPromptText("Plan Type");
+			howManyDays.setPromptText("howManyDays");
+			days.setPromptText("Day number");
+		}
+        if(Main.savelangmanager.equals("Hebrew")) {
+        	title.setText("ניהול אימונים");
+			backbtn.setText("חזור");
+			addbtn.setText("הוספה");
+			removebtn.setText("מחיקה");
+			BudyGoal.setPromptText("תוכנית");
+			howManyDays.setPromptText("כמה ימים");
+			days.setPromptText("איזה יום");
+			showbtn.setText("הצגה");
+		}
+		
+		
+		
 		
 		training.setOnMouseClicked(event -> {
 		    if (event.getClickCount() == 2) { // Check for double-click

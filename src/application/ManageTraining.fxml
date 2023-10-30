@@ -17,12 +17,12 @@
          </image>
       </ImageView>
       <ListView fx:id="training" layoutX="134.0" layoutY="179.0" prefHeight="210.0" prefWidth="465.0" />
-      <Label alignment="CENTER" layoutX="281.0" layoutY="14.0" prefHeight="20.0" prefWidth="237.0" text="Manage Training">
+      <Label fx:id="title" alignment="CENTER" layoutX="281.0" layoutY="14.0" prefHeight="20.0" prefWidth="237.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="backbtn" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -32,17 +32,17 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button layoutX="268.0" layoutY="411.0" mnemonicParsing="false" onAction="#add" prefHeight="36.0" prefWidth="72.0" text="Add">
+      <Button fx:id="addbtn" layoutX="268.0" layoutY="411.0" mnemonicParsing="false" onAction="#add" prefHeight="36.0" prefWidth="72.0" text="Add">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <Button layoutX="394.0" layoutY="411.0" mnemonicParsing="false" onAction="#remove" prefHeight="36.0" prefWidth="72.0" text="Remove">
+      <Button fx:id="removebtn" layoutX="394.0" layoutY="411.0" mnemonicParsing="false" onAction="#remove" prefHeight="36.0" prefWidth="72.0" text="Remove">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
       <ComboBox fx:id="BudyGoal" layoutX="135.0" layoutY="82.0" prefHeight="26.0" prefWidth="127.0" promptText="Plan Type" />
       <ComboBox fx:id="howManyDays" layoutX="303.0" layoutY="82.0" onAction="#fillcombobox" prefHeight="26.0" prefWidth="127.0" promptText="How many days" />
-      <Button layoutX="340.0" layoutY="130.0" mnemonicParsing="false" onAction="#show" text="show">
+      <Button fx:id="showbtn" layoutX="340.0" layoutY="130.0" mnemonicParsing="false" onAction="#show" text="show">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>

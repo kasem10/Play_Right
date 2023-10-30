@@ -17,12 +17,12 @@
          </image>
       </ImageView>
       <ListView fx:id="customers" layoutX="135.0" layoutY="143.0" prefHeight="210.0" prefWidth="535.0" />
-      <Label alignment="CENTER" layoutX="310.0" layoutY="28.0" prefHeight="20.0" prefWidth="237.0" text="Tracking Customers">
+      <Label fx:id="title" alignment="CENTER" layoutX="310.0" layoutY="28.0" prefHeight="20.0" prefWidth="237.0" text="Tracking Customers">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="backbtn" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

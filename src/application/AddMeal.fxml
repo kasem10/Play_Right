@@ -15,41 +15,41 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="294.0" layoutY="138.0" prefHeight="18.0" prefWidth="46.0" text="Name">
+      <Label fx:id="name2" layoutX="243.0" layoutY="133.0" prefHeight="26.0" prefWidth="101.0" text="Name">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="name" layoutX="357.0" layoutY="134.0" />
       <TextField fx:id="cal" layoutX="357.0" layoutY="180.0" />
-      <Label layoutX="279.0" layoutY="182.0" prefHeight="26.0" prefWidth="65.0" text="Calories">
+      <Label fx:id="cal2" layoutX="238.0" layoutY="179.0" prefHeight="26.0" prefWidth="102.0" text="Calories">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Button layoutX="393.0" layoutY="336.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
+      <Button fx:id="sumbitbtn" layoutX="393.0" layoutY="336.0" mnemonicParsing="false" onAction="#submitaddcomp" text="sumbit">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Button>
-      <Label layoutX="282.0" layoutY="223.0" prefHeight="26.0" prefWidth="65.0" text="Protins">
+      <Label fx:id="protin2" layoutX="238.0" layoutY="220.0" prefHeight="26.0" prefWidth="102.0" text="Protins">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
       <TextField fx:id="protin" layoutX="357.0" layoutY="221.0" />
       <TextField fx:id="carbs" layoutX="357.0" layoutY="263.0" />
-      <Label layoutX="294.0" layoutY="264.0" prefHeight="22.0" prefWidth="46.0" text="carbs">
+      <Label fx:id="carbs2" layoutX="238.0" layoutY="264.0" prefHeight="26.0" prefWidth="102.0" text="carbs">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="378.0" layoutY="38.0" prefHeight="26.0" prefWidth="138.0" text="Add meal">
+      <Label fx:id="title" layoutX="357.0" layoutY="30.0" prefHeight="35.0" prefWidth="247.0" text="Add meal">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button alignment="CENTER_RIGHT" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="backbtn" alignment="CENTER_RIGHT" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

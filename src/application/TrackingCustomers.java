@@ -18,6 +18,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -28,11 +30,32 @@ public class TrackingCustomers implements Initializable {
 	
 	 @FXML
 	    private TextField search;
+	 @FXML
+	    private Label title;
+
+	    @FXML
+	    private Button backbtn;
 	
 	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		if(Main.savelangmanager.equals("English")) {
+			
+			backbtn.setText("Back");
+			title.setText("Tracking Cutomers");
+			search.setPromptText("search by name");
+        
+			
+		}
+		 if(Main.savelangmanager.equals("Hebrew")) {
+			 
+				backbtn.setText("חזור");
+				title.setText("מעקב התקדמות");
+				search.setPromptText("חיפוש לפי שם");
+			
+		}
 		
 		//customers.setStyle("-fx-control-inner-background: lightgray;");
 		customers.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");

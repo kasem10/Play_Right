@@ -65,6 +65,12 @@ public class managerChatControll implements Initializable {
 
     @FXML
     private Button sendbtn;
+    
+    @FXML
+    private Button backbtn;
+
+    @FXML
+    private Label title;
 
     private static final DatagramSocket socket;
     static {
@@ -138,6 +144,22 @@ public class managerChatControll implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+if(Main.savelangmanager.equals("English")) {
+			
+			backbtn.setText("Back");
+			title.setText("Chat");
+			
+        
+			
+		}
+		 if(Main.savelangmanager.equals("Hebrew")) {
+			 
+				backbtn.setText("חזור");
+				title.setText("צ'אט");
+				
+			
+		}
 		
       
 		

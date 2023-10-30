@@ -134,7 +134,7 @@ public class ManagerMainPageController implements Initializable {
 
 			   ManageMusic.setText("ניהול שירים");
 	           MembersTrack.setText("מעקב");
-	           Chat.setText("צא'ט");
+	           Chat.setText("צ'אט");
 	           QA.setText("שאלות ותשובות");
 			
 		}

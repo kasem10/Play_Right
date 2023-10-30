@@ -14,9 +14,11 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
@@ -29,10 +31,50 @@ public class addexcercise implements Initializable {
 
 	    @FXML
 	    private ComboBox<Integer> day;
+	    
+	    @FXML
+	    private Label path2;
+	    @FXML
+	    private Label name2;
+	    @FXML
+	    private Button backbtn;
+	    @FXML
+	    private Label title;
+	    @FXML
+	    private Button sumbitbtn;
+	    @FXML
+	    private Label desc2;
 	
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		if(Main.savelangmanager.equals("English")) {
+			name2.setText("Name");
+			path2.setText("path");
+			desc2.setText("Desc");
+			sumbitbtn.setText("Submit");
+			backbtn.setText("Back");
+			title.setText("Add excercise");
+			type.setPromptText("Plan Type");
+			day.setPromptText("Day number");
+			
+        
+			
+		}
+		 if(Main.savelangmanager.equals("Hebrew")) {
+			  name2.setText("שם");
+			  path2.setText("נָתִיב");
+			  desc2.setText("תיאור");
+			  sumbitbtn.setText("אישור");
+			  backbtn.setText("חזור");
+			  title.setText("הוספת תרגיל");
+			  type.setPromptText("תוכנית");
+				day.setPromptText("איזה יום");
+		
+		// TODO Auto-generated method stub
+		
+	}
 		
 		ObservableList<String> list = FXCollections.observableArrayList("mb3","mb4","mb5","wl3","wl4","wl5");
 		type.setItems(list);
