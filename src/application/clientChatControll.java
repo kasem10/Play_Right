@@ -69,10 +69,22 @@ public class clientChatControll implements Initializable {
     private Button sendbtn;
     
     
-    
+    @FXML
+    private Button btnback;
+
+    @FXML
+    private Label title;
+
 
     @FXML
     private VBox vbox;
+    
+   
+
+   
+
+  
+
 
     private static final DatagramSocket socket;
     static {
@@ -149,7 +161,16 @@ public class clientChatControll implements Initializable {
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		
+		if(Main.savelangCustomer.equals("English")) {
+			title.setText("Chat");
+			btnback.setText("Back");
+	
+		}
+		 if(Main.savelangCustomer.equals("Hebrew")) {
+			 title.setText("צ'אט");
+				btnback.setText("חזור");
+
+		}
 		
 		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
 		

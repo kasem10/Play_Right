@@ -27,7 +27,22 @@ import javafx.stage.Stage;
 public class TrainingMainPageController implements Initializable {
 	
 	 
- 
+	 @FXML
+	    private Label title;
+
+	    @FXML
+	    private Label goal;
+
+
+	    @FXML
+	    private Label days;
+
+	    @FXML
+	    private Button plan;
+
+	    @FXML
+	    private Button btnback;
+
 
 	 @FXML
 	    private ComboBox<String> BudyGoal;
@@ -38,6 +53,28 @@ public class TrainingMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		if(Main.savelangCustomer.equals("English")) {
+			title.setText("What is your goal ?");
+			btnback.setText("Back");
+
+			goal.setText("your goal");
+
+			days.setText("How many days");
+			plan.setText("workout plan");
+			
+			
+		}
+		 if(Main.savelangCustomer.equals("Hebrew")) {
+			 title.setText("מה המטרה שלך ?");
+				btnback.setText("חזור");
+
+				goal.setText("המטרה שלך");
+
+				days.setText("כמה ימים בשבוע");
+				plan.setText("תן תוכנית");
+			
+		}
 		
 		
 		ObservableList<String> list = FXCollections.observableArrayList("Muscle Building","Weight Loss");

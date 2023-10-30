@@ -19,12 +19,12 @@
          </image>
       </ImageView>
       <ListView fx:id="music" layoutX="135.0" layoutY="143.0" prefHeight="210.0" prefWidth="535.0" />
-      <Label alignment="CENTER" layoutX="310.0" layoutY="27.0" prefHeight="20.0" prefWidth="237.0" text="Music as you like">
+      <Label fx:id="title" alignment="CENTER" layoutX="263.0" layoutY="27.0" prefHeight="35.0" prefWidth="348.0" text="Music as you like">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
-      <Button alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="btnback" alignment="CENTER_RIGHT" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -35,11 +35,11 @@
          </image>
       </ImageView>
       <Slider fx:id="controlVolume" layoutX="687.0" layoutY="176.0" orientation="VERTICAL" />
-      <Button layoutX="342.0" layoutY="380.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="30.0" prefWidth="52.0" text="Play">
+      <Button fx:id="play" layoutX="342.0" layoutY="380.0" mnemonicParsing="false" onAction="#playMusic" prefHeight="30.0" prefWidth="58.0" text="Play">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <Button layoutX="437.0" layoutY="380.0" mnemonicParsing="false" onAction="#stopMusic" prefHeight="30.0" prefWidth="52.0" text="Stop">
+      <Button fx:id="stop" layoutX="437.0" layoutY="380.0" mnemonicParsing="false" onAction="#stopMusic" prefHeight="30.0" prefWidth="58.0" text="Stop">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>

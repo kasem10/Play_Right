@@ -16,6 +16,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.control.Slider;
@@ -40,16 +41,63 @@ public class musicControll implements Initializable {
 	@FXML
     private Button sort;
 
-	
-	
-	 
-	
 	@FXML
 	private ListView<music> music;
+	
+
+
+	
+
+    @FXML
+    private Label title;
+
+    @FXML
+    private Button btnback;
+
+
+    @FXML
+    private Button play;
+
+    @FXML
+    private Button stop;
+
+  
+
+	
+	
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		sort.setText("Favorites");
+		
+		if(Main.savelangCustomer.equals("English")) {
+			title.setText("Music as you like");
+			btnback.setText("Back");
+
+			play.setText("Play");
+
+			stop.setText("Stop");
+			
+			
+			
+		}
+		 if(Main.savelangCustomer.equals("Hebrew")) {
+			 title.setText("מתאמנים עם מוזיקה ברקע");
+				btnback.setText("חזור");
+
+				play.setText("הפעל");
+
+				stop.setText("עצור");
+			
+		}
+		
+		 if(Main.savelangCustomer.equals("English")) {
+			 sort.setText("Favorites"); 
+		 }
+		 
+		 if(Main.savelangCustomer.equals("Hebrew")) {
+			 sort.setText("מועדפים"); 
+		 }
+		
 		
 		System.out.println(Main.saveCustomer.getSongs());
 		// TODO Auto-generated method stub
@@ -127,16 +175,31 @@ public class musicControll implements Initializable {
 		
 	}
 	public void sortbyfav(ActionEvent event) throws IOException{
-		if(sort.getText().equals("Favorites")) {
-		sort.setText("All");
+		if(sort.getText().equals("Favorites") || sort.getText().equals("מועדפים")  ) {
+		
+			if(sort.getText().equals("Favorites")) {
+				sort.setText("All");
+			}
+			if(sort.getText().equals("מועדפים")) {
+				sort.setText("הכל");
+			}
+			
 		music.getItems().clear();
 		ObservableList<music> list = FXCollections.observableArrayList();
 		list.addAll(Main.saveCustomer.getSongs());
 		music.getItems().addAll(list);
 		
 		}
-		else if(sort.getText().equals("All")) {
-			sort.setText("Favorites");
+		else if(sort.getText().equals("All") || sort.getText().equals("הכל")) {
+			
+			if(sort.getText().equals("All")){
+				sort.setText("Favorites");
+			}
+			if(sort.getText().equals("הכל")){
+				sort.setText("מועדפים");
+			}
+			
+			
 			music.getItems().clear();
 			music.getItems().addAll(Main.gym.getMusic().values());
 			

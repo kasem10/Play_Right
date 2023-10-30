@@ -28,48 +28,76 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class NutritionMainPageController implements Initializable {
-	
-    @FXML
-    private Label welcome;
 
-    @FXML
-    private TextField age;
+	  @FXML
+	    private Label title;
 
-    @FXML
-    private TextField height;
+	    @FXML
+	    private Label age2, gender2;
 
-    @FXML
-    private TextField weight;
+	    @FXML
+	    private TextField age;
 
-    @FXML
-    private Label result;
-    
-    @FXML
-    private VBox vbox;
-    
-    @FXML
-    private RadioButton male;
+	    @FXML
+	    private TextField height;
 
-    @FXML
-    private RadioButton female;
-    
+	    @FXML
+	    private TextField weight;
+
+	    @FXML
+	    private Label height2;
+
+	    @FXML
+	    private Label weight2;
+
+	    @FXML
+	    private RadioButton male;
+
+	    
+
+	    @FXML
+	    private RadioButton female;
+
+	    @FXML
+	    private Button   submit2;
+
+	    @FXML
+	    private Label result;
+
+	    @FXML
+	    private VBox vbox;
+
+	    @FXML
+	    private Button btnback;
+
+	    @FXML
+	    private Label years;
+
+	    @FXML
+	    private Label cm;
+
+	    @FXML
+	    private Label kg;
+
+
+   
     private final DropShadow dropShadow = new DropShadow();
-    
-    
-    
+   
+   
+   
     public void calc(ActionEvent event) throws IOException{
-    	
-    	double heightCm = Double.parseDouble(height.getText());
+   
+    double heightCm = Double.parseDouble(height.getText());
         double weightKg = Double.parseDouble(weight.getText());
         int ageYears = Integer.parseInt(age.getText());
-        
-        
-        Main.saveCustomer.setSaveAge(ageYears); 
-        Main.saveCustomer.setSaveHeight(heightCm); 
+       
+       
+        Main.saveCustomer.setSaveAge(ageYears);
+        Main.saveCustomer.setSaveHeight(heightCm);
         Main.saveCustomer.setSaveWeight(weightKg);
-        
-        
-        
+       
+       
+       
         Main.update();
 
         boolean isMale = male.isSelected();
@@ -95,52 +123,52 @@ public class NutritionMainPageController implements Initializable {
                 "\nRecommended Carbs in day: " + String.format("%.2f", recommendedCarbs);
 
         result.setText(resultText);
-        
+       
         Main.saveCalories= recommendedCalories;
         Main.saveCarbs= recommendedCarbs;
         Main.saveProtin= recommendedProtein;
-        
+       
         Button newButton = new Button("build plan");
 
         vbox.getChildren().add(newButton);
-        
+       
         newButton.setOnAction((EventHandler<ActionEvent>) new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-            	 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-  			   Parent root = null;
-			try {
-				root = FXMLLoader.load(getClass().getResource("nutritionbuildplan.fxml"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-  			   Scene scene = new Scene(root,800,466);
-  			   Image icon = new Image("/Images/icon.png");
-  			   primaryStage.getIcons().add(icon);
-  			   primaryStage.setScene(scene);
-  			   primaryStage.setTitle("Manager screen");
-  			   primaryStage.show();
-  			 Alert aler = new Alert(AlertType.INFORMATION);
-  			String headerText = "We have some Suggestions for you:\n"
-  	                 + "First meal: " + Main.meal1.getName() + "\n"
-  	                 + "Second meal: " + Main.meal2.getName() + "\n"
-  	                 + "Third meal: " + Main.meal3.getName();
+            Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+    Parent root = null;
+try {
+root = FXMLLoader.load(getClass().getResource("nutritionbuildplan.fxml"));
+} catch (IOException e) {
+// TODO Auto-generated catch block
+e.printStackTrace();
+}
+    Scene scene = new Scene(root,800,466);
+    Image icon = new Image("/Images/icon.png");
+    primaryStage.getIcons().add(icon);
+    primaryStage.setScene(scene);
+    primaryStage.setTitle("Manager screen");
+    primaryStage.show();
+  Alert aler = new Alert(AlertType.INFORMATION);
+  String headerText = "We have some Suggestions for you:\n"
+                  + "First meal: " + Main.meal1.getName() + "\n"
+                  + "Second meal: " + Main.meal2.getName() + "\n"
+                  + "Third meal: " + Main.meal3.getName();
 
-          	aler.setHeaderText(headerText);
- 			aler.showAndWait();
+          aler.setHeaderText(headerText);
+  aler.showAndWait();
                
             }
         });
-        
-        
-        
-        
        
-        
-		 
-	}
-    
+       
+       
+       
+       
+       
+
+}
+   
     private double calculateRecommendedCalories(double weightKg, double heightCm, int ageYears, boolean isMale) {
         // Implement your calorie calculation logic here
         // This is just a placeholder example
@@ -163,58 +191,95 @@ public class NutritionMainPageController implements Initializable {
         // This is just a placeholder example
         return recommendedCalories * 0.6;
     }
+
+ 
+
+@Override
+public void initialize(URL location, ResourceBundle resources) {
 	
-  
-	
-	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	if(Main.savelangCustomer.equals("English")) {
 		
-		System.out.println(Main.saveCustomer.getGender());
-		if(Main.saveCustomer.getSaveAge() != 0 || Main.saveCustomer.getSaveWeight() != 0 || Main.saveCustomer.getSaveHeight() != 0) {
-			
-			
-			
-			// Assuming Main.saveCustomer.getSaveAge() returns an int or any other data type
-			int ageValue = (int) Main.saveCustomer.getSaveAge(); // Replace with the actual data type
-			double weightValue = (double) Main.saveCustomer.getSaveAge();
-			double heightValue = (double) Main.saveCustomer.getSaveAge();
-			
+		btnback.setText("Back");
 
-			// Convert the ageValue to a String and set it in the TextField
-			age.setText(String.valueOf(ageValue));
-			weight.setText(String.valueOf(weightValue));
-			height.setText(String.valueOf(heightValue));
-			
-	
-			
-			if (Gender.Male.equals(Main.saveCustomer.getGender())) {
-			    // Gender is male
-			     male.setSelected(true);
-			} else {
-			    // Gender is not male
-				female.setSelected(true);
-			}
+		title.setText("Calculation of nutritional parameters");
 
-			
-			
-		}
-		  dropShadow.setColor(Color.RED);
-		     dropShadow.setRadius(10);
-		     dropShadow.setSpread(0.2);
-		     result.setEffect(dropShadow);
-	
+		age2.setText("Age");
+		height2.setText("height");
+		weight2.setText("weight"); 
+		years.setText("(in years)");
+		cm.setText("(in cm)");
+		kg.setText("(in Kg)");
+		gender2.setText("Gender");
+		submit2.setText("Submit");
+		male.setText("Male");
+		female.setText("Female"); 
+		
+		
 	}
-	
-	 public void back(ActionEvent event) throws IOException{
-		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-		    Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
-		    Scene scene = new Scene(root,800,466);
-		    Image icon = new Image("/Images/icon.png");
-		    primaryStage.getIcons().add(icon);
-		    primaryStage.setScene(scene);
-		    primaryStage.setTitle("CustomerMainPage");
-		    primaryStage.show();
-	 }
-	
+	 if(Main.savelangCustomer.equals("Hebrew")) {
+			btnback.setText("חזור");
+
+			title.setText("חישוב פרמטרי תזונה");
+
+			age2.setText("גיל");
+			height2.setText("גובה");
+			weight2.setText("משקל");
+			years.setText("(בשנים)");
+			cm.setText("(ס'ר)");
+			kg.setText("(קג)");
+			gender2.setText("מין");
+			submit2.setText("אישור"); 
+			male.setText("זכר");
+			female.setText("נקבה");
+		
+	}
+
+
+if(Main.saveCustomer.getSaveAge() != 0 || Main.saveCustomer.getSaveWeight() != 0 || Main.saveCustomer.getSaveHeight() != 0) {
+
+
+
+// Assuming Main.saveCustomer.getSaveAge() returns an int or any other data type
+int ageValue = (int) Main.saveCustomer.getSaveAge(); // Replace with the actual data type
+double weightValue = (double) Main.saveCustomer.saveWeight;
+double heightValue = (double) Main.saveCustomer.saveHeight;
+
+
+// Convert the ageValue to a String and set it in the TextField
+age.setText(String.valueOf(ageValue));
+weight.setText(String.valueOf(weightValue));
+height.setText(String.valueOf(heightValue));
+
+
+
+if (Gender.Male.equals(Main.saveCustomer.getGender())) {
+   // Gender is male
+    male.setSelected(true);
+} else {
+   // Gender is not male
+female.setSelected(true);
+}
+
+
+
+}
+ dropShadow.setColor(Color.RED);
+    dropShadow.setRadius(10);
+    dropShadow.setSpread(0.2);
+    result.setEffect(dropShadow);
+
+}
+
+public void back(ActionEvent event) throws IOException{
+Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+   Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
+   Scene scene = new Scene(root,800,466);
+   Image icon = new Image("/Images/icon.png");
+   primaryStage.getIcons().add(icon);
+   primaryStage.setScene(scene);
+   primaryStage.setTitle("CustomerMainPage");
+   primaryStage.show();
+}
+
 
 }

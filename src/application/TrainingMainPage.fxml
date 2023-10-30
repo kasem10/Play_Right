@@ -15,26 +15,26 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="321.0" layoutY="32.0" prefHeight="39.0" prefWidth="290.0" text="What is your goal ?">
+      <Label fx:id="title" layoutX="321.0" layoutY="32.0" prefHeight="39.0" prefWidth="290.0" text="What is your goal ?">
          <font>
             <Font name="System Bold Italic" size="24.0" />
          </font>
       </Label>
       <ComboBox fx:id="BudyGoal" layoutX="352.0" layoutY="180.0" prefWidth="150.0" />
-      <Label layoutX="249.0" layoutY="180.0" text="your goal">
+      <Label fx:id="goal" layoutX="249.0" layoutY="180.0" text="your goal">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Label>
       <ComboBox fx:id="howManyDays" layoutX="355.0" layoutY="239.0" prefWidth="150.0" />
-      <Label layoutX="207.0" layoutY="239.0" text="How many days ">
+      <Label fx:id="days" layoutX="207.0" layoutY="239.0" text="How many days ">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Label>
-      <Button layoutX="304.0" layoutY="316.0" mnemonicParsing="false" onAction="#goToPlan" prefHeight="37.0" prefWidth="125.0" text="workout plan">
+      <Button fx:id="plan" layoutX="364.0" layoutY="325.0" mnemonicParsing="false" onAction="#goToPlan" prefHeight="37.0" prefWidth="125.0" text="workout plan">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font></Button>
-      <Button alignment="CENTER_RIGHT" layoutX="28.0" layoutY="31.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
+      <Button fx:id="btnback" alignment="CENTER_RIGHT" layoutX="28.0" layoutY="31.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="64.0" text="Back" textAlignment="RIGHT" textFill="#0d0d0d">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
