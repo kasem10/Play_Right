@@ -15,12 +15,12 @@
             <Image url="@../Images/background2.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="ManageTraining" layoutX="169.0" layoutY="141.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="58.0" prefWidth="206.0" text="Manage Training">
+      <Button fx:id="ManageTraining" layoutX="169.0" layoutY="137.0" mnemonicParsing="false" onAction="#Addexercise" prefHeight="58.0" prefWidth="206.0" text="Manage Training">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="manageMeals" layoutX="427.0" layoutY="141.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="58.0" prefWidth="206.0" text="Manage Meals">
+      <Button fx:id="manageMeals" layoutX="427.0" layoutY="137.0" mnemonicParsing="false" onAction="#AddMeals" prefHeight="58.0" prefWidth="206.0" text="Manage Meals">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font></Button>
@@ -39,26 +39,31 @@
             <Image url="@../Images/goBackIcon.png" />
          </image>
       </ImageView>
-      <Button fx:id="ManageMusic" layoutX="427.0" layoutY="236.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="58.0" prefWidth="206.0" text="Manage Music">
+      <Button fx:id="ManageMusic" layoutX="427.0" layoutY="232.0" mnemonicParsing="false" onAction="#AddMusic" prefHeight="58.0" prefWidth="206.0" text="Manage Music">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="MembersTrack" layoutX="169.0" layoutY="236.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Members Track">
+      <Button fx:id="MembersTrack" layoutX="169.0" layoutY="232.0" mnemonicParsing="false" onAction="#tracking" prefHeight="58.0" prefWidth="206.0" text="Members Track">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="Chat" layoutX="169.0" layoutY="325.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
+      <Button fx:id="Chat" layoutX="169.0" layoutY="321.0" mnemonicParsing="false" onAction="#chat" prefHeight="58.0" prefWidth="206.0" text="Chat">
          <font>
             <Font name="System Bold Italic" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="QA" layoutX="427.0" layoutY="325.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
+      <Button fx:id="QA" layoutX="427.0" layoutY="321.0" mnemonicParsing="false" onAction="#questions" prefHeight="58.0" prefWidth="206.0" text="Questions&amp;Answers">
          <font>
             <Font name="System Bold Italic" size="18.0" />
          </font>
       </Button>
       <ComboBox fx:id="lang" layoutX="618.0" layoutY="19.0" onAction="#changelang" prefWidth="150.0" promptText="English" />
+      <Button fx:id="reports" layoutX="291.0" layoutY="393.0" mnemonicParsing="false" onAction="#godata" prefHeight="58.0" prefWidth="206.0" text="Reports">
+         <font>
+            <Font name="System Bold Italic" size="22.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

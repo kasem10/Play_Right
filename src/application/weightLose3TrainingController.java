@@ -55,62 +55,62 @@ public class weightLose3TrainingController implements Initializable {
 		
 	if(Main.saveperviospage == "MB3day1") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb3.get(1));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(1));	
 	}
 	if(Main.saveperviospage == "MB3day2") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb3.get(2));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(2));	
 	}
 	if(Main.saveperviospage == "MB3day3") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb3.get(3));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(3));	
 	}
 	
 	
 	
 	if(Main.saveperviospage == "MB4day1") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb4.get(1));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(1));	
 	}
 	if(Main.saveperviospage == "MB4day2") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb4.get(2));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(2));	
 	}
 	if(Main.saveperviospage == "MB4day3") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb4.get(3));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(3));	
 	}
 	if(Main.saveperviospage == "MB4day4") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb4.get(4));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(4));	
 	}
 	
 	
 	
 	if(Main.saveperviospage == "MB5day1") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb5.get(1));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(1));	
 	}
 	if(Main.saveperviospage == "MB5day2") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb5.get(2));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(2));	
 	}
 	if(Main.saveperviospage == "MB5day3") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb5.get(3));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(3));	
 	}
 	if(Main.saveperviospage == "MB5day4") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb5.get(4));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(4));	
 	}
 	if(Main.saveperviospage == "MB5day5") {
 		workedone.clear();
-		workedone.addAll(Main.gym.mb5.get(5));	
+		workedone.addAll(Main.saveCustomer.palntrainer.get(5));	
 	}
 	
 	
 	
-	
+	/*
 	if(Main.saveperviospage == "WL3day1") {
 		workedone.clear();
 		workedone.addAll(Main.gym.wl3.get(1));
@@ -146,6 +146,7 @@ public class weightLose3TrainingController implements Initializable {
 	
 	
 	
+	
 	if(Main.saveperviospage == "WL5day1") {
 		workedone.clear();
 		workedone.addAll(Main.gym.wl5.get(1));
@@ -166,6 +167,8 @@ public class weightLose3TrainingController implements Initializable {
 		workedone.clear();
 		workedone.addAll(Main.gym.wl5.get(5));
 	}
+	
+	*/
 	
 	 y = x+1;
 	

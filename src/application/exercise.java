@@ -60,7 +60,7 @@ public class exercise implements Serializable {
 
 	@Override
 	public String toString() {
-		return  path;
+		return  name;
 	}
 
 	

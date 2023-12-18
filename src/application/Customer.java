@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import Utils.Gender;
 
@@ -27,6 +28,24 @@ public class Customer extends Person implements Serializable{
 	public double saveAge=0;
 	public double saveHeight=0;
 	public double saveWeight=0;
+	HashMap<Integer, ArrayList<exercise>> palntrainer;
+	public String goal;
+	public String howmanydays;
+	public String Remarks;	
+	
+	
+
+	
+	public HashMap<Integer, ArrayList<exercise>> getPalntrainer() {
+		if(palntrainer == null) {
+			palntrainer = new HashMap<>();
+		}
+		return palntrainer;
+	}
+
+	public void setPalntrainer(HashMap<Integer, ArrayList<exercise>> palntrainer) {
+		this.palntrainer = palntrainer;
+	}
 	
 	
 	public Gender getSaveGender() {
@@ -150,6 +169,10 @@ public class Customer extends Person implements Serializable{
 	@Override
 	public String toString() {
 		return userName + " - " + "Current wieght: " + wieght + "Kg Improvement: " + diff + "Kg fedback: " + fedback ;
+				
+	}
+	public String string2() {
+		return userName;
 				
 	}
 

@@ -23,6 +23,8 @@ public class Gym implements Serializable {
 	
 	
 	
+	
+	
 	 HashMap<Integer, ArrayList<exercise>> mb3;
 	 HashMap<Integer, ArrayList<exercise>> mb4;
 	 HashMap<Integer, ArrayList<exercise>> mb5;
@@ -34,7 +36,7 @@ public class Gym implements Serializable {
 	
 	
 	
-	
+	 ArrayList<Customer> waitingcustomers;
 	ArrayList<exercise> Weightlose3daya;
 	
 	ArrayList<Question> Questions;
@@ -61,6 +63,17 @@ public class Gym implements Serializable {
 	
 	
 	
+
+	public ArrayList<Customer> getWaitingcustomers() {
+		if(waitingcustomers == null) {
+			waitingcustomers = new ArrayList<>();
+		}
+		return waitingcustomers;
+	}
+
+	public void setWaitingcustomers(ArrayList<Customer> waitingcustomers) {
+		this.waitingcustomers = waitingcustomers;
+	}
 
 	public ArrayList<Question> getQuestions() {
 		

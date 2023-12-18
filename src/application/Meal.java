@@ -65,7 +65,7 @@ public class Meal implements Serializable {
 
 	@Override
 	public String toString() {
-		return name;
+		return name+ " have " + carbs+ " carbs," +protin+" protin," +cal+ " calories"  ;
 	}
 	
 	

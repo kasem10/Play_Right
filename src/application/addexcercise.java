@@ -26,11 +26,7 @@ public class addexcercise implements Initializable {
 	
 	@FXML
 	TextField name, path , desc;
-	 @FXML
-	    private ComboBox<String> type;
-
-	    @FXML
-	    private ComboBox<Integer> day;
+	
 	    
 	    @FXML
 	    private Label path2;
@@ -56,8 +52,7 @@ public class addexcercise implements Initializable {
 			sumbitbtn.setText("Submit");
 			backbtn.setText("Back");
 			title.setText("Add excercise");
-			type.setPromptText("Plan Type");
-			day.setPromptText("Day number");
+			
 			
         
 			
@@ -69,45 +64,28 @@ public class addexcercise implements Initializable {
 			  sumbitbtn.setText("אישור");
 			  backbtn.setText("חזור");
 			  title.setText("הוספת תרגיל");
-			  type.setPromptText("תוכנית");
-				day.setPromptText("איזה יום");
+			 
 		
 		// TODO Auto-generated method stub
 		
 	}
 		
-		ObservableList<String> list = FXCollections.observableArrayList("mb3","mb4","mb5","wl3","wl4","wl5");
-		type.setItems(list);
 		
-		// TODO Auto-generated method stub
 		
 	}
-	public void fillcombobox (ActionEvent event) throws IOException {
-		if(type.getValue() == "mb3"  || type.getValue() == "wl3" ) {
-			day.getItems().clear();
-			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3);
-			day.setItems(list3);
-		}
-		if(type.getValue() == "mb4"  || type.getValue() == "wl4" ) {
-			day.getItems().clear();
-			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3,4);
-			day.setItems(list3);
-		}
-		if(type.getValue() == "mb5"  || type.getValue() == "wl5" ) {
-			day.getItems().clear();
-			ObservableList<Integer> list3 = FXCollections.observableArrayList(1,2,3,4,5);
-			day.setItems(list3);
-		}
 	
 	
-	}
+	
+	
 	
 	
 	
 	public void submitaddex (ActionEvent event) throws IOException {
 			
 		exercise ex = new exercise(name.getText(),path.getText() , desc.getText());
-		Main.gym.addex(ex, type.getValue(),day.getValue());
+		Main.savecustomerforplan.getPalntrainer().get(Main.savetheday).add(ex);
+		Main.update();
+	//	Main.gym.addex(ex, type.getValue(),day.getValue());
 		
 	//System.out.println(Main.gym.mb3.values());
 		Main.update();
@@ -129,7 +107,7 @@ public class addexcercise implements Initializable {
 	
 	 public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
-		    Parent root = FXMLLoader.load(getClass().getResource("manager.fxml"));
+		    Parent root = FXMLLoader.load(getClass().getResource("ManageTraining3.fxml"));
 		    Scene scene = new Scene(root,800,466);
 		    Image icon = new Image("/Images/icon.png");
 		    primaryStage.getIcons().add(icon);

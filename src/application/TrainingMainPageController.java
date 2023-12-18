@@ -18,10 +18,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 public class TrainingMainPageController implements Initializable {
@@ -85,6 +87,28 @@ public class TrainingMainPageController implements Initializable {
 	}
 	
 	
+	public void goToPlan(ActionEvent event) throws IOException {
+		
+		Main.saveCustomer.goal = BudyGoal.getValue();
+		Main.saveCustomer.howmanydays = howManyDays.getValue();
+		Main.gym.getWaitingcustomers().add(Main.saveCustomer);
+		 Alert aler = new Alert(AlertType.CONFIRMATION);
+			aler.setHeaderText("Your application has been successfully registered, it is forwarded to the coach so that he can build you a suitable program");
+			aler.showAndWait();	
+		Main.update();
+		Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+	    Parent root = FXMLLoader.load(getClass().getResource("CustomerMainPage.fxml"));
+	    Scene scene = new Scene(root,800,466);
+	    Image icon = new Image("/Images/icon.png");
+	    primaryStage.getIcons().add(icon);
+	    primaryStage.setScene(scene);
+	    primaryStage.show();
+		
+	}
+	
+	
+	
+	/*
 	public void goToPlan(ActionEvent event) throws IOException {
 		if(BudyGoal.getValue() == "Muscle Building" && howManyDays.getValue() == "3 Days") {
 			Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -161,6 +185,7 @@ public class TrainingMainPageController implements Initializable {
 			
 		}	
 	}
+	*/
 	
 	public void back(ActionEvent event) throws IOException{
 		 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();

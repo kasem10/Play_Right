@@ -44,6 +44,8 @@ public class ManagerMainPageController implements Initializable {
 	    private Button Chat;
 	    @FXML
 	    private Button btnback;
+	    @FXML
+	    private Button reports;
 
 	    @FXML
 	    private Button QA;
@@ -58,13 +60,21 @@ public class ManagerMainPageController implements Initializable {
 				st.setScene(cn);
 				st.show();
 		}
-	   public void Addexercise(ActionEvent event) throws IOException{
-			 Parent root = FXMLLoader.load(getClass().getResource("ManageTraining.fxml"));
+	   public void godata(ActionEvent event) throws IOException{
+			 Parent root = FXMLLoader.load(getClass().getResource("reports.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
 				st.setScene(cn);
 				st.show();
 		}
+	   public void Addexercise(ActionEvent event) throws IOException{
+			 Parent root = FXMLLoader.load(getClass().getResource("ManageTraining2.fxml"));
+			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+				Scene cn = new Scene(root);
+				st.setScene(cn);
+				st.show();
+		}
+	   
 	   public void tracking(ActionEvent event) throws IOException{
 			 Parent root = FXMLLoader.load(getClass().getResource("TrackingCustomers.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -105,6 +115,20 @@ public class ManagerMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		for(Customer cust :Main.gym.getWaitingcustomers()) {
+			if(cust.palntrainer != null) {
+				Main.gym.getWaitingcustomers().remove(cust);
+				Main.update();
+			}
+		}
+		
+		
+		if(!Main.gym.getWaitingcustomers().isEmpty()) {
+			ManageTraining.setStyle("-fx-background-color: red;");
+			
+		}
+		
+		
 		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew");
 		lang.setItems(list);
 		
@@ -148,6 +172,7 @@ public class ManagerMainPageController implements Initializable {
 		
 		
 		if(lang.getValue().equals("English")) {
+			reports.setText("Reports");
 			 ManageTraining.setText("Manage Training");
 			welcome.setText("Welcome manager");
 
@@ -161,6 +186,7 @@ public class ManagerMainPageController implements Initializable {
 			
 		}
 		 if(lang.getValue().equals("Hebrew")) {
+			 reports.setText("דוחות");
 			 welcome.setText("ברוך הבא מנהל");
 			 btnback.setText("חזור");
 			

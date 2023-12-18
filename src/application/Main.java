@@ -39,7 +39,8 @@ public class Main extends Application implements Serializable {
 	
 	public static String saveAnswer;
 	public static Question saveQuestion;
-	
+	public static Customer savecustomerforplan;
+	public static int savetheday;
 	
 	
 	
@@ -63,7 +64,6 @@ public class Main extends Application implements Serializable {
 		}
 	}
 	public static void main(String[] args) {
-		
 		
 		
 		deSerialize();

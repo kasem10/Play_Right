@@ -78,12 +78,36 @@ public class CustomerMainPageController implements Initializable {
 				st.show();
 		}
 	   public void goTraining(ActionEvent event) throws IOException{
-		
+		   if(Main.saveCustomer.howmanydays == null) {
 			 Parent root = FXMLLoader.load(getClass().getResource("TrainingMainPage.fxml"));
 			 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 				Scene cn = new Scene(root);
 				st.setScene(cn);
 				st.show();
+		   }
+		   else {
+		   if(Main.saveCustomer.howmanydays.equals("3 Days")) {
+				 Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding3Days.fxml"));
+				 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+					Scene cn = new Scene(root);
+					st.setScene(cn);
+					st.show();
+			   }
+		   if(Main.saveCustomer.howmanydays.equals("4 Days")) {
+				 Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding4Days.fxml"));
+				 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+					Scene cn = new Scene(root);
+					st.setScene(cn);
+					st.show();
+			   }
+		   if(Main.saveCustomer.howmanydays.equals("5 Days")) {
+				 Parent root = FXMLLoader.load(getClass().getResource("MuscleBuilding5Days.fxml"));
+				 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
+					Scene cn = new Scene(root);
+					st.setScene(cn);
+					st.show();
+			   }
+		   }
 		}
 	   public void findFreinds(ActionEvent event) throws IOException{
 			 Parent root = FXMLLoader.load(getClass().getResource("joinFreinds.fxml"));
@@ -131,7 +155,7 @@ public class CustomerMainPageController implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		
+		System.out.println(Main.gym.getWaitingcustomers().toString());
 		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew");
 		lang.setItems(list);
 		
