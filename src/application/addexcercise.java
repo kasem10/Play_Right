@@ -65,8 +65,18 @@ public class addexcercise implements Initializable {
 			  backbtn.setText("חזור");
 			  title.setText("הוספת תרגיל");
 			 
+	
 		
-		// TODO Auto-generated method stub
+	}
+		 if(Main.savelangmanager.equals("العربية")) {
+			  name2.setText("اسم");
+			  path2.setText("مسار");
+			  desc2.setText("وصف");
+			  sumbitbtn.setText("موافقة");
+			  backbtn.setText("رجوع");
+			  title.setText("اضافه التمرين");
+			 
+	
 		
 	}
 		

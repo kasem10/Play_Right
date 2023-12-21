@@ -60,6 +60,14 @@ public class reports implements Initializable {
 			 
 			
 		}
+		 if(Main.savelangmanager.equals("العربية")) {
+				
+			 backs.setText("رجوع");
+			 genders.setText("جنس");
+	         ages.setText("عمر");
+			 
+			
+		}
 		
 		
 		// TODO Auto-generated method stub

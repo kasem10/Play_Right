@@ -171,6 +171,11 @@ public class clientChatControll implements Initializable {
 				btnback.setText("חזור");
 
 		}
+		 if(Main.savelangCustomer.equals("العربية")) {
+			 title.setText("محادثة");
+				btnback.setText("رجوع");
+
+		}
 		
 		clientMessage.setStyle("-fx-control-inner-background: lightgray;");
 		

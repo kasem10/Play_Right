@@ -89,6 +89,15 @@ public class musicControll implements Initializable {
 				stop.setText("עצור");
 			
 		}
+		 if(Main.savelangCustomer.equals("العربية")) {
+			 title.setText("ممارسة الرياضة مع الموسيقى ");
+				btnback.setText("رجوع");
+
+				play.setText("شغل");
+
+				stop.setText("اوقف");
+			
+		}
 		
 		 if(Main.savelangCustomer.equals("English")) {
 			 sort.setText("Favorites"); 
@@ -96,6 +105,9 @@ public class musicControll implements Initializable {
 		 
 		 if(Main.savelangCustomer.equals("Hebrew")) {
 			 sort.setText("מועדפים"); 
+		 }
+		 if(Main.savelangCustomer.equals("العربية")) {
+			 sort.setText("المفضلة"); 
 		 }
 		
 		
@@ -175,13 +187,16 @@ public class musicControll implements Initializable {
 		
 	}
 	public void sortbyfav(ActionEvent event) throws IOException{
-		if(sort.getText().equals("Favorites") || sort.getText().equals("מועדפים")  ) {
+		if(sort.getText().equals("Favorites") || sort.getText().equals("מועדפים") || sort.getText().equals("المفضلة")   ) {
 		
 			if(sort.getText().equals("Favorites")) {
 				sort.setText("All");
 			}
 			if(sort.getText().equals("מועדפים")) {
 				sort.setText("הכל");
+			}
+			if(sort.getText().equals("المفضلة")) {
+				sort.setText("الكل");
 			}
 			
 		music.getItems().clear();
@@ -190,13 +205,16 @@ public class musicControll implements Initializable {
 		music.getItems().addAll(list);
 		
 		}
-		else if(sort.getText().equals("All") || sort.getText().equals("הכל")) {
+		else if(sort.getText().equals("All") || sort.getText().equals("הכל") || sort.getText().equals("الكل")) {
 			
 			if(sort.getText().equals("All")){
 				sort.setText("Favorites");
 			}
 			if(sort.getText().equals("הכל")){
 				sort.setText("מועדפים");
+			}
+			if(sort.getText().equals("الكل")){
+				sort.setText("المفضلة");
 			}
 			
 			

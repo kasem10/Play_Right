@@ -56,6 +56,13 @@ public class TrackingCustomers implements Initializable {
 				search.setPromptText("חיפוש לפי שם");
 			
 		}
+		 if(Main.savelangmanager.equals("العربية")) {
+			 
+				backbtn.setText("رجوع");
+				title.setText("تتبع التقدم");
+				search.setPromptText("البحث عن طريق الإسم");
+			
+		}
 		
 		//customers.setStyle("-fx-control-inner-background: lightgray;");
 		customers.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");

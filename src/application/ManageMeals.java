@@ -61,6 +61,13 @@ public class ManageMeals implements Initializable {
 			removebtn.setText("מחיקה");
 			search.setPromptText("חיפוש לפי שם");
 		}
+        if(Main.savelangmanager.equals("العربية")) {
+        	title.setText("اداره الوجبات");
+			backbtn.setText("رجوع");
+			addbtn.setText("اضافه");
+			removebtn.setText("محي");
+			search.setPromptText("البحث عن طريق الإسم");
+		}
 		
 		
 		//meals.setStyle("-fx-control-inner-background: lightgray;");

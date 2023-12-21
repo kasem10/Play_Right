@@ -156,7 +156,7 @@ public class CustomerMainPageController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		System.out.println(Main.gym.getWaitingcustomers().toString());
-		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew");
+		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew","العربية");
 		lang.setItems(list);
 		
 		if(Main.savelangCustomer.equals("English")) {
@@ -185,6 +185,20 @@ public class CustomerMainPageController implements Initializable {
 	         welcome.setText("ברוך הבא");
 	         btnback.setText("חזור");
 	         lang.setValue("Hebrew");
+			
+		}
+		 if(Main.savelangCustomer.equals("العربية")) {
+			 training.setText("تدريبات");
+				music.setText("اغاني");
+
+				chat.setText("محادثه");
+
+				nutrition.setText("وجبات واكل");
+				findFriends.setText("مع الاصدقاء");
+				questions.setText("أسئلة وأجوبة");
+	         welcome.setText("اهلا وسهلا");
+	         btnback.setText("رجوع");
+	         lang.setValue("العربية");
 			
 		}
 
@@ -229,6 +243,20 @@ public void changelang(ActionEvent event) throws IOException {
 	         welcome.setText("ברוך הבא");
 	         btnback.setText("חזור");
 	         lang.setValue("Hebrew");
+			
+		}
+		 if(Main.savelangCustomer.equals("العربية")) {
+			 training.setText("تدريبات");
+				music.setText("اغاني");
+
+				chat.setText("محادثه");
+
+				nutrition.setText("وجبات واكل");
+				findFriends.setText("مع الاصدقاء");
+				questions.setText("أسئلة وأجوبة");
+	         welcome.setText("اهلا وسهلا");
+	         btnback.setText("رجوع");
+	         lang.setValue("العربية");
 			
 		}
 	

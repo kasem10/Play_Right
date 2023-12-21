@@ -103,6 +103,14 @@ public class ManageTraining3 implements Initializable {
 			days.setPromptText("איזה יום");
 			showbtn.setText("הצגה");
 		}
+        if(Main.savelangmanager.equals("العربية")) {
+        	title.setText("اداره التدريبات");
+			backbtn.setText("رجوع");
+			addbtn.setText("اضافه");
+			removebtn.setText("محي");
+			days.setPromptText("اليوم");
+			showbtn.setText("عرض");
+		}
         
         if(Main.savecustomerforplan.howmanydays.equals("3 Days")) {
         	for(int i=1 ; i<4 ; i++ ) {

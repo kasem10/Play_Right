@@ -160,6 +160,13 @@ if(Main.savelangmanager.equals("English")) {
 				
 			
 		}
+		 if(Main.savelangmanager.equals("العربية")) {
+			 
+				backbtn.setText("رجوع");
+				title.setText("محادثة");
+				
+			
+		}
 		
       
 		

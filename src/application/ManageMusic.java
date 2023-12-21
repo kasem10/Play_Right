@@ -61,6 +61,13 @@ public class ManageMusic implements Initializable {
 			removebtn.setText("מחיקה");
 			search.setPromptText("חיפוש לפי שם");
 		}
+        if(Main.savelangmanager.equals("العربية")) {
+        	title.setText("اداره الاغاني");
+			backbtn.setText("رجوع");
+			addbtn.setText("اضافه");
+			removebtn.setText("محي");
+			search.setPromptText("البحث عن طريق الإسم");
+		}
 		
 		//music.setStyle("-fx-control-inner-background: lightgray;");
 		music.setStyle("-fx-control-inner-background: lightgray; -fx-font-size: 14; -fx-font-weight: bold; -fx-font-style: italic; ");

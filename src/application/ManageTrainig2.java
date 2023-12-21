@@ -62,10 +62,17 @@ public class ManageTrainig2 implements Initializable {
 		
 		}
         if(Main.savelangmanager.equals("Hebrew")) {
-        	title.setText("ניהול מוזיקה");
+        	title.setText("ניהול אימונים");
 			backbtn.setText("חזור");
 			sort.setText("לקוחות בהמתנה");
 			build.setText("בנה תוכנית");
+		
+		}
+        if(Main.savelangmanager.equals("العربية")) {
+        	title.setText(" اداره التدريبات");
+			backbtn.setText("رجوع");
+			sort.setText("زباىن بانتظار");
+			build.setText("ابني البرنامج");
 		
 		}
 		
@@ -103,7 +110,7 @@ public class ManageTrainig2 implements Initializable {
 	public void waitcust(ActionEvent event) throws IOException{
 		
 	
-		if(sort.getText().equals("WaitCustomers") || sort.getText().equals("לקוחות בהמתנה")  ) {
+		if(sort.getText().equals("WaitCustomers") || sort.getText().equals("לקוחות בהמתנה") || sort.getText().equals("زباىن بانتظار")  ) {
 			
 			if(sort.getText().equals("WaitCustomers")) {
 				sort.setText("All");
@@ -111,19 +118,25 @@ public class ManageTrainig2 implements Initializable {
 			if(sort.getText().equals("לקוחות בהמתנה")) {
 				sort.setText("הכל");
 			}
+			if(sort.getText().equals("زباىن بانتظار")) {
+				sort.setText("الكل");
+			}
 			
 			waitingcustomers.getItems().clear();
 		waitingcustomers.getItems().addAll(Main.gym.waitingcustomers);
 		waitingcustomers.setCellFactory(new CustomerNameListCellFactory());
 		
 		}
-		else if(sort.getText().equals("All") || sort.getText().equals("הכל")) {
+		else if(sort.getText().equals("All") || sort.getText().equals("הכל") || sort.getText().equals("الكل") ) {
 			
 			if(sort.getText().equals("All")){
 				sort.setText("WaitCustomers");
 			}
 			if(sort.getText().equals("הכל")){
 				sort.setText("לקוחות בהמתנה");
+			}
+			if(sort.getText().equals("الكل")){
+				sort.setText("زباىن بانتظار");
 			}
 			
 			

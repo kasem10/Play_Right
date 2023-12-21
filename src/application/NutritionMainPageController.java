@@ -233,6 +233,23 @@ public void initialize(URL location, ResourceBundle resources) {
 			female.setText("נקבה");
 		
 	}
+	 if(Main.savelangCustomer.equals("العربية")) {
+			btnback.setText("رجوع");
+
+			title.setText("حساب المعلمات الغذائية");
+
+			age2.setText("عمر");
+			height2.setText("طول");
+			weight2.setText("وزن");
+			years.setText("(سنين)");
+			cm.setText("(سم)");
+			kg.setText("(كغ)");
+			gender2.setText("جنس");
+			submit2.setText("موافقه"); 
+			male.setText("ذكر");
+			female.setText("انثى");
+		
+	}
 
 
 if(Main.saveCustomer.getSaveAge() != 0 || Main.saveCustomer.getSaveWeight() != 0 || Main.saveCustomer.getSaveHeight() != 0) {

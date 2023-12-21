@@ -129,7 +129,7 @@ public class ManagerMainPageController implements Initializable {
 		}
 		
 		
-		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew");
+		ObservableList<String> list = FXCollections.observableArrayList("English","Hebrew","العربية");
 		lang.setItems(list);
 		
 		
@@ -160,6 +160,21 @@ public class ManagerMainPageController implements Initializable {
 	           MembersTrack.setText("מעקב");
 	           Chat.setText("צ'אט");
 	           QA.setText("שאלות ותשובות");
+			
+		}
+		 if(Main.savelangmanager.equals("العربية")) {
+			 reports.setText("التقارير");
+			 welcome.setText("اهلا وسهلا مدرب");
+			 btnback.setText("رجوع");
+			 lang.setValue("العربية");
+			
+			 ManageTraining.setText("اداره التدريبات");
+			   manageMeals.setText("اداره الوجبات");
+
+			   ManageMusic.setText("اداره الاغاني");
+	           MembersTrack.setText("تتبع");
+	           Chat.setText("محادثة");
+	           QA.setText("أسئلة وأجوبة");
 			
 		}
 		
@@ -198,6 +213,21 @@ public class ManagerMainPageController implements Initializable {
 	           MembersTrack.setText("מעקב");
 	           Chat.setText("צא'ט");
 	           QA.setText("שאלות ותשובות");
+			
+		}
+		 if(lang.getValue().equals("العربية")) {
+			 reports.setText("التقارير");
+			 welcome.setText("اهلا وسهلا مدرب");
+			 btnback.setText("رجوع");
+			
+			
+			 ManageTraining.setText("اداره التدريبات");
+			   manageMeals.setText("اداره الوجبات");
+
+			   ManageMusic.setText("اداره الاغاني");
+	           MembersTrack.setText("تتبع");
+	           Chat.setText("محادثة");
+	           QA.setText("أسئلة وأجوبة");
 			
 		}
 	}

@@ -84,6 +84,17 @@ public class joinFreinds implements Initializable {
 				submit.setText("אישור");
 			
 		}
+		 if(Main.savelangCustomer.equals("العربية")) {
+				title.setText("التدرب مع الاصدقاء");
+				btnback.setText("رجوع");
+
+				fullname.setText("الاسم كامل");
+
+				phone1.setText("هاتف");
+				location1.setText("منطقه");
+				submit.setText("موافقه");
+			
+		}
 		
 		ObservableList<String> list = FXCollections.observableArrayList("Haifa","Tel aviv","Hedira","Raanana");
 		location.setItems(list);
