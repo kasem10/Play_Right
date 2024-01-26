@@ -25,6 +25,8 @@ public class Gym implements Serializable {
 	
 	
 	
+	
+	
 	 HashMap<Integer, ArrayList<exercise>> mb3;
 	 HashMap<Integer, ArrayList<exercise>> mb4;
 	 HashMap<Integer, ArrayList<exercise>> mb5;
@@ -33,6 +35,8 @@ public class Gym implements Serializable {
 	 HashMap<Integer, ArrayList<exercise>> wl3;
 	 HashMap<Integer, ArrayList<exercise>> wl4;
 	 HashMap<Integer, ArrayList<exercise>> wl5;
+	 
+	
 	
 	
 	

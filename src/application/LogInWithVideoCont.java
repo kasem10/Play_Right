@@ -3,6 +3,7 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ResourceBundle;
 import javafx.beans.InvalidationListener;
@@ -162,6 +163,9 @@ public class LogInWithVideoCont implements Initializable {
     	        Main.saveCustomer.setFedback(feedbackInput.getText());
     	        Main.saveCustomer.setWieght(weight);
     	        Main.saveCustomer.setDate(LocalDate.now());
+    	        Main.saveCustomer.wieghts.add(weight);
+    	        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    	   		Main.saveCustomer.wieghts2.put((LocalDate.now()),weight);
     	        Main.update();
     	        popupStage.close();
     	    });

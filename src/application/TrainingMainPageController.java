@@ -7,6 +7,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -23,6 +25,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
@@ -44,6 +47,12 @@ public class TrainingMainPageController implements Initializable {
 
 	    @FXML
 	    private Button btnback;
+
+	    @FXML
+	    private TextField height;
+
+	    @FXML
+	    private TextField weight;
 
 
 	 @FXML
@@ -91,6 +100,13 @@ public class TrainingMainPageController implements Initializable {
 		
 		Main.saveCustomer.goal = BudyGoal.getValue();
 		Main.saveCustomer.howmanydays = howManyDays.getValue();
+		Main.saveCustomer.saveHeight = Double.parseDouble(height.getText());
+		Main.saveCustomer.saveWeight = Double.parseDouble(weight.getText());
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		Main.saveCustomer.wieghts2.put(LocalDate.now(), Double.parseDouble(weight.getText()));
+		Main.saveCustomer.wieghts.add(Double.parseDouble(weight.getText()));
+		
+		
 		Main.gym.getWaitingcustomers().add(Main.saveCustomer);
 		 Alert aler = new Alert(AlertType.CONFIRMATION);
 			aler.setHeaderText("Your application has been successfully registered, it is forwarded to the coach so that he can build you a suitable program");

@@ -35,7 +35,7 @@ public class reports implements Initializable {
 			st.show();
 	}
    public void godata(ActionEvent event) throws IOException{
-		 Parent root = FXMLLoader.load(getClass().getResource("data2.fxml"));
+		 Parent root = FXMLLoader.load(getClass().getResource("usersdata.fxml"));
 		 Stage st = (Stage)((Node)event.getSource()).getScene().getWindow();
 			Scene cn = new Scene(root);
 			st.setScene(cn);

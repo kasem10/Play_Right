@@ -19,6 +19,8 @@ public class Customer extends Person implements Serializable{
 	private String userName;
 	private String password;
 	private double wieght;
+	public ArrayList<Double> wieghts;
+	public HashMap<LocalDate,Double> wieghts2;
 	private double diff;
 	private String fedback;
 	private LocalDate date ;
@@ -32,7 +34,8 @@ public class Customer extends Person implements Serializable{
 	public String goal;
 	public String howmanydays;
 	public String Remarks;	
-	
+	public LocalDate joiningdate;
+	public LocalDate lastsighnin;
 	
 
 	
@@ -99,6 +102,10 @@ public class Customer extends Person implements Serializable{
 		this.password = password;
 		LocalDate currentDate = LocalDate.now();
 		date  = currentDate.minusDays(1);;
+		joiningdate= currentDate;
+		wieghts = new ArrayList<>();
+		wieghts2 = new HashMap<>();
+		
 	}
 	
 	

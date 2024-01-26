@@ -40,6 +40,7 @@ public class Main extends Application implements Serializable {
 	public static String saveAnswer;
 	public static Question saveQuestion;
 	public static Customer savecustomerforplan;
+	public static Customer savecustomerfortrack;
 	public static int savetheday;
 	
 	

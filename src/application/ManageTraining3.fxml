@@ -40,10 +40,11 @@
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
-      <Button fx:id="showbtn" layoutX="466.0" layoutY="78.0" mnemonicParsing="false" text="show">
+      <Button fx:id="showbtn" layoutX="466.0" layoutY="78.0" mnemonicParsing="false" onAction="#show" text="show">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font></Button>
       <ComboBox fx:id="days" layoutX="286.0" layoutY="79.0" onAction="#fillcombobox" prefHeight="26.0" prefWidth="116.0" promptText="Day number" />
+      <ComboBox fx:id="ex2" layoutX="286.0" layoutY="114.0" onAction="#pop" prefWidth="150.0" />
    </children>
 </AnchorPane>

@@ -73,6 +73,45 @@ public class TrackingCustomers implements Initializable {
 	        filterCustomers(newValue);
 	    });
 		
+		customers.setOnMouseClicked(event -> {
+		    if (event.getClickCount() == 2) { // Check for double-click
+		        Customer selectedExercise = customers.getSelectionModel().getSelectedItem();
+		        if (selectedExercise != null) {
+		        	int Select = customers.getSelectionModel().getSelectedIndex();
+		        	Customer s= customers.getItems().get(Select);
+		    		Main.savecustomerfortrack =s;
+		    		
+		    		
+		    	    try {
+		    	    	 Stage primaryStage =  (Stage)((Node)event.getSource()).getScene().getWindow();
+		    			    Parent root = FXMLLoader.load(getClass().getResource("data2.fxml"));
+		    			    Scene scene = new Scene(root,800,466);
+		    			    Image icon = new Image("/Images/icon.png");
+		    			    primaryStage.getIcons().add(icon);
+		    			    primaryStage.setScene(scene);
+		    			    primaryStage.show();
+		    	    } catch (IOException e) {
+		    	        e.printStackTrace();
+		    	    }
+		        }
+				   
+	    		
+	    	    
+	        }
+	    
+	});
+		    
+		
+		    
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 	private void filterCustomers(String keyword) {
 	    Collection<Customer> allCustomers = Main.gym.getCustomers().values();

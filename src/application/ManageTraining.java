@@ -10,6 +10,7 @@ import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -68,6 +69,9 @@ public class ManageTraining implements Initializable {
 	 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		 
+		
+		
 		if(Main.savelangmanager.equals("English")) {
 			title.setText("Manage Training");
 			backbtn.setText("back");
